@@ -1,0 +1,45 @@
+msgid ""
+msgstr "Project-Id-Version: tygh\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US"
+
+msgctxt "Addons::name::my_module"
+msgid "my_module"
+msgstr "My changes"
+
+msgctxt "Addons::description::my_module"
+msgid "my_module"
+msgstr "A dummy add-on for easier hook design editing"
+
+msgctxt "Languages::covid"
+msgid "covid"
+msgstr "Get the latest on our COVID-19 response"
+
+msgctxt "Languages::trips"
+msgid "trips"
+msgstr "Trips"
+
+msgctxt "Languages::hosts_guides"
+msgid "hosts_guides"
+msgstr "Hosts guides"
+
+msgctxt "Languages::add_boat"
+msgid "add_boat"
+msgstr "Add Boats"
+
+msgctxt "Languages::log_out"
+msgid "log_out"
+msgstr "Log out"
+
+msgctxt "Languages::services"
+msgid "services"
+msgstr "Services"
+
+msgctxt "Languages::hosts_community"
+msgid "hosts_community"
+msgstr "Hosts community"
+
+msgctxt "Languages::saved"
+msgid "saved"
+msgstr "Saved"

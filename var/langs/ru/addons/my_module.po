@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: cs-cart-latest\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
+"X-Crowdin-Project: cs-cart-latest\n"
+"X-Crowdin-Project-ID: 50163\n"
+"X-Crowdin-Language: ru\n"
+"X-Crowdin-File: /release-4.11.5/addons/my_changes.po\n"
+"X-Crowdin-File-ID: 3606\n"
+"PO-Revision-Date: 2020-09-01 09:18\n"
+
+msgctxt "Addons::name::my_module"
+msgid "my_module"
+msgstr "_Мои изменения"
+
+msgctxt "Addons::description::my_module"
+msgid "my_module"
+msgstr "Специальный модуль для внесения собственных изменений в платформу"
+
+msgctxt "Languages::covid"
+msgid "covid"
+msgstr "Get the latest on our COVID-19 response"
+
+msgctxt "Languages::boats"
+msgid "boats"
+msgstr "Boats"
+
+msgctxt "Languages::experiences"
+msgid "experiences"
+msgstr "Experiences"
+
+msgctxt "Languages::destinations"
+msgid "destinations"
+msgstr "Destinations"
+
+msgctxt "Languages::events"
+msgid "events"
+msgstr "Events"
+
+msgctxt "Languages::add_boat"
+msgid "add_boat"
+msgstr "Добавить лодки"
+
+msgctxt "Languages::hosts_guides"
+msgid "hosts_guides"
+msgstr "Хозяева"
+
+msgctxt "Languages::services"
+msgid "services"
+msgstr "Услуги"
+
+msgctxt "Languages::hosts_community"
+msgid "hosts_community"
+msgstr "Hosts community"
+
+msgctxt "Languages::saved"
+msgid "saved"
+msgstr "Сохраненных"
+
+

@@ -1,0 +1,9 @@
+{
+	"title":"Yacht",
+	"description":"Yacht theme",
+	"parent_theme":"responsive",
+	"logo":"media\/images\/cart.png",
+	"mail":"media\/images\/invoice_logo.png",
+	"favicon":"media\/images\/favicon.ico",
+	"developer": "Alexey Medvedev"
+}
