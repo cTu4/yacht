@@ -17,11 +17,12 @@
                     <img src="images/my_module/Union.svg" alt="">
                     {if $auth.user_id}
                         <img src="images/my_module/account.png" alt="">
+                        <span class="circle"></span>
                     {else}
                         <img src="images/my_module/user.svg" alt="">
 
                     {/if}
-                    <span class="circle"></span>
+
                 </a>
             {/capture}
             {if $auth.user_id}
