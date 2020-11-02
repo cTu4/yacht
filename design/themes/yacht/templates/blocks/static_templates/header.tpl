@@ -1,4 +1,5 @@
- <div class="header">
+{** block-description:tmpl_header **}
+<div class="header">
     <div class="covid ">{__('covid')} &#8594;</div>
     <div class="main-header d-flex justify-content-between align-items-center ">
         <div class="logo col-2"><a href="#">Yachts & More</a></div>
