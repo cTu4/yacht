@@ -39,6 +39,28 @@
             <li><a href="">Additional Options</a></li>
         </ul>
     </div>
+    <div class="under d-flex justify-content-between ">
+        <div class="left d-flex  justify-content-around">
+            <div class="logo"><a href="#">Yachts & More</a></div>
+            <span>© 2020 Yachts & More, Inc. All rights reserved</span>
+            <ul class="d-flex justify-content-between">
+                <li>Privacy</li>
+                <li>•</li>
+                <li>Terms</li>
+                <li>•</li>
+                <li>Site map</li>
+            </ul>
+        </div>
+        <div class="right d-flex justify-content-end">
+            {include file="blocks/languages.tpl" }
+            {include file="blocks/currencies.tpl" format="name"}
+            <div class="social">
+                <img src="/images/my_module/Facebook.svg" alt="">
+                <img src="/images/my_module/Twitter.svg " alt="">
+                <img src="/images/my_module/Instagram.svg" alt="">
+            </div>
+        </div>
+    </div>
 
 
 </div>
