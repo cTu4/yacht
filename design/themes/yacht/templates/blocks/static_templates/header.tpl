@@ -24,7 +24,7 @@
 
             {include file="blocks/languages.tpl" }
             <div class="weather">
-                <img src="images/Summer.svg" alt="weather">
+                <img src="images/my_module/Summer.svg" alt="weather">
                 <span>+24°C</span>
             </div>
            {capture name='content'}
