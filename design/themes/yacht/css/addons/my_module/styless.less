@@ -11,6 +11,11 @@ my_module
   line-height: 20px;
   letter-spacing: -0.1px;
 }
+.t-12px{
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 1px!important;
+}
 body, .tygh-footer > div{
   background: #fff!important;
 }
@@ -205,11 +210,43 @@ a:hover{
   margin: 0 0 0 30px;
   min-width: 400px;
   max-width: 570px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+
 }
 .donate-text a{
   text-decoration: underline;
 }
+
+// Bottom
+.bottom{
+  background: #F7F7F7;
+  padding: 40px 100px;
+}
+.info{
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.4);
+}
+.info ul{
+  width: 22.5%;
+}
+.info ul li a{
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.info ul li:first-child{
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px!important;
+}
+.info ul li:not(:first-child){
+  margin-bottom: 20px;
+  opacity: 0.6;
+
+}
+.info ul li:not(:first-child) a{
+  letter-spacing: 0.3px;
+}
+
 
 @media (max-width: 1240px) {
   .header-nav a{

@@ -1,5 +1,5 @@
 {** block-description:tmpl_donate **}
-
+{script src="js/addons/my_module/script.js"}
 <div class="donate d-flex justify-content-between">
     <div class="donate-text">
         <p class="t-32px font-weight-bold">
@@ -11,5 +11,6 @@
         </p>
         <img src="images/my_module/donate.svg" alt="logo">
     </div>
+
     <img class="donate-img" src="images/my_module/donate_stats.svg" alt="info to donate">
 </div>
