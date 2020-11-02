@@ -67,6 +67,12 @@ a:hover{
 .ty-select-block__a{
   min-width: 30px;
 }
+.ty-select-block__a > *{
+  margin: 0 2px;
+  font-weight: 500;
+  font-size: 12px!important;
+  line-height: 16px;
+}
 .header-nav a{
   font-size: 17px!important;
   line-height: 24px!important;
@@ -82,9 +88,12 @@ a:hover{
 }
 .weather{
   min-width: 45px;
+  white-space:nowrap;
 }
+
 .add_boat, .weather span, .ty-select-block__a-item{
-  font-size: 11px!important;
+  white-space: nowrap;
+  font-size: 11px;
   font-weight: 600;
   line-height: 16px;
 }
@@ -95,6 +104,9 @@ a:hover{
 }
 .add_boat:hover{
   cursor: pointer;
+}
+.ty-select-wrapper:hover path{
+  fill:#1DD1B9;
 }
 .add_boat:hover path{
   color: #1DD1B9;
@@ -239,40 +251,61 @@ a:hover{
   letter-spacing: 1px!important;
 }
 .info ul li:not(:first-child){
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   opacity: 0.6;
 
 }
 .info ul li:not(:first-child) a{
-  letter-spacing: 0.3px;
+  letter-spacing: -0.3px;
 }
 
 // under
+.under{
+  margin-top: 15px;
+}
 .under .logo a{
   font-size: 14px!important;
   line-height: 18px;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
 }
 .under .left span{
-  font-family: SF Pro Display;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
   opacity: 0.6;
 }
+.under ul li{
+  margin: 0 3px;
+}
 .under ul li a{
-  font-family: SF Pro Display;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
 }
 
-.right,.left{
+.right{
   width: 30%;
 }
+.left{
+  width: 45%;
+}
 
+.right > *{
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+.left > *{
+  margin: 0 5px;
+}
+.social svg{
+  cursor:pointer;
+}
+.under svg:hover{
+  fill: #1DD1B9;
+}
 @media (max-width: 1240px) {
   .header-nav a{
     font-size: 15px!important;

@@ -22,7 +22,7 @@
 
             {include file="blocks/currencies.tpl" format="name"}
 
-            {include file="blocks/languages.tpl" }
+            {include file="blocks/languages.tpl" display_icon=true}
             <div class="weather">
                 <img src="images/my_module/Summer.svg" alt="weather">
                 <span>+24°C</span>
