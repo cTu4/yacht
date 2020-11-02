@@ -19,7 +19,9 @@
                         <img src="images/my_module/account.png" alt="">
                     {else}
                         <img src="images/my_module/user.svg" alt="">
+
                     {/if}
+                    <span class="circle"></span>
                 </a>
             {/capture}
             {if $auth.user_id}
@@ -47,16 +49,16 @@
             {include file="views/auth/login_form.tpl" style="popup" id="popup`$block.snapping_id`"}
         </div>
     </div>
-{*    <div class="ty-account-info__buttons buttons-container">*}
-{*        {if $auth.user_id}*}
-{*            {$is_vendor_with_active_company="MULTIVENDOR"|fn_allowed_for && ($auth.user_type == "V") && ($auth.company_status == "A")}*}
-{*            {if $is_vendor_with_active_company}*}
-{*                <a href="{$config.vendor_index|fn_url}" rel="nofollow" class="ty-btn ty-btn__primary" target="_blank">{__("go_to_admin_panel")}</a>*}
-{*            {/if}*}
-{*            <a href="{"auth.logout?redirect_url=`$return_current_url`"|fn_url}" rel="nofollow" class="ty-btn {if $is_vendor_with_active_company}ty-btn__tertiary{else}ty-btn__primary{/if}">{__("sign_out")}</a>*}
-{*        {else}*}
-{*            <a href="{if $runtime.controller == "auth" && $runtime.mode == "login_form"}{$config.current_url|fn_url}{else}{"auth.login_form?return_url=`$return_current_url`"|fn_url}{/if}" data-ca-target-id="login_block{$block.snapping_id}" class="cm-dialog-opener cm-dialog-auto-size ty-btn ty-btn__secondary" rel="nofollow">{__("sign_in")}</a><a href="{"profiles.add"|fn_url}" rel="nofollow" class="ty-btn ty-btn__primary">{__("register")}</a>*}
+    <div class="ty-account-info__buttons buttons-container">
+        {if $auth.user_id}
+            {$is_vendor_with_active_company="MULTIVENDOR"|fn_allowed_for && ($auth.user_type == "V") && ($auth.company_status == "A")}
+            {if $is_vendor_with_active_company}
+                <a href="{$config.vendor_index|fn_url}" rel="nofollow" class="ty-btn ty-btn__primary" target="_blank">{__("go_to_admin_panel")}</a>
+            {/if}
+            <a href="{"auth.logout?redirect_url=`$return_current_url`"|fn_url}" rel="nofollow" class="ty-btn {if $is_vendor_with_active_company}ty-btn__tertiary{else}ty-btn__primary{/if}">{__("sign_out")}</a>
+        {else}
+            <a href="{if $runtime.controller == "auth" && $runtime.mode == "login_form"}{$config.current_url|fn_url}{else}{"auth.login_form?return_url=`$return_current_url`"|fn_url}{/if}" data-ca-target-id="login_block{$block.snapping_id}" class="cm-dialog-opener cm-dialog-auto-size ty-btn ty-btn__secondary" rel="nofollow">{__("sign_in")}</a><a href="{"profiles.add"|fn_url}" rel="nofollow" class="ty-btn ty-btn__primary">{__("register")}</a>
 
-{*        {/if}*}
-{*    </div>*}
+        {/if}
+    </div>
 <!--account_info_{$block.snapping_id}--></div>
