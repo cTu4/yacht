@@ -32,6 +32,31 @@ msgctxt "Languages::log_out"
 msgid "log_out"
 msgstr "Log out"
 
+msgctxt "Languages::boats"
+msgid "boats"
+msgstr "Boats"
+
+msgctxt "Languages::experiences"
+msgid "experiences"
+msgstr "Experiences"
+
+msgctxt "Languages::destinations"
+msgid "destinations"
+msgstr "Destinations"
+
+msgctxt "Languages::events"
+msgid "events"
+msgstr "Events"
+
+msgctxt "Languages::services"
+msgid "services"
+msgstr "Services"
+
+msgctxt "Languages::hosts_community"
+msgid "hosts_community"
+msgstr "Hosts community"
+
+
 msgctxt "Languages::services"
 msgid "services"
 msgstr "Services"
@@ -47,6 +72,10 @@ msgstr "Saved"
 msgctxt "Languages::Sailboats"
 msgid "Sailboats"
 msgstr "Sailboats"
+
+msgctxt "Languages::Catamarans"
+msgid "Catamarans"
+msgstr "Catamarans"
 
 msgctxt "Languages:less"
 msgid "less"
@@ -64,6 +93,9 @@ msgctxt "Languages:beths"
 msgid "beths"
 msgstr "beths"
 
+msgctxt "Languages:Greece"
+msgid "Greece"
+msgstr "Greece"
 
 
 

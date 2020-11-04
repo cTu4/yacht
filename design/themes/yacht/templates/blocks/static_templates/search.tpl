@@ -3,7 +3,7 @@
 <div class="search d-flex flex-column">
 
 
-    <span class="t-32px">The ideal boat will be found anywhere in the world.<br/>
+    <span class="t-32px font-weight-600">The ideal boat will be found anywhere in the world.<br/>
     Choose the country where you want to go on a maritime journey.</span>
 
     <form action="{""|fn_url}" name="search_form" method="get">
@@ -21,26 +21,26 @@
             {else}
                 {assign var="search_title" value=__("search_products")}
             {/if}
-            <input style="margin:10px 0" type="text" name="q" value="{$search.q}" id="search_input{$smarty.capture.search_input_id}" title="{$search_title}" class="ty-search-block__input cm-hint" />
+            <input style="margin:10px 5px" type="text" name="q" value="{$search.q}" id="search_input{$smarty.capture.search_input_id}" title="{$search_title}" class="ty-search-block__input cm-hint" />
         {/strip}
         {capture name="search_input_id"}{$block.snapping_id}{/capture}
         <div class="input_search d-flex">
-            <div class="item_search"><span class="t-16px">Location</span>
+            <div class="item_search"><span class="t-16px font-weight-bold">Location</span>
                 <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.31073 0H0.689272C0.382143 0 0.189596 0.331793 0.341974 0.598455L3.6527 6.39223C3.80626 6.66096 4.19374 6.66096 4.3473 6.39223L7.65803 0.598456C7.8104 0.331793 7.61786 0 7.31073 0Z" fill="#2466F6"/>
                 </svg><br>
                 <span class="t-15px">Where are you going</span></div>
-            <div class="item_search"><span class="t-16px">Check in — Check out</span>
+            <div class="item_search"><span class="t-16px font-weight-bold">Check in — Check out</span>
                 <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.31073 0H0.689272C0.382143 0 0.189596 0.331793 0.341974 0.598455L3.6527 6.39223C3.80626 6.66096 4.19374 6.66096 4.3473 6.39223L7.65803 0.598456C7.8104 0.331793 7.61786 0 7.31073 0Z" fill="#2466F6"/>
                 </svg><br>
                 <span class="t-15px">Add travel dates</span></div>
-            <div class="item_search"><span class="t-16px">Price from — to</span>
+            <div class="item_search"><span class="t-16px font-weight-bold">Price from — to</span>
                 <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.31073 0H0.689272C0.382143 0 0.189596 0.331793 0.341974 0.598455L3.6527 6.39223C3.80626 6.66096 4.19374 6.66096 4.3473 6.39223L7.65803 0.598456C7.8104 0.331793 7.61786 0 7.31073 0Z" fill="#2466F6"/>
                 </svg><br>
                 <span class="t-15px">Type in rent amount</span></div>
-            <div class="item_search"><span class="t-16px">Team</span>
+            <div class="item_search"><span class="t-16px font-weight-bold">Team</span>
                 <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.31073 0H0.689272C0.382143 0 0.189596 0.331793 0.341974 0.598455L3.6527 6.39223C3.80626 6.66096 4.19374 6.66096 4.3473 6.39223L7.65803 0.598456C7.8104 0.331793 7.61786 0 7.31073 0Z" fill="#2466F6"/>
                 </svg><br>
