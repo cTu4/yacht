@@ -43,3 +43,29 @@ msgstr "Hosts community"
 msgctxt "Languages::saved"
 msgid "saved"
 msgstr "Saved"
+
+msgctxt "Languages::Sailboats"
+msgid "Sailboats"
+msgstr "Sailboats"
+
+msgctxt "Languages:less"
+msgid "less"
+msgstr "less"
+
+msgctxt "Languages:with"
+msgid "with"
+msgstr "with"
+
+msgctxt "Languages:in"
+msgid "in"
+msgstr "in"
+
+msgctxt "Languages:beths"
+msgid "beths"
+msgstr "beths"
+
+
+
+
+
+
