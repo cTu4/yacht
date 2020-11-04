@@ -77,23 +77,23 @@ msgctxt "Languages::Catamarans"
 msgid "Catamarans"
 msgstr "Catamarans"
 
-msgctxt "Languages:less"
+msgctxt "Languages::less"
 msgid "less"
 msgstr "less"
 
-msgctxt "Languages:with"
+msgctxt "Languages::with"
 msgid "with"
 msgstr "with"
 
-msgctxt "Languages:in"
+msgctxt "Languages::in"
 msgid "in"
 msgstr "in"
 
-msgctxt "Languages:beths"
+msgctxt "Languages::beths"
 msgid "beths"
 msgstr "beths"
 
-msgctxt "Languages:Greece"
+msgctxt "Languages::Greece"
 msgid "Greece"
 msgstr "Greece"
 

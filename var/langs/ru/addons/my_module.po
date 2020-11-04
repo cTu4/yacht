@@ -60,7 +60,7 @@ msgctxt "Languages::saved"
 msgid "saved"
 msgstr "Сохраненных"
 
-msgctxt "Languages:Greece"
+msgctxt "Languages::Greece"
 msgid "Greece"
 msgstr "Греция"
 

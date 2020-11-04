@@ -311,6 +311,7 @@ line-height: 16px;
 opacity: 0.6;
 }
 .under ul li{
+  white-space: nowrap;
 margin: 0 3px;
 }
 .under ul li a{
@@ -404,13 +405,13 @@ fill: #1DD1B9;
 .btn-blue:hover{
   color:#fff!important;
 }
-.btn-search:hover{
+.btn-search:hover, .item_preset:hover{
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.16);
 }
 
 // PRESETS
 .presets{
-  margin: 0 70px;
+  margin: 30px 70px;
 }
 .item_preset{
   height: 80px;
@@ -420,6 +421,10 @@ fill: #1DD1B9;
   border-radius: 12px;
   color: #fff;
   position: relative;
+  cursor: pointer;
+}
+.item_preset:hover{
+  color:#fff!important;
 }
 .item_preset:not(:last-child){
   flex:1;
