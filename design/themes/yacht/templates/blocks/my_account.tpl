@@ -8,7 +8,7 @@
     </a>
 {/capture}
 
-<div id="account_info_{$block.snapping_id}">
+<div id="account_info_{$block.snapping_id}" >
     {assign var="return_current_url" value=$config.current_url|escape:url}
     <ul class="ty-account-info">
         {hook name="profiles:my_account_menu"}
