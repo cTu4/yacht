@@ -5,6 +5,12 @@ my_module
 .tygh-top-panel *{
 font-size: unset!important;
 }
+.t-white{
+  color:#fff;
+}
+.margin_center{
+  margin: 30px 80px;
+}
 .pointer{
   cursor: pointer;
 }
@@ -48,6 +54,11 @@ letter-spacing: -1.5px;
 font-size: 15px;
 line-height: 20px;
 letter-spacing: -0.3px;
+}
+.t-14px{
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.1px;
 }
 .t-12px{
 font-size: 12px;
@@ -122,7 +133,7 @@ letter-spacing: -0.1px;
 .right{
 padding: 0!important;
 }
-.right > div{
+.header .right > div{
 margin: 0 10px;
 }
 .weather{
@@ -346,6 +357,20 @@ cursor:pointer;
 .under svg:hover{
 fill: #1DD1B9;
 }
+// mini_search
+.search_mini{
+  background: #1DD1B9;
+  height: 64px;
+  border-radius: 12px;
+  text-align:center ;
+  position: relative;
+  padding: 20px;
+}
+.arrow-bottom{
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
 // SEARCH
 .search{
   background: #1DD1B9;
@@ -414,9 +439,7 @@ fill: #1DD1B9;
 }
 
 // PRESETS
-.presets{
-  margin: 30px 70px;
-}
+
 .item_preset{
   height: 80px;
   margin: 0 10px;
@@ -451,13 +474,71 @@ fill: #1DD1B9;
   border-radius: 12px;
   padding: 30px 25px;
 }
+.banner .left div:first-child{
+  margin-bottom: 20px;
+}
 .banner a{
   text-decoration: underline;
   margin-right: 10px;
 }
+.banner .right div{
+  text-align: center;
+}
 .btn-banner{
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.16);
   border-radius: 8px;
+  padding: 20px;
+  margin: 0 10px;
+}
+
+// safety banner
+.safety_banner{
+  background: #B1F6A0;
+  border-radius: 12px;
+  padding: 25px 25px 0 25px;
+}
+.safety_banner >div{
+  width: 70%;
+}
+.safety_banner span{
+  margin-bottom: 10px;
+}
+.safety_banner a{
+  margin: 10px 0 20px 0;
+  text-decoration: underline;
+}
+.safety_banner img{
+  margin: 30px 40px 0 0;
+}
+
+// calm_banner
+.calm_banner{
+  background: #000000;
+  height: 196px;
+}
+.calm_banner .left{
+  width: 50%;
+}
+.calm_banner .right{
+  position: relative;
+  width: 45%;
+}
+.calm_banner .right .palm_1{
+  position: absolute;
+  left:0;
+  bottom:-20%;
+  transform: rotate(-210deg) scale(0.7);
+}
+.calm_banner .right .palm_2{
+  position: absolute;
+  left:35%;
+  bottom: 0;
+  transform: scale(0.9);
+}
+.calm_banner .right .palm_3{
+  position: absolute;
+  right: 0;
+  transform: rotate(-235deg);
 }
 @media (max-width: 1240px) {
 .header-nav a{

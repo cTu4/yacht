@@ -1,6 +1,6 @@
 {** block-description:tmpl_search **}
 {script src="js/addons/my_module/script.js"}
-<div class="search d-flex flex-column">
+<div class="search margin_center d-flex flex-column">
 
 
     <span class="t-32px font-weight-600">The ideal boat will be found anywhere in the world.<br/>
