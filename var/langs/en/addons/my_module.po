@@ -12,6 +12,18 @@ msgctxt "Addons::description::my_module"
 msgid "my_module"
 msgstr "A dummy add-on for easier hook design editing"
 
+msgctxt "Languages::slider_category"
+msgid "slider_category"
+msgstr "Slider for category"
+
+msgctxt "Languages::block_slider_category"
+msgid "slider_category"
+msgstr "Slider for category"
+
+msgctxt "Languages::block_slider_category_description"
+msgid "slider_category"
+msgstr "Slider for other category"
+
 msgctxt "Languages::covid"
 msgid "covid"
 msgstr "Get the latest on our COVID-19 response"

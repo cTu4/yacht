@@ -19,7 +19,6 @@
                     {__('add_boat')}
                 </a>
             </div>
-
             {include file="blocks/currencies.tpl" format="name"}
 
             {include file="blocks/languages.tpl" display_icon=true}
