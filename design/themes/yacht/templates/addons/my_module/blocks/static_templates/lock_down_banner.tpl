@@ -1,3 +1,5 @@
+{include file='addons/my_module/blocks/sliders/slider_category.tpl'}
+
 <div class="banner margin_center d-flex justify-content-between">
     <div class="left d-flex flex-column justify-content-between">
         <div class="font-weight-600 t-32px">Waiting for world openning?
@@ -19,4 +21,3 @@
         <div class="btn-banner btn-white pointer t-16px font-weight-700">Tell me about new openned countries</div>
     </div>
 </div>
-{include file='addons/my_module/blocks/sliders/slider_category.tpl'}
