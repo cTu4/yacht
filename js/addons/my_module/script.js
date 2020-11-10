@@ -71,4 +71,62 @@
         $('.info_slider_3').html(`${event.page.index+1} of ${event.page.count} pages`);
     }
 
+    $('.owl-carousel-4').owlCarousel({
+        loop:true,
+        items: 2,
+        margin:10,
+        nav:false,
+        slideBy: 2,
+        mouseDrag: false,
+        onTranslated: callback_4
+    });
+    $('.next_4').on('click',function (){
+        $('.owl-carousel-4').trigger('next.owl.carousel');
+    });
+    $('.prev_4').on('click',function (){
+        $('.owl-carousel-4').trigger('prev.owl.carousel');
+    });
+    function callback_4(event) {
+        $('.info_slider_4').html(`${event.page.index+1} of ${event.page.count} pages`);
+    }
+
+
+    $('.owl-carousel-5').owlCarousel({
+        loop:true,
+        items: 4,
+        margin:10,
+        nav:false,
+        slideBy: 4,
+        mouseDrag: false,
+        onTranslated: callback_5
+    });
+    $('.next_5').on('click',function (){
+        $('.owl-carousel-5').trigger('next.owl.carousel');
+    });
+    $('.prev_5').on('click',function (){
+        $('.owl-carousel-5').trigger('prev.owl.carousel');
+    });
+    function callback_5(event) {
+        $('.info_slider_5').html(`${event.page.index+1} of ${event.page.count} pages`);
+    }
+
+    $('.owl-carousel-6').owlCarousel({
+        loop:true,
+        items: 4,
+        margin:10,
+        nav:false,
+        slideBy: 4,
+        mouseDrag: false,
+        onTranslated: callback_6
+    });
+    $('.next_6').on('click',function (){
+        $('.owl-carousel-6').trigger('next.owl.carousel');
+    });
+    $('.prev_6').on('click',function (){
+        $('.owl-carousel-6').trigger('prev.owl.carousel');
+    });
+    function callback_6(event) {
+        $('.info_slider_6').html(`${event.page.index+1} of ${event.page.count} pages`);
+    }
+
 }(Tygh, Tygh.$));
