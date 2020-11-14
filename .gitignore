@@ -3,6 +3,7 @@
 /app/addons/*
 !/app/addons/my_module
 
+
 /images/*
 !/images/my_module
 
@@ -34,6 +35,6 @@
 !/js/addons/my_module
 
 /var/*
-!/var/langs
+!/var/langs/*
 
 /.idea/**
