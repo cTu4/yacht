@@ -11,8 +11,8 @@
             add `single_cabins` int(2),
             add `double_sleep_place` int(2),
             add `single_sleep_place` int(2),
-            add `shower` tinyint(1),
-            add `kitchen` tinyint(1)
+            add `shower` varchar(1),
+            add `kitchen` varchar(1)
         </item>
         <item for="uninstall">
             alter table `?:products`

@@ -64,4 +64,28 @@ msgctxt "Languages::Greece"
 msgid "Greece"
 msgstr "Греция"
 
+msgctxt "Languages::quantity_double_cabins"
+msgid "quantity_double_cabins"
+msgstr "Количество кают для двоих"
+
+msgctxt "Languages::quantity_single_cabins"
+msgid "quantity_single_cabins"
+msgstr "Количество кают для одного"
+
+msgctxt "Languages::quantity_double_sleep_places"
+msgid "quantity_double_sleep_places"
+msgstr "Количество спальных месть для двоих"
+
+msgctxt "Languages::quantity_single_sleep_places"
+msgid "quantity_single_sleep_places"
+msgstr "Количество спальных месть для одного"
+
+msgctxt "Languages::availability_shower"
+msgid "availability_shower"
+msgstr "Наличие душа"
+
+msgctxt "Languages::availability_kitchen"
+msgid "availability_kitchen"
+msgstr "Наличие кухни"
+
 
