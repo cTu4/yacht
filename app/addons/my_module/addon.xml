@@ -4,4 +4,24 @@
     <version>1.0</version>
     <status>active</status>
     <default_language>en</default_language>
+    <queries>
+        <item for="install">
+            alter table `?:products`
+            add `double_cabins` int(2),
+            add `single_cabins` int(2),
+            add `double_sleep_place` int(2),
+            add `single_sleep_place` int(2),
+            add `shower` tinyint(1),
+            add `kitchen` tinyint(1)
+        </item>
+        <item for="uninstall">
+            alter table `?:products`
+            drop `double_cabins`,
+            drop `single_cabins`,
+            drop `double_sleep_place`,
+            drop `single_sleep_place`,
+            drop `shower`,
+            drop `kitchen`
+        </item>
+    </queries>
 </addon>
