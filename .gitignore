@@ -24,6 +24,16 @@
 /upgrades
 
 /design/*
+!/design/backend
+/design/backend/*
+!/design/backend/templates
+/design/backend/templates/*
+!/design/backend/templates/addons
+/design/backend/templates/addons/*
+!/design/backend/templates/addons/my_module
+
+
+
 !/design/themes
 /design/themes/*
 !/design/themes/yacht
