@@ -133,6 +133,79 @@ msgctxt "Languages::availability_kitchen"
 msgid "availability_kitchen"
 msgstr "Availability of kitchen"
 
+msgctxt "Languages::cabins"
+msgid "cabins"
+msgstr "Cabins"
+
+msgctxt "Languages::double"
+msgid "double"
+msgstr "double"
+
+msgctxt "Languages::single"
+msgid "single"
+msgstr "single"
+
+msgctxt "Languages::sleeping_places"
+msgid "sleeping_places"
+msgstr "Sleeping places"
+
+msgctxt "Languages::beds"
+msgid "beds"
+msgstr "beds"
+
+msgctxt "Languages::double_bed"
+msgid "double_bed"
+msgstr "double"
+
+msgctxt "Languages::single_bed"
+msgid "single_bed"
+msgstr "single"
+
+msgctxt "Languages::shower"
+msgid "shower"
+msgstr "Shower"
+
+msgctxt "Languages::cold"
+msgid "cold"
+msgstr "cold"
+
+msgctxt "Languages::hot"
+msgid "hot"
+msgstr "hot"
+
+msgctxt "Languages::water"
+msgid "water"
+msgstr "water"
+
+msgctxt "Languages::shower_text"
+msgid "shower_text"
+msgstr "Cold and hot water"
+
+msgctxt "Languages::kitchen"
+msgid "kitchen"
+msgstr "Kitchen"
+
+msgctxt "Languages::kitchen_text"
+msgid "kitchen_text"
+msgstr "You can cook yourself"
+
+msgctxt "Languages::add2favorite"
+msgid "add2favorite"
+msgstr "Add to favorites"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

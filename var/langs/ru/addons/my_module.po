@@ -74,11 +74,11 @@ msgstr "Количество кают для одного"
 
 msgctxt "Languages::quantity_double_sleep_places"
 msgid "quantity_double_sleep_places"
-msgstr "Количество спальных месть для двоих"
+msgstr "Количество спальных мест для двоих"
 
 msgctxt "Languages::quantity_single_sleep_places"
 msgid "quantity_single_sleep_places"
-msgstr "Количество спальных месть для одного"
+msgstr "Количество спальных мест для одного"
 
 msgctxt "Languages::availability_shower"
 msgid "availability_shower"
@@ -87,5 +87,65 @@ msgstr "Наличие душа"
 msgctxt "Languages::availability_kitchen"
 msgid "availability_kitchen"
 msgstr "Наличие кухни"
+
+msgctxt "Languages::cabins"
+msgid "cabins"
+msgstr "Каюты"
+
+msgctxt "Languages::double"
+msgid "double"
+msgstr "для двоих"
+
+msgctxt "Languages::single"
+msgid "single"
+msgstr "для одного"
+
+msgctxt "Languages::sleeping_places"
+msgid "sleeping_places"
+msgstr "Спальные места"
+
+msgctxt "Languages::beds"
+msgid "beds"
+msgstr "кроватей"
+
+msgctxt "Languages::double_bed"
+msgid "double_bed"
+msgstr "двуспальных"
+
+msgctxt "Languages::single_bed"
+msgid "single_bed"
+msgstr "односпальных"
+
+msgctxt "Languages::shower"
+msgid "shower"
+msgstr "Душ"
+
+msgctxt "Languages::cold"
+msgid "cold"
+msgstr "холодная"
+
+msgctxt "Languages::hot"
+msgid "hot"
+msgstr "горячая"
+
+msgctxt "Languages::water"
+msgid "water"
+msgstr "вода"
+
+msgctxt "Languages::shower_text"
+msgid "shower_text"
+msgstr "Холодная и горячая вода"
+
+msgctxt "Languages::kitchen"
+msgid "kitchen"
+msgstr "Кухня"
+
+msgctxt "Languages::kitchen_text"
+msgid "kitchen_text"
+msgstr "Вы можете готовить сами"
+
+msgctxt "Languages::add2favorite"
+msgid "add2favorite"
+msgstr "Добавить в избранное"
 
 
