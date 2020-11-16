@@ -148,4 +148,36 @@ msgctxt "Languages::add2favorite"
 msgid "add2favorite"
 msgstr "Добавить в избранное"
 
+msgctxt "Languages::boat_options"
+msgid "boat_options"
+msgstr "Удобства и возможности"
+
+msgctxt "Languages::bath_accessories"
+msgid "bath_accessories"
+msgstr "Банные акксесуары"
+
+msgctxt "Languages::dishes"
+msgid "dishes"
+msgstr "Питание"
+
+msgctxt "Languages::cinema"
+msgid "cinema"
+msgstr "Кинотеатр"
+
+msgctxt "Languages::pool"
+msgid "pool"
+msgstr "Бассейн"
+
+msgctxt "Languages::bar"
+msgid "bar"
+msgstr "Минибар"
+
+msgctxt "Languages::pets"
+msgid "pets"
+msgstr "Животные"
+
+msgctxt "Languages::washer"
+msgid "washer"
+msgstr "Стиральная машина"
+
 

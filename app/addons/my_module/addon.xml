@@ -12,7 +12,15 @@
             add `double_sleep_place` int(2),
             add `single_sleep_place` int(2),
             add `shower` varchar(1),
-            add `kitchen` varchar(1)
+            add `kitchen` varchar(1),
+            add `wi_fi` varchar(1),
+            add `bath_accessories` varchar(1),
+            add `dishes` varchar(1),
+            add `cinema` varchar(1),
+            add `pool` varchar(1),
+            add `bar` varchar(1),
+            add `pets` varchar(1),
+            add `washer` varchar(1)
         </item>
         <item for="uninstall">
             alter table `?:products`
@@ -21,7 +29,15 @@
             drop `double_sleep_place`,
             drop `single_sleep_place`,
             drop `shower`,
-            drop `kitchen`
+            drop `kitchen`,
+            drop `wi_fi`,
+            drop `bath_accessories`,
+            drop `dishes`,
+            drop `cinema`,
+            drop `pool`,
+            drop `bar`,
+            drop `pets`,
+            drop `washer`
         </item>
     </queries>
 </addon>

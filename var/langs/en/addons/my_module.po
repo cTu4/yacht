@@ -193,6 +193,38 @@ msgctxt "Languages::add2favorite"
 msgid "add2favorite"
 msgstr "Add to favorites"
 
+msgctxt "Languages::boat_options"
+msgid "boat_options"
+msgstr "Amenities and options"
+
+msgctxt "Languages::bath_accessories"
+msgid "bath_accessories"
+msgstr "Bath accessories"
+
+msgctxt "Languages::dishes"
+msgid "dishes"
+msgstr "Dishes"
+
+msgctxt "Languages::cinema"
+msgid "cinema"
+msgstr "Cinema"
+
+msgctxt "Languages::pool"
+msgid "pool"
+msgstr "Swimming pool"
+
+msgctxt "Languages::bar"
+msgid "bar"
+msgstr "Mini bar"
+
+msgctxt "Languages::pets"
+msgid "pets"
+msgstr "Pets"
+
+msgctxt "Languages::washer"
+msgid "washer"
+msgstr "Washer"
+
 
 
 

@@ -282,6 +282,11 @@ margin: 40px 0;
 }
 .bot-br{
 border-bottom: 0.5px solid rgba(0,0,0,0.1);
+
+}
+.bot-br-3{
+  padding-bottom: 40px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.3);
 }
 .wrap-sup ul{
 width: 30%;
@@ -845,14 +850,17 @@ fill: #1DD1B9;
   grid-row-end: 3;
   position: relative;
 }
+.content .info > div{
+  margin-bottom: 40px;
+}
 .detailed .title{
   margin-bottom: 40px;
 }
 .detailed .info .title > div{
   margin-bottom: 15px;
 }
-.rating .t-blue{
-  margin-left: 20px;
+.rating > span{
+  margin-right: 20px;
 }
 .detailed a{
   text-decoration: underline;
@@ -864,7 +872,11 @@ fill: #1DD1B9;
   background: #F2F4FA;
 }
 .detailed .cards-info{
-  margin: -5px;
+  margin: -5px -5px 40px -5px;
+}
+
+.detailed .full_desc{
+  line-height: 25px;
 }
 .detailed .cards-info .card{
   border: 1px solid rgba(143, 156, 184, 0.3);
@@ -882,6 +894,32 @@ fill: #1DD1B9;
   right:15px;
 }
 
+.detailed .host .icon{
+  min-width: 80px;
+  margin-left: 50px;
+}
+
+.detailed .host .text > div{
+  margin-bottom: 15px;
+}
+
+
+.title_options{
+  margin: 40px 0 20px 0
+}
+
+.boat_options .option{
+  width: 33.33%;
+  margin: 15px 0;
+}
+.boat_options .option > span{
+  opacity: 0.6;
+}
+
+
+
+
+
 
 .ty-breadcrumbs svg{
   margin-right: 10px;
@@ -893,6 +931,7 @@ fill: #1DD1B9;
 .option{
   min-width: 240px;
 }
+
 @media (max-width: 1240px) {
 .header-nav a{
 font-size: 15px!important;
