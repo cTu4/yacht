@@ -50,6 +50,7 @@
     <div class="control-group">
         <label class="control-label" for="wi_fi">Wi-Fi:</label>
         <div class="controls">
+            <input type="hidden" name="product_data[wi_fi]" value="N" />
             <input type="checkbox" name="product_data[wi_fi]" id="wi_fi" value="Y" {if $product_data.wi_fi == "Y" }checked="checked"{/if}>
         </div>
     </div>
@@ -58,6 +59,7 @@
     <div class="control-group">
         <label class="control-label" for="bath_accessories">{__("bath_accessories")}:</label>
         <div class="controls">
+            <input type="hidden" name="product_data[bath_accessories]" value="N" />
             <input type="checkbox" name="product_data[bath_accessories]" id="bath_accessories" value="Y" {if $product_data.bath_accessories == "Y" }checked="checked"{/if}>
         </div>
     </div>
@@ -66,6 +68,7 @@
     <div class="control-group">
         <label class="control-label" for="dishes">{__("dishes")}:</label>
         <div class="controls">
+            <input type="hidden" name="product_data[dishes]" value="N" />
             <input type="checkbox" name="product_data[dishes]" id="dishes" value="Y" {if $product_data.dishes == "Y" }checked="checked"{/if}>
         </div>
     </div>
@@ -74,12 +77,14 @@
     <div class="control-group">
         <label class="control-label" for="bath_accessories">{__("cinema")}:</label>
         <div class="controls">
+            <input type="hidden" name="product_data[cinema]" value="N" />
             <input type="checkbox" name="product_data[cinema]" id="cinema" value="Y" {if $product_data.cinema == "Y" }checked="checked"{/if}>
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="pool">{__("pool")}:</label>
         <div class="controls">
+            <input type="hidden" name="product_data[pool]" value="N" />
             <input type="checkbox" name="product_data[pool]" id="pool" value="Y" {if $product_data.pool == "Y" }checked="checked"{/if}>
         </div>
     </div>
@@ -87,18 +92,21 @@
     <div class="control-group">
         <label class="control-label" for="bar">{__("bar")}:</label>
         <div class="controls">
+            <input type="hidden" name="product_data[bar]" value="N" />
             <input type="checkbox" name="product_data[bar]" id="bar" value="Y" {if $product_data.bar == "Y" }checked="checked"{/if}>
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="bath_accessories">{__("pets")}:</label>
         <div class="controls">
+            <input type="hidden" name="product_data[pets]" value="N" />
             <input type="checkbox" name="product_data[pets]" id="pets" value="Y" {if $product_data.pets == "Y" }checked="checked"{/if}>
         </div>
     </div>
     <div class="control-group">
         <label class="control-label" for="washer">{__("washer")}:</label>
         <div class="controls">
+            <input type="hidden" name="product_data[washer]" value="N" />
             <input type="checkbox" name="product_data[washer]" id="washer" value="Y" {if $product_data.washer == "Y" }checked="checked"{/if}>
         </div>
     </div>

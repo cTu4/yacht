@@ -174,10 +174,14 @@ msgstr "Минибар"
 
 msgctxt "Languages::pets"
 msgid "pets"
-msgstr "Животные"
+msgstr "Можно с животными"
 
 msgctxt "Languages::washer"
 msgid "washer"
 msgstr "Стиральная машина"
+
+msgctxt "Languages::share"
+msgid "share"
+msgstr "Поделиться"
 
 

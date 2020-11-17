@@ -219,7 +219,7 @@ msgstr "Mini bar"
 
 msgctxt "Languages::pets"
 msgid "pets"
-msgstr "Pets"
+msgstr "Pets allowed"
 
 msgctxt "Languages::washer"
 msgid "washer"
