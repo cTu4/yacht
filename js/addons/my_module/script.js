@@ -129,4 +129,20 @@
         $('.info_slider_6').html(`${event.page.index+1} of ${event.page.count} pages`);
     }
 
+    $(document).ready(function() {
+        $('.owl-carousel-search').each(function (slider){
+            $(this).owlCarousel({
+                loop:true,
+                items: 1,
+                nav:false,
+                mouseDrag: true,
+                dots:true
+            });
+        });
+    });
+
+
+
+
+
 }(Tygh, Tygh.$));

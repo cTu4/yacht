@@ -33,6 +33,14 @@
         </div>
     </div>
 
+    <div class="control-group {$no_hide_input_if_shared_product}">
+        <label for="product_quantity_baths" class="control-label ">{__("quantity_baths")}:</label>
+        <div class="controls">
+            <input class="input-large" form="form" type="text" name="product_data[baths]" id="product_quantity_baths" size="55" value="{$product_data.baths}" />
+            {include file="buttons/update_for_all.tpl" display=$show_update_for_all object_id="product" name="update_all_vendors[baths]"}
+        </div>
+    </div>
+
     <div class="control-group">
         <label class="control-label" for="availability_shower">{__("availability_shower")}:</label>
         <div class="controls">
@@ -108,6 +116,29 @@
         <div class="controls">
             <input type="hidden" name="product_data[washer]" value="N" />
             <input type="checkbox" name="product_data[washer]" id="washer" value="Y" {if $product_data.washer == "Y" }checked="checked"{/if}>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="checked">{__("checked")}:</label>
+        <div class="controls">
+            <input type="hidden" name="product_data[checked]" value="N" />
+            <input type="checkbox" name="product_data[checked]" id="checked" value="Y" {if $product_data.checked == "Y" }checked="checked"{/if}>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="plus">{__("plus")}:</label>
+        <div class="controls">
+            <input type="hidden" name="product_data[plus]" value="N" />
+            <input type="checkbox" name="product_data[plus]" id="plus" value="Y" {if $product_data.plus == "Y" }checked="checked"{/if}>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label" for="lux">{__("lux")}:</label>
+        <div class="controls">
+            <input type="hidden" name="product_data[lux]" value="N" />
+            <input type="checkbox" name="product_data[lux]" id="lux" value="Y" {if $product_data.lux == "Y" }checked="checked"{/if}>
         </div>
     </div>
 </div>

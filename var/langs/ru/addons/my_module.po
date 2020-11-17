@@ -80,6 +80,10 @@ msgctxt "Languages::quantity_single_sleep_places"
 msgid "quantity_single_sleep_places"
 msgstr "Количество спальных мест для одного"
 
+msgctxt "Languages::quantity_baths"
+msgid "quantity_baths"
+msgstr "Количество ванных комнат"
+
 msgctxt "Languages::availability_shower"
 msgid "availability_shower"
 msgstr "Наличие душа"
@@ -180,8 +184,51 @@ msgctxt "Languages::washer"
 msgid "washer"
 msgstr "Стиральная машина"
 
+msgctxt "Languages::checked"
+msgid "checked"
+msgstr "Проверено"
+
+msgctxt "Languages::plus"
+msgid "plus"
+msgstr "Плюс"
+
+msgctxt "Languages::lux"
+msgid "lux"
+msgstr "Люкс"
+
 msgctxt "Languages::share"
 msgid "share"
 msgstr "Поделиться"
 
+msgctxt "Languages::result_for"
+msgid "result_for"
+msgstr "Совпадений для"
+
+msgctxt "Languages::select_date"
+msgid "select_date"
+msgstr "Выбрать дату"
+
+msgctxt "Languages::add_vacation"
+msgid "add_vacation"
+msgstr "Выбрать место"
+
+msgctxt "Languages::price_range"
+msgid "price_range"
+msgstr "Ценовой диапозон"
+
+msgctxt "Languages::see_all_filters"
+msgid "see_all_filters"
+msgstr "Все фильтры"
+
+msgctxt "Languages::show_on_map"
+msgid "show_on_map"
+msgstr "Показать на карте"
+
+msgctxt "Languages::berths"
+msgid "berths"
+msgstr "спальных мест"
+
+msgctxt "Languages::baths"
+msgid "baths"
+msgstr "ванных комнат"
 

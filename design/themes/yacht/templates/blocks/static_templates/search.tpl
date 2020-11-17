@@ -23,9 +23,9 @@
             {/if}
             <input type="text" name="q" value="{$search.q}" id="search_input{$smarty.capture.search_input_id}" title="{$search_title}" class="ty-search-block__input cm-hint" />
             {if $settings.General.search_objects}
-                {include file="buttons/magnifier.tpl" but_name="search.results" alt=__("search")}
+                <input type="hidden" name="dispatch" value="search.results" />
             {else}
-                {include file="buttons/magnifier.tpl" but_name="products.search" alt=__("search")}
+                <input type="hidden" name="dispatch" value="products.search" />
             {/if}
         {/strip}
         {capture name="search_input_id"}{$block.snapping_id}{/capture}

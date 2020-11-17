@@ -125,6 +125,10 @@ msgctxt "Languages::quantity_single_sleep_places"
 msgid "quantity_single_sleep_places"
 msgstr "Quantity of single sleeping places"
 
+msgctxt "Languages::quantity_baths"
+msgid "quantity_baths"
+msgstr "Quantity of baths"
+
 msgctxt "Languages::availability_shower"
 msgid "availability_shower"
 msgstr "Availability of shower"
@@ -224,6 +228,51 @@ msgstr "Pets allowed"
 msgctxt "Languages::washer"
 msgid "washer"
 msgstr "Washer"
+
+msgctxt "Languages::checked"
+msgid "checked"
+msgstr "Checked"
+
+msgctxt "Languages::plus"
+msgid "plus"
+msgstr "Plus"
+
+msgctxt "Languages::lux"
+msgid "lux"
+msgstr "Lux"
+
+msgctxt "Languages::result_for"
+msgid "result_for"
+msgstr "Results for"
+
+msgctxt "Languages::select_date"
+msgid "select_date"
+msgstr "Select Dated"
+
+msgctxt "Languages::add_vacation"
+msgid "add_vacation"
+msgstr "Add Vacations"
+
+msgctxt "Languages::price_range"
+msgid "price_range"
+msgstr "Select Price Range"
+
+msgctxt "Languages::see_all_filters"
+msgid "see_all_filters"
+msgstr "See All Filters"
+
+msgctxt "Languages::show_on_map"
+msgid "show_on_map"
+msgstr "Show on map"
+
+msgctxt "Languages::berths"
+msgid "berths"
+msgstr "berths"
+
+msgctxt "Languages::baths"
+msgid "baths"
+msgstr "baths"
+
 
 
 
