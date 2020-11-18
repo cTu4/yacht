@@ -253,6 +253,7 @@ msgctxt "Languages::add_vacation"
 msgid "add_vacation"
 msgstr "Add Vacations"
 
+
 msgctxt "Languages::price_range"
 msgid "price_range"
 msgstr "Select Price Range"
@@ -273,7 +274,9 @@ msgctxt "Languages::baths"
 msgid "baths"
 msgstr "baths"
 
-
+msgctxt "Languages::share"
+msgid "share"
+msgstr "Share"
 
 
 

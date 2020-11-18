@@ -128,21 +128,20 @@
     function callback_6(event) {
         $('.info_slider_6').html(`${event.page.index+1} of ${event.page.count} pages`);
     }
+}(Tygh, Tygh.$));
 
-    $(document).ready(function() {
+(function(_, $) {
+    $.ceEvent('on', 'ce.commoninit', function (context) {
+
         $('.owl-carousel-search').each(function (slider){
             $(this).owlCarousel({
-                loop:true,
+                loop:false,
                 items: 1,
                 nav:false,
                 mouseDrag: true,
-                dots:true
+                dots:true,
+                lazyLoad: true
             });
         });
     });
-
-
-
-
-
-}(Tygh, Tygh.$));
+})(Tygh, Tygh.$);

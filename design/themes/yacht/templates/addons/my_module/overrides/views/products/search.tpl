@@ -1,3 +1,5 @@
+{include file="common/pagination.tpl"}
+{*{script src="js/addons/my_module/script.js"}*}
 <div class="margin_center">
     <div class="info-search-result bot-br-3">
         <div class="title t-28px font-weight-bold">
@@ -49,9 +51,11 @@
                 </div>
                 <div class="owl-carousel owl-carousel-search owl-theme">
                     <img src="{$product.main_pair.detailed.image_path}">
-                    {foreach from=$product.image_pairs item="image" name="foo"}
-                        <img src="{$image.detailed.image_path}">
-                    {/foreach}
+                    {if $product.image_pairs}
+                        {foreach from=$product.image_pairs item="image" name="foo"}
+                            <img src="{$image.detailed.image_path}">
+                        {/foreach}
+                    {/if}
                 </div>
 
                 <div class="title d-flex flex-column pointer">
@@ -67,13 +71,15 @@
                             {$product.double_sleep_place + $product.single_sleep_place} {__('berths')},
                             {$product.baths} {__('baths')}</div>
                         <div>
-                            <span class="t-18px font-weight-bold">₽{$product.price|number_format:0:",":" "}</span> <span class="t-18px">/ {__('day')}</span>
+                            <span class="t-18px font-weight-bold" >{include file="common/price.tpl" value=$product.price span_id="discounted_price_`$obj_prefix``$obj_id`" class="ty-price-num" live_editor_name="product:price:{$product.product_id}" live_editor_phrase=$product.base_price}</span> <span class="t-18px">/ {__('day')}</span>
                         </div>
 
                 </div>
             </div>
         {/foreach}
     </div>
+
+    {include file="common/pagination.tpl"}
 </div>
 
 
