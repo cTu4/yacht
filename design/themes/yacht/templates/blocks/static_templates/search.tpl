@@ -15,7 +15,7 @@
         <input type="hidden" name="pname" value="Y" />
         <input type="hidden" name="pkeywords" value="Y" />
         <input type="hidden" name="search_performed" value="Y" />
-        <input type="hidden" name="items_per_page" value="12" />
+        <input type="hidden" name="items_per_page" value="16" />
         {strip}
             {if $settings.General.search_objects}
                 {assign var="search_title" value=__("search")}
