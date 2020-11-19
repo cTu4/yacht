@@ -232,3 +232,70 @@ msgctxt "Languages::baths"
 msgid "baths"
 msgstr "ванных комнат"
 
+msgctxt "Languages::need_captain"
+msgid "need_captain"
+msgstr "Нужен капитан"
+
+msgctxt "Languages::captain_fee"
+msgid "captain_fee"
+msgstr "Плата капитану"
+
+msgctxt "Languages::additional_services"
+msgid "additional_services"
+msgstr "Дополнительные сервисы"
+
+msgctxt "Languages::select_next_step"
+msgid "select_next_step"
+msgstr "Выберите на следующем шаге"
+
+msgctxt "Languages::deposit"
+msgid "deposit"
+msgstr "Депозит"
+
+msgctxt "Languages::insurance_fee"
+msgid "insurance_fee"
+msgstr "Страховой сбор"
+
+msgctxt "Languages::service_fee"
+msgid "service_fee"
+msgstr "Сервисный сбор"
+
+msgctxt "Languages::total"
+msgid "total"
+msgstr "Сумма"
+
+msgctxt "Languages::select_rent"
+msgid "select_rent"
+msgstr "Выбрать сервисы и Арендовать"
+
+msgctxt "Languages::per_day"
+msgid "per_day"
+msgstr "в день"
+
+msgctxt "Languages::check_in"
+msgid "check_in"
+msgstr "Дата заезда"
+
+msgctxt "Languages::check_out"
+msgid "check_out"
+msgstr "Дата отъезда"
+
+msgctxt "Languages::team"
+msgid "team"
+msgstr "Команда"
+
+msgctxt "Languages::adults"
+msgid "adults"
+msgstr "взрослых"
+
+msgctxt "Languages::adult"
+msgid "adult"
+msgstr "взрослый"
+
+msgctxt "Languages::children"
+msgid "children"
+msgstr "детей"
+
+msgctxt "Languages::child"
+msgid "child"
+msgstr "ребенок"

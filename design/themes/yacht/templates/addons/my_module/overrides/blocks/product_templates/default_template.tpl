@@ -120,9 +120,188 @@
                     pets=$product.pets
                     washer=$product.washer
                 }
+            <div class="weather">
+                <div class="date d-flex justify-content-between">
+                    
+                </div>
+            </div>
         </div>
         <div class="options col-4">
-            a
+            <div class="boat_order">
+                <div class="edit pointer">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.66895 10.332L8.11968 10.0294V10.0294C8.29187 10.0083 8.45206 9.93023 8.57481 9.80764L14.5118 3.87454V3.87454C15.1692 3.21681 15.1692 2.15078 14.5118 1.49305V1.49305C13.8541 0.835651 12.788 0.835651 12.1303 1.49305L6.24856 7.3748V7.3748C6.12944 7.49388 6.05218 7.64841 6.02839 7.81516L5.66895 10.332Z" stroke="#2466F6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M7.9051 1.77368H4.11204C2.39331 1.77368 1 3.16699 1 4.88572V11.8878C1 13.6065 2.39331 14.9999 4.11204 14.9999H11.1141C12.8329 14.9999 14.2262 13.6065 14.2262 11.8878V8.09475" stroke="#2466F6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="t-16px t-blue-a font-weight-600">{__('edit')}</span>
+                </div>
+                <div class="item d-flex">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 13C10.343 13 9 11.657 9 10C9 8.343 10.343 7 12 7C13.657 7 15 8.343 15 10C15 11.657 13.657 13 12 13Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 21C12 21 5 15.25 5 10C5 6.134 8.134 3 12 3C15.866 3 19 6.134 19 10C19 15.25 12 21 12 21Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="title d-flex flex-column">
+                        <div  class="t-15px t-gray-op5">{__('location')}</div>
+                        <div class="t-18px font-weight-600">Barcelona, Spain</div>
+                    </div>
+                </div>
+                <div class="item d-flex">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 7.99609H1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 1.87598V4.12598" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 1.87598V4.12598" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 20H4C2.343 20 1 18.657 1 17V6C1 4.343 2.343 3 4 3H16C17.657 3 19 4.343 19 6V17C19 18.657 17.657 20 16 20Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="title d-flex flex-column">
+                        <div  class="t-15px t-gray-op5">{__('check_in')} — {__('check_out')}</div>
+                        <div class="t-18px font-weight-600">Sep 12, 2020 — Sep 19, 2020</div>
+                    </div>
+                </div>
+                <div class="item d-flex">
+                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 15C1 12.791 2.791 11 5 11H9C11.209 11 13 12.791 13 15" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.47488 2.02513C10.8417 3.39197 10.8417 5.60804 9.47488 6.97488C8.10804 8.34172 5.89197 8.34172 4.52513 6.97488C3.15829 5.60804 3.15829 3.39197 4.52513 2.02513C5.89197 0.65829 8.10804 0.65829 9.47488 2.02513" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 10H18C19.657 10 21 11.343 21 13" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M18.2678 2.73223C19.2441 3.70854 19.2441 5.29145 18.2678 6.26776C17.2915 7.24407 15.7085 7.24407 14.7322 6.26776C13.7559 5.29145 13.7559 3.70854 14.7322 2.73223C15.7085 1.75592 17.2915 1.75592 18.2678 2.73223" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="title d-flex flex-column">
+                        <div  class="t-15px t-gray-op5">{__('team')}</div>
+                        <div class="t-18px font-weight-600">4 {__('adults')}, 2 {__('children')}</div>
+                    </div>
+                </div>
+                <div class="item d-flex">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.494 12C12.666 12.006 12 12.678 12 13.506C12 14.334 12.672 15.006 13.5 15C14.328 15 15 14.328 15 13.5C15 12.672 14.328 12 13.494 12Z" fill="black"/>
+                        <path d="M3 6.283V6C3 4.343 4.343 3 6 3H18C19.657 3 21 4.343 21 6V15C21 16.657 19.657 18 18 18H17" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 9H17" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.325 20.922C15.205 21.356 17 19.928 17 17.999V9.38705C17 7.99005 16.036 6.77805 14.675 6.46405L5.45 4.33505C4.196 4.04505 3 4.99705 3 6.28305V16.152C3 17.549 3.964 18.761 5.325 19.075L13.325 20.922V20.922Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="title d-flex flex-column">
+                        <div  class="t-15px t-gray-op5">{__('price')}</div>
+                        <div class="t-18px font-weight-600">
+                            <div>
+                                    <span class="t-15px font-weight-600">
+                                        € 12 496
+                                    </span>
+                                <span class="t-15px t-gray-op5">
+                                        / € 1435 {__('per_day')}
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_order">
+                <div class="items">
+                    <div class="item d-flex justify-content-between">
+                        <div class="d-flex">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.061 5.43899C11.647 6.02499 11.647 6.97499 11.061 7.55999C10.475 8.14599 9.52499 8.14599 8.93999 7.55999C8.35399 6.97399 8.35399 6.02399 8.93999 5.43899C9.52499 4.85399 10.475 4.85399 11.061 5.43899" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 15V8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6.5 10H5C5 12.761 7.239 15 10 15C12.761 15 15 12.761 15 10H13.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div class="title d-flex flex-column">
+                                <div class="t-18px font-weight-600">{__('need_captain')}</div>
+                                <div class="t-14px t-gray-op5">{__('captain_fee')}</div>
+                                <div>
+                                    <span class="t-15px font-weight-600">
+                                        € 1600
+                                    </span>
+                                    <span class="t-15px t-gray-op5">
+                                        / € 200 {__('per_day')}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="toggle-wrapper">
+                            <div class="toggle normal">
+                                <input id="check_1" class="input_slide" type="checkbox">
+                                <label class="toggle-item" for="check_1"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item d-flex justify-content-between">
+                        <div class="d-flex">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17 3.94H10.529C10.198 3.94 9.888 3.776 9.702 3.502L8.297 1.437C8.111 1.164 7.802 1 7.471 1H3C1.895 1 1 1.895 1 3V15C1 16.105 1.895 17 3 17H17C18.105 17 19 16.105 19 15V5.94C19 4.836 18.105 3.94 17 3.94V3.94Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.99023 7.62V13.12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M7.24023 10.37H12.7402" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div class="title d-flex flex-column">
+                                <div class="t-18px font-weight-600">{__('additional_services')}</div>
+                                <div  class="t-15px t-gray-op5">{__('select_next_step')}</div>
+                            </div>
+                        </div>
+                        <div class="toggle-wrapper">
+                            <div class="toggle normal">
+                                <input id="check_2" class="input_slide" type="checkbox">
+                                <label class="toggle-item" for="check_2"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item d-flex">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 3V3C15.5899 3 18.5 5.91015 18.5 9.5C18.5 13.0898 15.5899 16 12 16C8.41015 16 5.5 13.0898 5.5 9.5V9.5C5.5 5.91015 8.41015 3 12 3C12 3 12 3 12 3" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 16H17" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 7.02389V6.19849" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 11.9763V12.8017" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.5688 11.3869C10.7809 11.7489 11.1678 11.9727 11.5873 11.9762H12.4953C13.1333 11.9921 13.6634 11.4879 13.6794 10.8499C13.6931 10.298 13.3147 9.81347 12.7759 9.6932L11.2291 9.30444C10.6078 9.15886 10.2221 8.53712 10.3676 7.91576C10.4911 7.38886 10.9637 7.01821 11.5048 7.02387H12.4128C12.8327 7.02671 13.2201 7.25067 13.4321 7.6132" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18.0009 12H19V12C20.1046 12 21 12.8954 21 14V19C21 20.1046 20.1046 21 19 21H5V21C3.89543 21 3 20.1046 3 19V14V14C3 12.8954 3.89543 12 5 12H5.99912" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="title d-flex flex-column">
+                                <div  class="t-15px t-gray-op5">{__('deposit')}</div>
+                                <div class="t-18px font-weight-600">€ 600</div>
+                        </div>
+                    </div>
+                    <div class="item d-flex">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 6V14C1 16.761 3.239 19 6 19H14C16.761 19 19 16.761 19 14V6C19 3.239 16.761 1 14 1H6C3.239 1 1 3.239 1 6Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.5 5.642C11.768 5.34 12.231 5 12.937 5C14.172 5 15 6.117 15 7.158C15 9.333 12.192 11 11.5 11C10.808 11 8 9.333 8 7.158C8 6.117 8.828 5 10.063 5C10.769 5 11.232 5.34 11.5 5.642Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div class="title d-flex flex-column">
+                            <div  class="t-15px t-gray-op5">{__('insurance_fee')}</div>
+                            <div class="t-18px font-weight-600">€ 120</div>
+                        </div>
+                    </div>
+                    <div class="item d-flex">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.3291 14.67L14.6691 9.32996" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18.2386 3H5.7614C4.23632 3 3 4.23632 3 5.7614V18.2386C3 19.7637 4.23632 21 5.7614 21H18.2386C19.7637 21 21 19.7637 21 18.2386V5.7614C21 4.23632 19.7637 3 18.2386 3Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="15" cy="15" r="1" fill="black" stroke="black"/>
+                            <circle cx="9" cy="9" r="1" fill="black" stroke="black"/>
+                        </svg>
+                        <div class="title d-flex flex-column">
+                            <div  class="t-15px t-gray-op5">
+                                {__('service_fee')}
+                                <span class="cm-tooltip" title="tooltip text">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 10.5C8.48528 10.5 10.5 8.48528 10.5 6C10.5 3.51472 8.48528 1.5 6 1.5C3.51472 1.5 1.5 3.51472 1.5 6C1.5 8.48528 3.51472 10.5 6 10.5Z" stroke="#2466F6" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4.84277 4.84279V4.84279C4.96124 4.33222 5.42626 3.97822 5.94994 3.99995V3.99995C6.53602 3.96749 7.03846 4.4141 7.07494 4.99995C7.07494 5.75191 5.99994 5.99995 5.99994 6.49995" stroke="#2466F6" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M6.0625 7.875C6.0625 7.90952 6.03452 7.9375 6 7.9375C5.96548 7.9375 5.9375 7.90952 5.9375 7.875C5.9375 7.84048 5.96548 7.8125 6 7.8125" stroke="#2466F6" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M6 7.8125V7.8125C6.03452 7.8125 6.0625 7.84048 6.0625 7.875" stroke="#2466F6" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                </span>
+                            </div>
+                            <div class="t-18px font-weight-600">€ 1482,60</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bot">
+                    <div class="total d-flex justify-content-between">
+                        <span class="t-22px font-weight-500">{__('total')}</span>
+                        <span class="t-22px font-weight-500">€ 15 508,60</span>
+                    </div>
+                    <div class="button pointer t-18px t-white font-weight-600">
+                            {__('select_rent')}
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
         </div>
     </div>
 

@@ -278,6 +278,79 @@ msgctxt "Languages::share"
 msgid "share"
 msgstr "Share"
 
+msgctxt "Languages::need_captain"
+msgid "need_captain"
+msgstr "Need captain"
+
+msgctxt "Languages::captain_fee"
+msgid "captain_fee"
+msgstr "Captain's fee"
+
+msgctxt "Languages::additional_services"
+msgid "additional_services"
+msgstr "Additional services"
+
+msgctxt "Languages::select_next_step"
+msgid "select_next_step"
+msgstr "Select in the next step"
+
+msgctxt "Languages::deposit"
+msgid "deposit"
+msgstr "Deposit"
+
+msgctxt "Languages::insurance_fee"
+msgid "insurance_fee"
+msgstr "Insurance fee"
+
+msgctxt "Languages::service_fee"
+msgid "service_fee"
+msgstr "Service fee"
+
+msgctxt "Languages::total"
+msgid "total"
+msgstr "Total"
+
+msgctxt "Languages::select_rent"
+msgid "select_rent"
+msgstr "Select Services & Rent"
+
+msgctxt "Languages::per_day"
+msgid "per_day"
+msgstr "per day"
+
+msgctxt "Languages::check_in"
+msgid "check_in"
+msgstr "Check in"
+
+msgctxt "Languages::check_out"
+msgid "check_out"
+msgstr "Check out"
+
+msgctxt "Languages::team"
+msgid "team"
+msgstr "Team"
+
+msgctxt "Languages::adults"
+msgid "adults"
+msgstr "adults"
+
+msgctxt "Languages::adult"
+msgid "adult"
+msgstr "adult"
+
+msgctxt "Languages::children"
+msgid "children"
+msgstr "children"
+
+msgctxt "Languages::child"
+msgid "child"
+msgstr "child"
+
+msgctxt "Languages::selected_dates"
+msgid "selected_dates"
+msgstr "Selected dates"
+
+
 
 
 

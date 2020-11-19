@@ -1,4 +1,4 @@
-<div id="breadcrumbs_{$block.block_id}" class=" d-flex justify-content-between">
+<div id="breadcrumbs_{$block.block_id}" class="breadcrumbs d-flex justify-content-between">
 
     {if $breadcrumbs && $breadcrumbs|@sizeof > 1}
         <div class="ty-breadcrumbs clearfix">
@@ -43,4 +43,5 @@
         </div>
     </div>
 
-    <!--breadcrumbs_{$block.block_id}--></div>
+    <!--breadcrumbs_{$block.block_id}-->
+</div>
