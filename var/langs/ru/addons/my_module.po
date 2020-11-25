@@ -299,3 +299,23 @@ msgstr "детей"
 msgctxt "Languages::child"
 msgid "child"
 msgstr "ребенок"
+
+msgctxt "Languages::cleanliness"
+msgid "Cleanliness"
+msgstr "Чистоплотность"
+
+msgctxt "Languages::communication"
+msgid "communication"
+msgstr "Коммуникация"
+
+msgctxt "Languages::check-in"
+msgid "check-in"
+msgstr "Регистрация"
+
+msgctxt "Languages::accuracy"
+msgid "accuracy"
+msgstr "Точность"
+
+msgctxt "Languages::value"
+msgid "value"
+msgstr "Ценность"

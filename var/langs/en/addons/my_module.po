@@ -350,6 +350,32 @@ msgctxt "Languages::selected_dates"
 msgid "selected_dates"
 msgstr "Selected dates"
 
+msgctxt "Languages::cleanliness"
+msgid "Cleanliness"
+msgstr "Cleanliness"
+
+msgctxt "Languages::communication"
+msgid "communication"
+msgstr "Communication"
+
+msgctxt "Languages::check-in"
+msgid "check-in"
+msgstr "Check-in"
+
+msgctxt "Languages::accuracy"
+msgid "accuracy"
+msgstr "Accuracy"
+
+msgctxt "Languages::value"
+msgid "value"
+msgstr "Value"
+
+msgctxt "Languages::like"
+msgid "like"
+msgstr "Like"
+
+
+
 
 
 

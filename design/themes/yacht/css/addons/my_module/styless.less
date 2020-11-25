@@ -19,8 +19,11 @@ font-size: unset!important;
 }
 .t-gray-op5{
   color: #000000;
-
   opacity: 0.5;
+}
+.t-gray-op6{
+  color: #000000;
+  opacity: 0.6;
 }
 .t-green{
   color: #21A300;
@@ -135,6 +138,11 @@ letter-spacing: 1px!important;
   line-height: 12px;
   letter-spacing: -0.1px;
 }
+.t-10px{
+  font-size: 10px;
+  line-height: 14px;
+}
+
 body, .tygh-footer > div{
 background: #fff!important;
 }
@@ -878,10 +886,10 @@ fill: #1DD1B9;
 .detailed{
   margin: 10px 80px;
 }
-.detailed .content .info .title{
+.detailed .content .info > .title{
   margin-bottom: 40px;
 }
-.detailed .info .title > div{
+.detailed .info > .title > div{
   margin-bottom: 15px;
 }
 .rating > span{
@@ -1145,7 +1153,36 @@ label::before {
 .input_slide:checked + label:before {
   left: 13px;
 }
-
+// Reviews
+.discussion .points > div{
+  width: 45%;
+}
+.discussion .points .point > div{
+  width: 40%;
+  margin-bottom: 12px;
+}
+.progress{
+  height: 4px;
+  background: #E7E7E7;
+  border-radius: 60px;
+  margin-right: 10px;
+}
+.progress-bar{
+  background: #000000;
+  border-radius: 60px;
+}
+.discussion .posts .post{
+  width: 30%;
+}
+.discussion .posts .post > div{
+  margin-bottom: 8px;
+}
+.discussion .posts .post .icons > div{
+  margin-right: 20px;
+}
+.discussion .posts .post .title .face{
+  margin-right: 8px;
+}
 
 
 .breadcrumbs{

@@ -60,7 +60,6 @@
 
             </div>
             <div class="cards-info d-flex justify-content-left">
-{*                {$product|fn_print_r}*}
                 {include file="addons/my_module/blocks/cards-info.tpl"
                     double_cabins=$product.double_cabins
                     single_cabins=$product.single_cabins
@@ -70,7 +69,6 @@
                     kitchen=$product.kitchen
                 }
             </div>
-{*            {include file="addons/discussion/blocks/product_tabs/discussion.tpl"}*}
             <div class="host bot-br-3 d-flex align-items-center">
                 <div class="text">
                     <div class="t-28px font-weight-bold">
@@ -125,6 +123,7 @@
                     
                 </div>
             </div>
+            {include file="addons/discussion/blocks/product_tabs/discussion.tpl"}
         </div>
         <div class="options col-4">
             <div class="boat_order">
