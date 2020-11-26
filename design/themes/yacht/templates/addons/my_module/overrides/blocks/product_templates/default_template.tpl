@@ -118,11 +118,11 @@
                     pets=$product.pets
                     washer=$product.washer
                 }
-            <div class="weather">
-                <div class="date d-flex justify-content-between">
-                    
-                </div>
-            </div>
+{*            <div class="weather">*}
+{*                <div class="date d-flex justify-content-between">*}
+{*                    *}
+{*                </div>*}
+{*            </div>*}
             {include file="addons/discussion/blocks/product_tabs/discussion.tpl"}
         </div>
         <div class="options col-4">
@@ -271,10 +271,12 @@
                             <circle cx="9" cy="9" r="1" fill="black" stroke="black"/>
                         </svg>
                         <div class="title d-flex flex-column">
-                            <div  class="t-15px t-gray-op5">
-                                {__('service_fee')}
-                                <span class="cm-tooltip" title="tooltip text">
-                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div  >
+                                <span class="t-15px t-gray-op5">
+                                    {__('service_fee')}
+                                </span>
+                                <span class="cm-tooltip pointer" title="tooltip text">
+                                    <svg width="15" height="15" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M6 10.5C8.48528 10.5 10.5 8.48528 10.5 6C10.5 3.51472 8.48528 1.5 6 1.5C3.51472 1.5 1.5 3.51472 1.5 6C1.5 8.48528 3.51472 10.5 6 10.5Z" stroke="#2466F6" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M4.84277 4.84279V4.84279C4.96124 4.33222 5.42626 3.97822 5.94994 3.99995V3.99995C6.53602 3.96749 7.03846 4.4141 7.07494 4.99995C7.07494 5.75191 5.99994 5.99995 5.99994 6.49995" stroke="#2466F6" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M6.0625 7.875C6.0625 7.90952 6.03452 7.9375 6 7.9375C5.96548 7.9375 5.9375 7.90952 5.9375 7.875C5.9375 7.84048 5.96548 7.8125 6 7.8125" stroke="#2466F6" stroke-linecap="round" stroke-linejoin="round"/>
