@@ -120,9 +120,13 @@
                 </div>
             {/foreach}
         </div>
-        <div class="show_all">
-            <span class="t-14px font-weight-500">Show All {$discussion.search.total_items} reviews</span>
+        <div class="bot_discussion ">
+            <div class="show_all d-flex pointer">
+                <span class="t-14px font-weight-500">Show All {$discussion.search.total_items} reviews</span>
+            </div>
+            <div class="blur"></div>
         </div>
+
     </div>
 </div>
 

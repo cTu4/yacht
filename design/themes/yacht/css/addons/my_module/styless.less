@@ -1193,18 +1193,28 @@ label::before {
   margin-bottom: 30px;
 }
 .discussion .posts .left_column .post:last-child{
-  margin-bottom: 70px;
+  margin-bottom: 82px;
 }
 .discussion .wrap_posts{
   position: relative;
+  overflow: hidden;
+}
+.discussion .wrap_posts .bot_discussion{
+  position: absolute;
+  padding-bottom: 10px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) -17.16%, #FFFFFF 50.75%);
 }
 .discussion .wrap_posts .show_all{
-  position: absolute;
-  bottom:40px;
-  left: 0px;
   border: 1px solid #000000;
   border-radius: 8px;
   padding: 10px;
+  width: 155px;
+  background: #fff;
+}
+.discussion .wrap_posts .blur{
 }
 .discussion .posts .post > div:not(:last-child){
   margin-bottom: 8px;
@@ -1214,6 +1224,9 @@ label::before {
 }
 .discussion .posts .post .title .face{
   margin-right: 8px;
+}
+.blur{
+  width: 100%;
 }
 
 

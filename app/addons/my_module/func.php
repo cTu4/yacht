@@ -8,10 +8,10 @@ function fn_my_module_get_discussion_post($object_id, $object_type, $get_posts, 
             "right_column"=>[]
         ];
         for($i=0;$i<9;$i=$i+3){
-            if(isset($posts[$i]) && $i+2<8){
+            if(isset($posts[$i])){
                 array_push($posts_data['left_column'],$posts[$i]);
             }
-            if(isset($posts[$i+1]) && $i+1<8){
+            if(isset($posts[$i+1])){
                 array_push($posts_data['center_column'],$posts[$i+1]);
 
             }

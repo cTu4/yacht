@@ -5,7 +5,7 @@
         <div class="logo col-2"><a href="/yacht">Yachts & More</a></div>
         <div class="col-1"></div>
         <nav class="header-nav d-flex justify-content-center col-6">
-            <a href="/yacht/boats">{__('boats')}</a>
+            <a href="{$smarty.server.REQUEST_URI}boats">{__('boats')}</a>
             <a href="#">{__('experiences')}</a>
             <a href="#">{__('destinations')}</a>
             <a href="#">{__('events')}</a>

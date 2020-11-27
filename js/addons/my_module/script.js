@@ -1,6 +1,14 @@
 (function(_, $) {
 
 
+        var height = 0;
+        $('.left_column .post').each(function (){
+            console.log($(this).height());
+            height += $(this).height() + parseInt( $(this).css("marginBottom") );
+        });
+    $('.wrap_posts').css({
+        height: height
+    });
         $('.heart').on('click',(e)=>{
             $(e.target).css({
                 fill: '#ff033e',
