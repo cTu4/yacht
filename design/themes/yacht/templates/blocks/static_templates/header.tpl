@@ -1,11 +1,11 @@
 {** block-description:tmpl_header **}
 <div class="header">
-    <div class="covid "><a href="/yacht">{__('covid')} &#8594;</a></div>
+    <div class="covid "><a href="{$config.http_path}">{__('covid')} &#8594;</a></div>
     <div class="main-header d-flex justify-content-between align-items-center ">
-        <div class="logo col-2"><a href="/yacht">Yachts & More</a></div>
+        <div class="logo col-2"><a href="{$config.http_path}">Yachts & More</a></div>
         <div class="col-1"></div>
         <nav class="header-nav d-flex justify-content-center col-6">
-            <a href="/yacht/boats">{__('boats')}</a>
+            <a href="{$config.http_path}/boats">{__('boats')}</a>
             <a href="#">{__('experiences')}</a>
             <a href="#">{__('destinations')}</a>
             <a href="#">{__('events')}</a>
