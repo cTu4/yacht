@@ -225,7 +225,9 @@ min-width: 45px;
 white-space:nowrap;
 }
 
-.add_boat, .weather span, .ty-select-block__a-item{
+.main-header .add_boat,
+.main-header .weather span,
+.main-header .ty-select-block__a-item{
 white-space: nowrap;
 font-size: 11px!important;
 font-weight: 600;
@@ -425,10 +427,10 @@ font-size: 12px;
 line-height: 16px;
 }
 
-.right{
+.under .right{
 width: 30%;
 }
-.left{
+.under .left{
 width: 45%;
 }
 
@@ -1227,6 +1229,56 @@ label::before {
 }
 .blur{
   width: 100%;
+}
+
+// Weather
+.weather .date .title,.weather .forecast .title{
+  margin-bottom: 15px;
+}
+.weather .date .dates{
+  margin-bottom: 30px;
+}
+
+.weather .date .dates span,.weather .date .dates .right svg{
+  margin-right: 10px;
+}
+.weather .date .dates span:first-child{
+  margin-right: 25px;
+}
+.weather .forecast .img-map{
+  position: relative;
+  margin-bottom: 20px;
+}
+.weather .forecast .open-map{
+  padding: 10px 13px;
+  background: #fff;
+  position: absolute;
+  border-radius: 8px;
+  right: 12px;
+  bottom: 12px;
+}
+.forecast .forecast-table{
+  width: 80%;
+  margin: 0 -15px;
+}
+.forecast .forecast-table .separator{
+  width: 100%;
+  margin-bottom: 9px;
+  margin-left: 6px;
+  border-bottom: 0.5px solid rgba(0,0,0,0.2);;
+}
+.forecast .forecast-table .item, .forecast .forecast-table .top .item{
+  //min-width: 50px;
+  flex:1;
+}
+.forecast .forecast-table .item{
+  margin: 0 15px;
+}
+.forecast .forecast-table .item, .forecast .forecast-table .top .item > div:not(:last-child){
+  margin-bottom: 12px;
+}
+.forecast .forecast-table .item-2 > *:first-child{
+  margin-bottom: 3px;
 }
 
 

@@ -319,3 +319,24 @@ msgstr "Точность"
 msgctxt "Languages::value"
 msgid "value"
 msgstr "Ценность"
+
+msgctxt "Languages::selected_dates"
+msgid "selected_dates"
+msgstr "Выбранные даты"
+
+msgctxt "Languages::edit_dates"
+msgid "edit_dates"
+msgstr "Редактировать даты"
+
+msgctxt "Languages::weather"
+msgid "weather"
+msgstr "Погода"
+
+msgctxt "Languages::water_temperature"
+msgid "water_temperature"
+msgstr "Температура воды"
+
+msgctxt "Languages::wind_m/s"
+msgid "wind_m/s"
+msgstr "Скорость ветра м/с"
+

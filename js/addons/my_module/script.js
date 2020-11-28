@@ -3,12 +3,23 @@
 
         var height = 0;
         $('.left_column .post').each(function (){
-            console.log($(this).height());
             height += $(this).height() + parseInt( $(this).css("marginBottom") );
         });
     $('.wrap_posts').css({
         height: height
     });
+    // console.log($('.forecast .wind').innerWidth());
+    // $('.forecast .wind, .forecast .water').css({
+    //     minWidth:$('.forecast .wind').innerWidth()
+    // })
+    //     .minWidth($('.forecast .wind').innerWidth());
+    // $('.forecast .wind .item, .forecast .water .item').each(function (){
+    //     $(this).css({
+    //         "min-width":$('.forecast-table .top .item').width()
+    //     });
+    // });
+
+
         $('.heart').on('click',(e)=>{
             $(e.target).css({
                 fill: '#ff033e',

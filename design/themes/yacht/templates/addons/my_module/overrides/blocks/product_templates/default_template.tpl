@@ -118,11 +118,8 @@
                     pets=$product.pets
                     washer=$product.washer
                 }
-{*            <div class="weather">*}
-{*                <div class="date d-flex justify-content-between">*}
-{*                    *}
-{*                </div>*}
-{*            </div>*}
+            {include file="addons/my_module/blocks/weather.tpl"}
+
             {include file="addons/discussion/blocks/product_tabs/discussion.tpl"}
         </div>
         <div class="options col-4">

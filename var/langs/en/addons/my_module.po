@@ -350,6 +350,10 @@ msgctxt "Languages::selected_dates"
 msgid "selected_dates"
 msgstr "Selected dates"
 
+msgctxt "Languages::edit_dates"
+msgid "edit_dates"
+msgstr "Edit dates"
+
 msgctxt "Languages::cleanliness"
 msgid "Cleanliness"
 msgstr "Cleanliness"
@@ -373,6 +377,27 @@ msgstr "Value"
 msgctxt "Languages::like"
 msgid "like"
 msgstr "Like"
+
+msgctxt "Languages::weather"
+msgid "weather"
+msgstr "Weather"
+
+msgctxt "Languages::sunny"
+msgid "sunny"
+msgstr "sunny"
+
+msgctxt "Languages::water_temperature"
+msgid "water_temperature"
+msgstr "Water temperature"
+
+msgctxt "Languages::water_temperature"
+msgid "water_temperature"
+msgstr "Water temperature"
+
+msgctxt "Languages::wind_m/s"
+msgid "wind_m/s"
+msgstr "Wind m/s"
+
 
 
 
