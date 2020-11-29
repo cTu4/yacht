@@ -1258,9 +1258,33 @@ label::before {
   bottom: 12px;
 }
 .forecast .forecast-table{
-  width: 80%;
+  width: 100%;
   margin: 0 -15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  z-index: 100;
 }
+.forecast .forecast-table img{
+  max-width: unset;
+  height: 36px;
+  width: 36px;
+}
+.forecast .forecast-table .top{
+  position: relative;
+}
+.forecast .forecast-table .title{
+  position: absolute;
+  width: calc(~'100% - 30px');
+  left: 15px;
+
+}
+.forecast .forecast-table .title-1{
+  bottom: 70px
+}
+.forecast .forecast-table .title-2{
+  bottom: 20px
+}
+
 .forecast .forecast-table .separator{
   width: 100%;
   margin-bottom: 9px;
@@ -1269,7 +1293,7 @@ label::before {
 }
 .forecast .forecast-table .item, .forecast .forecast-table .top .item{
   //min-width: 50px;
-  flex:1;
+  //flex:1;
 }
 .forecast .forecast-table .item{
   margin: 0 15px;
@@ -1277,8 +1301,35 @@ label::before {
 .forecast .forecast-table .item, .forecast .forecast-table .top .item > div:not(:last-child){
   margin-bottom: 12px;
 }
+.forecast .forecast-table .margin-bottom{
+  margin-bottom: 40px!important;
+}
 .forecast .forecast-table .item-2 > *:first-child{
   margin-bottom: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 50px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 50px;
+  width: 3px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 

@@ -37,7 +37,7 @@
                 {__('weather')}
             </div>
             <div class="img-map">
-                <img style="width: 100%" src="images/my_module/weather.png" alt="">
+                <img style="width: 100%" src="images/my_module/weather.png" width="36" height="36" alt="">
                 <div class="open-map pointer">
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 13L13 1" stroke="#323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -46,53 +46,65 @@
                     </svg>
                 </div>
             </div>
-            <div class="forecast-table f-flex flex-column">
+            <div class="forecast-table d-flex flex-column">
                 <div class="d-flex top">
+                    <div class="item d-flex flex-column align-items-center">
+                        <div class=" t-12px font-weight-500">
+                            8 Mo
+                        </div>
+                        <div class="text-center">
+                            <img src="images/my_module/weather/storm.png"  alt="">
+                            <div class="t-9px t-gray">storm{*{__('sunny')}*}</div>
+                        </div>
+                        <div class="t-15px font-weight-500">
+                            +24
+                        </div>
+                        <div class="margin-bottom t-11px font-weight-500 t-gray">
+                            +19
+                        </div>
+                        <div class="margin-bottom t-11px font-weight-500 t-gray">
+                            +19
+                        </div>
+                        <div class=" t-11px font-weight-500 t-gray">
+                            7
+                        </div>
+                    </div>
                     {for $i=1 to 8}
                         <div class="item d-flex flex-column align-items-center">
                             <div class=" t-12px font-weight-500">
                                 {$i} Mo
                             </div>
-                            <div class="item-2">
                                 <div class="text-center">
                                     <img src="images/my_module/weather/sunny.png" alt="">
                                     <div class="t-9px t-gray">partly cloudy{*{__('sunny')}*}</div>
                                 </div>
-                            </div>
-                            <div class="item-2">
                                 <div class="t-15px font-weight-500">
                                     +24
                                 </div>
-                                <div class="t-11px font-weight-500 t-gray">
+                                <div class="margin-bottom t-11px font-weight-500 t-gray">
                                     +19
                                 </div>
-                            </div>
-                        </div>
-                    {/for}
-                </div>
-                <div class="d-flex item">
-                    <div class="t-9px">{__('water_temperature')}</div>
-                    <div class="separator"></div>
-                </div>
-                <div class="d-flex water">
-                        {for $i=1 to 8}
-                            <div class="item t-11px font-weight-500 t-gray">
+                            <div class="margin-bottom t-11px font-weight-500 t-gray">
                                 +19
                             </div>
-                        {/for}
-                </div>
-
-                <div class="d-flex item">
-                    <div class="t-9px">{__('wind_m/s')}</div>
-                    <div class="separator"></div>
-                </div>
-                <div class="d-flex wind">
-                    {for $i=1 to 8}
-                        <div class="item t-11px font-weight-500 t-gray">
-                            7
+                            <div class=" t-11px font-weight-500 t-gray">
+                                7
+                            </div>
                         </div>
                     {/for}
+
+                    <div class="title title-1 d-flex">
+                        <div class="t-9px">{__('water_temperature')}</div>
+                        <div class="separator"></div>
+                    </div>
+
+                    <div class="title title-2 d-flex">
+                        <div class="t-9px">{__('wind_m/s')}</div>
+                        <div class="separator"></div>
+                    </div>
                 </div>
+
+
 
 
 

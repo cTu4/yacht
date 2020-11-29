@@ -1,5 +1,30 @@
 (function(_, $) {
+    $.fn.hScroll = function( options )
+    {
+        function scroll( obj, e )
+        {
+            var evt = e.originalEvent;
+            var scroll_px = 40;
+            var direction = evt.detail ? evt.detail * scroll_px : evt.wheelDelta;
+            if( direction > 0)
+            {
+                direction =  $(obj).scrollLeft() - scroll_px;
+            }
+            else
+            {
+                direction = $(obj).scrollLeft() + scroll_px;
+            }
+            $(obj).scrollLeft( direction );
+            e.preventDefault();
+        }
 
+        $(this).width( $(this).find('div').width() );
+
+        $(this).bind('DOMMouseScroll mousewheel', function( e )
+        {
+            scroll( this, e );
+        });
+    }
 
         var height = 0;
         $('.left_column .post').each(function (){
@@ -8,18 +33,30 @@
     $('.wrap_posts').css({
         height: height
     });
-    // console.log($('.forecast .wind').innerWidth());
-    // $('.forecast .wind, .forecast .water').css({
-    //     minWidth:$('.forecast .wind').innerWidth()
-    // })
-    //     .minWidth($('.forecast .wind').innerWidth());
-    // $('.forecast .wind .item, .forecast .water .item').each(function (){
-    //     $(this).css({
-    //         "min-width":$('.forecast-table .top .item').width()
-    //     });
-    // });0
+    $('.forecast .forecast-table').hScroll();
+    var width_title = 0;
+    $('.forecast .forecast-table .item').each(function (){
+        width_title += $(this).width() + 30;
+    });
+    $('.forecast .forecast-table .title').width(width_title - 30);
 
 
+
+    $('.post .like').on('click', function (e){
+        var old_count_like = 0;
+        if($(e.target).prop('nodeName') === 'path'){
+            $(e.target).attr('fill', '#000');
+            old_count_like = parseInt($(e.target).parent().next('span').html());
+            $(e.target).parent().next('span').html(old_count_like + 1);
+        }
+        else{
+            console.log($(e.target).find('span'));
+            old_count_like = parseInt($(e.target).find('span').html());
+            $(e.target).find('span').html(old_count_like +1);
+            $(e.target).find('path').attr('fill', '#000');
+        }
+        $(e.target).closest('.like').removeClass('t-blue-a');
+    });
         $('.heart').on('click',(e)=>{
             $(e.target).css({
                 fill: '#ff033e',
