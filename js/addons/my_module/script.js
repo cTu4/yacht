@@ -17,7 +17,7 @@
     //     $(this).css({
     //         "min-width":$('.forecast-table .top .item').width()
     //     });
-    // });
+    // });0
 
 
         $('.heart').on('click',(e)=>{
