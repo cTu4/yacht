@@ -340,3 +340,7 @@ msgctxt "Languages::wind_m/s"
 msgid "wind_m/s"
 msgstr "Скорость ветра м/с"
 
+msgctxt "Languages::in_collections"
+msgid "in_collections"
+msgstr "В коллекции"
+

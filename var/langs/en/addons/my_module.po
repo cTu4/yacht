@@ -398,6 +398,10 @@ msgctxt "Languages::wind_m/s"
 msgid "wind_m/s"
 msgstr "Wind m/s"
 
+msgctxt "Languages::in_collections"
+msgid "in_collections"
+msgstr "In collections"
+
 
 
 
