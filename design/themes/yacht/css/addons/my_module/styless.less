@@ -1,7 +1,9 @@
 /* ==========================================================================
 my_module
 ========================================================================== */
-
+.main-content-grid{
+  margin-bottom:0!important;
+}
 .tygh-top-panel *{
 font-size: unset!important;
 }
@@ -834,17 +836,28 @@ fill: #1DD1B9;
 .owl-carousel-6 .cart_type_boat{
   color: #5D23C2;
 }
+
+// Cammon styles for sliders slick
+.slider{
+  margin: 40px 0
+}
+.slider .title_slider .t-28px{
+  margin-right: 25px;
+}
 // slider collections
 .slider-collections{
   margin: 0 -8px;
 }
-.slider-collections .item{
+.slick-slide{
   position: relative;
   margin: 0 8px;
 }
-.slider-collections .item img{
-  position: relative;
+.slider-collections .item{
   border-radius: 12px;
+}
+.slider-collections .item .title{
+  max-width: 285px;
+  padding: 50px 10px 10px 10px;
 }
 .slider .title_slider{
   margin-bottom: 15px;
@@ -879,11 +892,22 @@ fill: #1DD1B9;
   margin-left: -20px;
   background: linear-gradient(90.42deg, #0066FF 0%, #0090F9 97.24%);
 }
-.slider-collections .item .title{
-  position: absolute;
-  left:10px;
-  bottom: 10px;
+
+// Similar slider
+.slider-similar .item{
+  box-shadow: none;
 }
+.slider-similar .item:hover{
+  box-shadow: none;
+}
+.slider-similar .item .title span{
+  margin: 3px 0;
+}
+.slider-similar .item img{
+  position: relative;
+  border-radius: 12px;
+}
+
 
 // Detailed page
 .images img{
@@ -937,7 +961,7 @@ fill: #1DD1B9;
   grid-row-end: 3;
   position: relative;
 }
-.content .info > div{
+.content .info > div:not(:last-child){
   margin-bottom: 40px;
 }
 .detailed{
@@ -1211,7 +1235,7 @@ label::before {
   left: 13px;
 }
 // Reviews
-.discussion > div{
+.discussion > div:not(:last-child){
   margin-bottom: 40px;
 }
 .discussion .overall_rating .title{
