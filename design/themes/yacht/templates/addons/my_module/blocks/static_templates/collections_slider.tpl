@@ -21,7 +21,7 @@
     </div>
 
 
-    <div class="slider-collections">
+    <div class="slider-collections non-hover">
         {for $i=0 to 7}
             <div  class="item" style="background-image: linear-gradient(to top, rgba(8, 10, 55, 0.73) 0%, rgba(8, 10, 55, 0.09) ),
     url('https://s7d2.scene7.com/is/image/ritzcarlton/GettyImages-621114212?$LargeViewport42pct$');">
