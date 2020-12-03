@@ -1,4 +1,5 @@
 DirectoryIndex index.html index.php
+#DirectoryIndex store_closed.html index.php
 
 <IfModule mod_rewrite.c>
 RewriteEngine on
@@ -8,7 +9,7 @@ RewriteEngine on
 # Your store url is http://www.yourcompany.com/store/cart
 # So "RewriteBase" should be:
 # RewriteBase /store/cart
-# RewriteBase /yacht
+# RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !.(png|gif|ico|swf|jpe?g|js|css)$
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

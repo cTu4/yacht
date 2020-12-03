@@ -19,8 +19,8 @@
 /install.html
 /robots.txt
 /store_closed.html
-!/.htaccess
-
+/.htaccess
+/.gitignore
 /upgrades
 
 /design/*
