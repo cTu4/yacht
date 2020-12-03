@@ -718,11 +718,15 @@ fill: #1DD1B9;
 .slider{
   margin: 30px 0;
 }
-.slider > a{
+.slider .link a{
   text-decoration: underline;
+  vertical-align: bottom;
 }
 .slider > a svg{
   margin-left: 7px;
+}
+.slider .non-hover .item a:hover{
+  color: unset!important;
 }
 .nav div{
   border: 0.5px solid rgba(0, 0, 0, 0.2);
@@ -740,7 +744,6 @@ fill: #1DD1B9;
   position: relative;
   border-radius: 12px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
-  margin: 15px 0;
 }
 .owl-carousel .item:hover{
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
