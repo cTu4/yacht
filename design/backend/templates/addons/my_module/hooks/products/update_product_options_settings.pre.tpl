@@ -44,6 +44,7 @@
     <div class="control-group">
         <label class="control-label" for="availability_shower">{__("availability_shower")}:</label>
         <div class="controls">
+            <input type="hidden" name="product_data[shower]" value="N" />
             <input type="checkbox" name="product_data[shower]" id="availability_shower" value="Y" {if $product_data.shower == "Y" }checked="checked"{/if}>
         </div>
     </div>
@@ -51,6 +52,7 @@
     <div class="control-group">
         <label class="control-label" for="availability_kitchen">{__("availability_kitchen")}:</label>
         <div class="controls">
+            <input type="hidden" name="product_data[kitchen]" value="N" />
             <input type="checkbox" name="product_data[kitchen]" id="availability_kitchen" value="Y" {if $product_data.kitchen == "Y" }checked="checked"{/if}>
         </div>
     </div>

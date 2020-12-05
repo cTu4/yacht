@@ -740,21 +740,21 @@ fill: #1DD1B9;
 .next{
   transform: rotate(-90deg);
 }
-.owl-carousel .item{
+.slider-field .item{
   position: relative;
   border-radius: 12px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
 }
-.owl-carousel .item:hover{
+.slider-field .item:hover{
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
 }
-.owl-carousel .item a:hover{
+.slider-field .item a:hover{
   color:#000!important;
 }
 .owl-carousel-1 img{
   border-radius: 12px 12px 0 0!important;
 }
-.owl-carousel .owl-item img{
+.slider-field  img{
   border-radius: 12px;
 }
 .heart{
@@ -821,19 +821,19 @@ fill: #1DD1B9;
   max-width: 400px;
 }
 
-.owl-carousel-5 .item{
+.slider-checked .item{
   box-shadow: none;
 }
-.owl-carousel-5 .item:hover{
+.slider-checked  .item:hover{
   box-shadow: none;
 }
-.owl-carousel-5 .item .title span{
+.slider-checked .item .title span{
   margin: 3px 0;
 }
-.owl-carousel-5 .item img{
+.slider-checked .item img{
   position: relative;
 }
-.owl-carousel-5 .cart_type_boat{
+.slider-checked .cart_type_boat{
   color: #C22823;
 }
 
@@ -861,11 +861,12 @@ fill: #1DD1B9;
   margin-right: 25px;
 }
 // slider collections
-.slider-collections{
+.slider-field {
   margin: 0 -8px;
 }
-.slick-slide{
+.slider-field  .slick-slide,  .slider .item{
   position: relative;
+  flex:1;
   margin: 0 8px;
 }
 .slider-collections .item{
@@ -1088,6 +1089,7 @@ fill: #1DD1B9;
 }
 .products-search-result .product img{
   border-radius: 12px;
+  height: 100%;
 }
 .products-search-result .product a:hover{
   color: #000!important;
@@ -1095,7 +1097,7 @@ fill: #1DD1B9;
 .products-search-result .product a:hover path{
   fill: #EB2A50!important;
 }
-.owl-carousel-search img{
+.slider-search img{
   height: 14vw;
   width: 50px;
 }
@@ -1106,15 +1108,28 @@ fill: #1DD1B9;
   margin-bottom: 5px;
 }
 //
+.slick-track
+{
+  display: flex !important;
+}
 
+.slider-search .slick-slide > div{
+  height: 100%;
+}
+.slick-slide
+{
+  height: inherit !important;
+}
 
-.owl-carousel-search .owl-dots{
+.slider-search .slick-dots{
   position: absolute;
+  display: flex;
   left:50%;
   margin-left:-26px;
   bottom: 10px;
 }
-.owl-carousel-search .owl-dot{
+.slider-search .slick-dots li div{
+  cursor: pointer;
   width: 7px;
   height: 7px;
   background: #fff!important;
@@ -1122,7 +1137,7 @@ fill: #1DD1B9;
   opacity: 0.6;
   margin: 0 3px
 }
-.owl-carousel-search .owl-dot.active{
+.slider-search .slick-dots li.slick-active div{
   opacity: 1;
   border:none;
 }

@@ -50,7 +50,7 @@
                         </span>
                     {/if}
                 </div>
-                <div class="owl-carousel owl-carousel-search owl-theme">
+                <div class="slider-search">
                     <img src="{$product.main_pair.detailed.image_path}">
                     {if $product.image_pairs}
                         {foreach from=$product.image_pairs item="image" name="foo"}
