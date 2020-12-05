@@ -49,6 +49,7 @@
                     </span>
                 </div>
                 <div class="full_desc t-16px">
+                    {$product|fn_print_r}
                     {$product.full_description}
                 </div>
                 <a class="t-16px t-blue-a font-weight-500">
