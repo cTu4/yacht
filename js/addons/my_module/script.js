@@ -25,7 +25,29 @@
             scroll( this, e );
         });
     }
-
+    $('.slider-field').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+        info_slider(event, slick, currentSlide, nextSlide);
+    });
+    $('.prev').on('click',function (){
+        slide(this,'prev');
+    });
+    $('.next').on('click',function (){
+        slide(this,'next')
+    });
+    function info_slider(event, slick, currentSlide, nextSlide){
+        let item_per_page = slick.options.slidesToShow;
+        var i = Math.floor((currentSlide ? currentSlide : 0)/item_per_page)+ 1;
+        $(event.target).prev().find('.info_slider').text(i + ' of ' + Math.ceil((slick.slideCount)/item_per_page) + " pages");
+        $(event.target).find('.item').css({margin:0});
+    }
+    function slide(el,direction){
+        if(direction === "next"){
+            $(el).closest(".title_slider").next().slick('slickNext');
+        }
+        else{
+            $(el).closest(".title_slider").next().slick('slickPrev');
+        }
+    }
         var height = 0;
         $('.left_column .post').each(function (){
             height += $(this).height() + parseInt( $(this).css("marginBottom") );
@@ -205,9 +227,7 @@
         $('.slider-collections').slick('slickNext');
     });
 
-    $('.slider-similar').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
-        info_slider(event, slick, currentSlide, nextSlide);
-    });
+
     $('.slider-similar').slick({
         infinite: false,
         slidesToShow: 4,
@@ -222,13 +242,33 @@
         $('.slider-similar').slick('slickNext');
     });
 
-    function info_slider(event, slick, currentSlide, nextSlide){
-        let item_per_page = slick.options.slidesToShow;
-        console.log('sss');
-        var i = Math.floor((currentSlide ? currentSlide : 0)/item_per_page)+ 1;
-        $(event.target).prev().find('.info_slider').text(i + ' of ' + Math.ceil((slick.slideCount)/item_per_page) + " pages");
-        $(event.target).find('.item').css({margin:0});
-    }
+
+    $('.slider-checked').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        arrows: false,
+        dots: false,
+        swipe: false
+    });
+    $('.slider-destination').slick({
+        infinite: false,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        arrows: false,
+        dots: false
+    });
+    $('.slider-challenges').slick({
+        infinite: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: false,
+        dots: false
+    });
+
+
+
+
 }(Tygh, Tygh.$));
 
 

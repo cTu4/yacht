@@ -813,14 +813,22 @@ fill: #1DD1B9;
 .owl-carousel-3 .item img{
   position: relative;
 }
-.owl-carousel-4 .item .title{
+.slider-challenges .item .title{
   position: absolute;
   top:0;
   left:0;
   margin: 20px;
-  max-width: 400px;
+  max-width: 370px;
 }
-
+.slider-challenges .icon-event{
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+//checked slider
+.slider-field .slider-search .slick-slide{
+  margin:0
+}
 .slider-checked .item{
   box-shadow: none;
 }
@@ -833,9 +841,7 @@ fill: #1DD1B9;
 .slider-checked .item img{
   position: relative;
 }
-.slider-checked .cart_type_boat{
-  color: #C22823;
-}
+
 
 .owl-carousel-6 .item{
   box-shadow: none;
@@ -864,10 +870,10 @@ fill: #1DD1B9;
 .slider-field {
   margin: 0 -8px;
 }
-.slider-field  .slick-slide,  .slider .item{
+.slider-field .slick-slide, .slider .item{
   position: relative;
   flex:1;
-  margin: 0 8px;
+  margin: 0 8px 10px 8px;
 }
 .slider-collections .item{
   border-radius: 12px;
@@ -1100,6 +1106,8 @@ fill: #1DD1B9;
 .slider-search img{
   height: 14vw;
   width: 50px;
+  cursor: pointer;
+  flex:1;
 }
 .products-search-result .product .title{
   margin-top: 15px
