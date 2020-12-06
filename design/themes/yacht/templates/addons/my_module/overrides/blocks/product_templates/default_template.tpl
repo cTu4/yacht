@@ -118,6 +118,7 @@
                     pets=$product.pets
                     washer=$product.washer
                 }
+            {include file="addons/my_module/blocks/map.tpl"}
             {include file="addons/my_module/blocks/weather.tpl"}
 
             {include file="addons/discussion/blocks/product_tabs/discussion.tpl"}

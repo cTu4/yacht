@@ -265,9 +265,54 @@
         arrows: false,
         dots: false
     });
+    $(document).ready(function() {
+        ymaps.ready(init);
+        var myMap,
+            myPlacemark;
+
+        function init(){
+            myMap = new ymaps.Map ("map", {
+                center: [55.76, 37.64],
+                zoom: 7
+            });
+
+            myPlacemark = new ymaps.Placemark([55.931161, 37.848649], {
+                iconContent: "$ 2450",
+                balloonContent: 'Столица России'
+
+                },
+                {
+                    preset: "islands#redCircleIcon",
+                    iconColor: '#000'
+                });
+
+            myMap.geoObjects.add(myPlacemark);
+            $.ajax({
+                url: "https://geocode-maps.yandex.ru/1.x/?apikey=b32251bf-b0a1-4013-a53e-03c1d438785f&format=json&geocode=37.841495 55.937906&results=1"
+            }).done(function(resp) {
+                console.log(resp);
+            });
+
+        }
+    });
 
 
 
+//     // Create the script tag, set the appropriate attributes
+//     var script = _.doc.createElement('script');
+//     script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAx0mMExcObDb5oqalgIAyiTuNXMrr3-wU&callback=initMap';
+//     script.defer = true;
+//
+// // Attach your callback function to the `window` object
+//     window.initMap = function() {
+//          let map = new google.maps.Map(_.doc.getElementById("kek"), {
+//             center: { lat: -34.397, lng: 150.644 },
+//             zoom: 8,
+//         });
+//     };
+//
+// // Append the 'script' element to 'head'
+//     _.doc.head.appendChild(script);
 
 }(Tygh, Tygh.$));
 
