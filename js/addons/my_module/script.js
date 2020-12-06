@@ -277,14 +277,14 @@
             });
 
             myPlacemark = new ymaps.Placemark([55.931161, 37.848649], {
-                iconContent: "$ 2450",
+                iconContent: "$ 2450  ",
                 balloonContent: 'Столица России'
 
                 },
                 {
-                    preset: "islands#redCircleIcon",
-                    iconColor: '#000'
-                });
+                    preset: 'islands#blueStretchyIcon',
+                    iconColor: '#1D85D1'
+        });
 
             myMap.geoObjects.add(myPlacemark);
             $.ajax({
