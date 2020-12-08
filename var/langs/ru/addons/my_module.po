@@ -344,3 +344,7 @@ msgctxt "Languages::in_collections"
 msgid "in_collections"
 msgstr "В коллекции"
 
+msgctxt "Languages::reservation"
+msgid "reservation"
+msgstr "Бронирование"
+

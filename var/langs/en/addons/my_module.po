@@ -402,6 +402,10 @@ msgctxt "Languages::in_collections"
 msgid "in_collections"
 msgstr "In collections"
 
+msgctxt "Languages::reservation"
+msgid "reservation"
+msgstr "Reservation"
+
 
 
 
