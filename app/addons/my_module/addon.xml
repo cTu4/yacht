@@ -6,6 +6,16 @@
     <default_language>en</default_language>
     <queries>
         <item for="install">
+            CREATE TABLE `?:product_reservations` (
+            `reservation_id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            `product_id` varchar(6),
+            `time_start` int(11),
+            `time_end` int(11)
+            )
+        </item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:reservations;</item>
+
+        <item for="install">
             alter table `?:products`
             add `double_cabins` int(2),
             add `single_cabins` int(2),

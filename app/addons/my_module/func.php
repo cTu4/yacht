@@ -23,3 +23,21 @@ function fn_my_module_get_discussion_post($object_id, $object_type, $get_posts, 
     }
 
 }
+function fn_update_reservation($reservations,$product_id){
+    if (!empty($reservations) && is_array($reservations)){
+
+        foreach ($reservations as $id_reservatoion => &$data_reservation){
+            $data_reservation['time_start'] = strtotime($data_reservation['time_start']);
+            $data_reservation['time_end'] = strtotime($data_reservation['time_end']);
+
+            if(preg_match('/add/',strval($id_reservatoion))){
+                $data_reservation['product_id'] = $product_id;
+                db_query("INSERT INTO ?:product_reservations ?e", $data_reservation);
+            }
+            else{
+                db_query("UPDATE ?:product_reservations SET ?u WHERE reservation_id = ?i", $data_reservation, $id_reservatoion);
+            }
+        }
+
+    }
+}
