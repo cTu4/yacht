@@ -1,5 +1,5 @@
 
-<div id="content_reservation">
+<div id="content_reservation" class="hidden">
     {foreach from=$reservations item="reservation" name="for_reserv"}
         <label class="control-label" for="item-{$reservation.reservation_id}">{$smarty.foreach.for_reserv.iteration}. </label>
         <div id="item-{$smarty.foreach.for_reserv.iteration}">
