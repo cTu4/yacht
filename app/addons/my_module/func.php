@@ -30,16 +30,20 @@ function html_print($text){
 };
 function fn_update_reservation($reservations,$product_id){
     if (!empty($reservations) && is_array($reservations)){
-        $count = db_get_field("SELECT COUNT(*) FROM ?:product_reservations");
         foreach ($reservations as $id_reservatoion => &$data_reservation){
+            $id_reservation_old = db_get_field("SELECT reservation_id FROM ?:product_reservations where reservation_id=?s",$id_reservatoion);
             $data_reservation['time_start'] = strtotime($data_reservation['time_start']);
             $data_reservation['time_end'] = strtotime($data_reservation['time_end']);
-            if($count < $id_reservatoion){
-                $data_reservation['product_id'] = $product_id;
-                db_query("INSERT INTO ?:product_reservations ?e", $data_reservation);
+            if($id_reservation_old){
+                html_print(["old",$data_reservation]);
+                db_query("UPDATE ?:product_reservations SET ?u WHERE reservation_id = ?i", $data_reservation, $id_reservation_old);
+
             }
             else{
-                db_query("UPDATE ?:product_reservations SET ?u WHERE reservation_id = ?i", $data_reservation, $id_reservatoion);
+                html_print(["new",$data_reservation]);
+                $data_reservation['product_id'] = $product_id;
+                db_query("INSERT INTO ?:product_reservations ?e", $data_reservation);
+
             }
         }
 
