@@ -35,12 +35,10 @@ function fn_update_reservation($reservations,$product_id){
             $data_reservation['time_start'] = strtotime($data_reservation['time_start']);
             $data_reservation['time_end'] = strtotime($data_reservation['time_end']);
             if($id_reservation_old){
-                html_print(["old",$data_reservation]);
                 db_query("UPDATE ?:product_reservations SET ?u WHERE reservation_id = ?i", $data_reservation, $id_reservation_old);
 
             }
             else{
-                html_print(["new",$data_reservation]);
                 $data_reservation['product_id'] = $product_id;
                 db_query("INSERT INTO ?:product_reservations ?e", $data_reservation);
 

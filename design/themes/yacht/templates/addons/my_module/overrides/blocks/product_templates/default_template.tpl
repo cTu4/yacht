@@ -151,7 +151,35 @@
                     </svg>
                     <div class="title d-flex flex-column">
                         <div  class="t-15px t-gray-op5">{__('check_in')} — {__('check_out')}</div>
-                        <div class="t-18px font-weight-600">Sep 12, 2020 — Sep 19, 2020</div>
+                        <div class="d-flex">
+                            <input class="date input t-18px font-weight-600" value="Sep 12, 2020"></input>
+                            <input class="date input t-18px font-weight-600" value="Sep 19, 2020"></input>
+                        </div>
+
+
+                        {*                        Sep 12, 2020 — Sep 19, 2020*}
+                        <script type="text/javascript">
+                            (function(_, $) {$ldelim}
+                            $.ceEvent('on', 'ce.commoninit', function(context) {
+                                var time = new Date().toString("MMM d, yyyy");
+                                console.log(time);
+
+                                $('.date').datepicker({
+                                    changeMonth: true,
+                                    duration: 'fast',
+                                    changeYear: true,
+                                    selectOtherMonths: true,
+                                    showOtherMonths: true,
+                                    minDate: time,
+                                    maxDate: 'Sep 10, 2022',
+
+                                    dateFormat: 'M d, yy'
+                                });
+                            });
+                            {$rdelim}(Tygh, Tygh.$));
+                        </script>
+{*                        {include file="common/calendar.tpl" date_id="elm_reservation_holder_add_end" date_name="reservations[add][time_end]" date_val=1607720400|default:$smarty.const.TIME start_year=$settings.Company.company_start_year}*}
+
                     </div>
                 </div>
                 <div class="item d-flex">
