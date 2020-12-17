@@ -151,35 +151,7 @@
                     </svg>
                     <div class="title d-flex flex-column">
                         <div  class="t-15px t-gray-op5">{__('check_in')} — {__('check_out')}</div>
-                        <div class="d-flex">
-                            <input class="date input t-18px font-weight-600" value="Sep 12, 2020"></input>
-                            <input class="date input t-18px font-weight-600" value="Sep 19, 2020"></input>
-                        </div>
-
-
-                        {*                        Sep 12, 2020 — Sep 19, 2020*}
-                        <script type="text/javascript">
-                            (function(_, $) {$ldelim}
-                            $.ceEvent('on', 'ce.commoninit', function(context) {
-                                var time = new Date().toString("MMM d, yyyy");
-                                console.log(time);
-
-                                $('.date').datepicker({
-                                    changeMonth: true,
-                                    duration: 'fast',
-                                    changeYear: true,
-                                    selectOtherMonths: true,
-                                    showOtherMonths: true,
-                                    minDate: time,
-                                    maxDate: 'Sep 10, 2022',
-
-                                    dateFormat: 'M d, yy'
-                                });
-                            });
-                            {$rdelim}(Tygh, Tygh.$));
-                        </script>
-{*                        {include file="common/calendar.tpl" date_id="elm_reservation_holder_add_end" date_name="reservations[add][time_end]" date_val=1607720400|default:$smarty.const.TIME start_year=$settings.Company.company_start_year}*}
-
+                            <input id="date" class="date input w-100 t-18px font-weight-600"  value="{$product.available_dates[0].time_start|date_format:"%b %d,%Y"} — {$product.available_dates[0].time_end|date_format:"%b %d,%Y"}" autocomplete="off"></input>
                     </div>
                 </div>
                 <div class="item d-flex">
@@ -333,4 +305,33 @@
     </div>
 
 </div>
+<script type="text/javascript">
+    (function(_, $) {$ldelim}
+
+    $('#date').dateRangePicker({
+        format: 'MMM DD, YYYY',
+        separator: " — ",
+        language: "{$block.lang_code}",
+        startDate: new Date()
+    });
+
+    // var picker = new Lightpick({
+    //         field: document.getElementById('date'),
+    //         singleDate: false,
+    //         format: 'MMM DD, YYYY',
+    //         separator: " — ",
+    //         selectForward: true,
+    //         lang: "ru",
+    //         onSelect: function(start, end){
+    //             console.log(start);
+    //             console.log(start.format('MMM DD, YYYY'));
+    //             document.getElementById('date').innerHTML = "aasadsd";
+    //         }
+    //     });
+
+    var today = new Date(1607547600);
+
+    console.log(today);
+    {$rdelim}(Tygh, Tygh.$));
+</script>
 
