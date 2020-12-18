@@ -307,31 +307,50 @@
 </div>
 <script type="text/javascript">
     (function(_, $) {$ldelim}
-
+    var dates = {$product.available_dates|json_encode nofilter};
+    console.log(dates);
     $('#date').dateRangePicker({
         format: 'MMM DD, YYYY',
         separator: " — ",
         language: "{$block.lang_code}",
-        startDate: new Date()
+        startDate: new Date(),
+        endDate: moment().startOf('year').add(3, 'year'),
+        autoClose: true,
+        changeMonth: true,
+        changeYear: true,
+        isInvalidDate: function(date) {
+            console.log(date);
+            return dates.reduce(function(previousValue, currentValue, index, array) {
+
+                return (date >= currentValue.time_start && date <= currentValue.time_end);
+            }, false);
+        },
+        beforeShowDay: function(t)
+        {
+            return dates.reduce(function(previousValue, currentValue, index, array) {
+                return previousValue || (t >= currentValue.start && t <= currentValue.end);
+            }, false);
+            // var valid = !(t.getDay() == 0 || t.getDay() == 6);  //disable saturday and sunday
+            // var _class = '';
+            // var _tooltip = valid ? '' : 'weekends are disabled';
+            // return [valid,_class,_tooltip];
+        }
     });
 
-    // var picker = new Lightpick({
-    //         field: document.getElementById('date'),
-    //         singleDate: false,
-    //         format: 'MMM DD, YYYY',
-    //         separator: " — ",
-    //         selectForward: true,
-    //         lang: "ru",
-    //         onSelect: function(start, end){
-    //             console.log(start);
-    //             console.log(start.format('MMM DD, YYYY'));
-    //             document.getElementById('date').innerHTML = "aasadsd";
-    //         }
-    //     });
+     {*var picker = new Lightpick({*}
+     {*        field: document.getElementById('date'),*}
+     {*        singleDate: false,*}
+     {*        format: 'MMM DD, YYYY',*}
+     {*        separator: " — ",*}
+     {*        selectForward: true,*}
+     {*        lang: "{$block.lang_code}",*}
+     {*       minDate: new Date(),*}
+     {*       maxDate: moment().startOf('year').add(1, 'year'),*}
+     {*    disableDates: [moment().startOf('day'), ['2020-12-23', '2020-12-30']]*}
 
-    var today = new Date(1607547600);
+     {*    });*}
 
-    console.log(today);
+
     {$rdelim}(Tygh, Tygh.$));
 </script>
 

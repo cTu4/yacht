@@ -26,6 +26,7 @@ function fn_my_module_get_discussion_post($object_id, $object_type, $get_posts, 
 function fn_my_module_get_product_data_post(&$product_data, $auth, $preview, $lang_code){
     $dates = db_get_array("select time_start,time_end from ?:product_reservations where product_id=?s",$product_data['product_id']);
     $product_data['available_dates']=$dates;
+
 }
 function html_print($text){
     echo "<pre>";
@@ -51,3 +52,6 @@ function fn_update_reservation($reservations,$product_id){
 
     }
 }
+
+
+
