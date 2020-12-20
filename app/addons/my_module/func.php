@@ -35,24 +35,22 @@ function html_print($text){
 };
 function fn_update_reservation($reservations,$reservations_add,$product_id){
 
-
-
     if (!empty($reservations) && is_array($reservations)){
         foreach ($reservations as $data_reservation){
 
             $data_reservation['time_start'] = strtotime($data_reservation['time_start']);
             $data_reservation['time_end'] = strtotime($data_reservation['time_end']);
+
             $id = $data_reservation['id_reservation'];
             unset($data_reservation['$data_reservation']);
-            db_query("UPDATE ?:product_reservations SET ?u WHERE reservation_id = ?i", $data_reservation, $id);
-
-
-//                db_query("INSERT INTO ?:product_reservations ?e", $data_reservation);
+            if($data_reservation['time_start'] && $data_reservation['time_end'] && $id){
+                db_query("UPDATE ?:product_reservations SET ?u WHERE reservation_id = ?i", $data_reservation, $id);
+            }
         }
 
     }
     if (!empty($reservations_add) && is_array($reservations_add)){
-        foreach ($reservations_add as $data_reservation){
+        foreach ($reservations_add as &$data_reservation){
                 $data_reservation['time_start'] = strtotime($data_reservation['time_start']);
                 $data_reservation['time_end'] = strtotime($data_reservation['time_end']);
                 $data_reservation['product_id']=$product_id;
