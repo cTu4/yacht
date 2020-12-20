@@ -26,6 +26,13 @@
 /design/*
 !/design/backend
 /design/backend/*
+
+!/design/backend/css
+/design/backend/css/*
+!/design/backend/css/addons
+/design/backend/css/addons/*
+!/design/backend/css/addons/my_module
+
 !/design/backend/templates
 /design/backend/templates/*
 !/design/backend/templates/addons

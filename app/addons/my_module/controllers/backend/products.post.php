@@ -8,8 +8,8 @@ if (!defined('BOOTSTRAP')) { die('Access denied'); }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($mode == 'update') {
-        if (!empty($_REQUEST['reservations'])) {
-            fn_update_reservation($_REQUEST['reservations'],$_REQUEST['product_id']);
+        if (isset($_REQUEST['reservations']) || isset($_REQUEST['reservations_add'])) {
+            fn_update_reservation(isset($_REQUEST['reservations'])?$_REQUEST['reservations']:null,isset($_REQUEST['reservations_add'])?$_REQUEST['reservations_add']:null,$_REQUEST['product_id']);
         }
     }
 

@@ -308,32 +308,30 @@
 <script type="text/javascript">
     (function(_, $) {$ldelim}
     var dates = {$product.available_dates|json_encode nofilter};
-    console.log(dates);
     $('#date').dateRangePicker({
         format: 'MMM DD, YYYY',
         separator: " — ",
+        monthSelect: true,
+        yearSelect: true,
         language: "{$block.lang_code}",
         startDate: new Date(),
         endDate: moment().startOf('year').add(3, 'year'),
         autoClose: true,
         changeMonth: true,
         changeYear: true,
-        isInvalidDate: function(date) {
-            console.log(date);
-            return dates.reduce(function(previousValue, currentValue, index, array) {
-
-                return (date >= currentValue.time_start && date <= currentValue.time_end);
-            }, false);
-        },
+        selectForward: true,
+        autoUpdateInput: true,
         beforeShowDay: function(t)
         {
-            return dates.reduce(function(previousValue, currentValue, index, array) {
-                return previousValue || (t >= currentValue.start && t <= currentValue.end);
-            }, false);
-            // var valid = !(t.getDay() == 0 || t.getDay() == 6);  //disable saturday and sunday
-            // var _class = '';
-            // var _tooltip = valid ? '' : 'weekends are disabled';
-            // return [valid,_class,_tooltip];
+            let valid = false;
+            dates.forEach(function (date){
+                let start = new Date(date.time_start*1000);
+                let end = new Date(date.time_end*1000);
+                if(t >= start && t <= end){
+                    valid = true;
+                }
+            });
+            return [valid,'',''];
         }
     });
 

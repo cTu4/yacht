@@ -33,25 +33,36 @@ function html_print($text){
     print_r($text);
     echo "</pre>";
 };
-function fn_update_reservation($reservations,$product_id){
+function fn_update_reservation($reservations,$reservations_add,$product_id){
+
+
+
     if (!empty($reservations) && is_array($reservations)){
-        foreach ($reservations as $id_reservatoion => &$data_reservation){
-            $id_reservation_old = db_get_field("SELECT reservation_id FROM ?:product_reservations where reservation_id=?s",$id_reservatoion);
+        foreach ($reservations as $data_reservation){
+
             $data_reservation['time_start'] = strtotime($data_reservation['time_start']);
             $data_reservation['time_end'] = strtotime($data_reservation['time_end']);
-            if($id_reservation_old){
-                db_query("UPDATE ?:product_reservations SET ?u WHERE reservation_id = ?i", $data_reservation, $id_reservation_old);
+            $id = $data_reservation['id_reservation'];
+            unset($data_reservation['$data_reservation']);
+            db_query("UPDATE ?:product_reservations SET ?u WHERE reservation_id = ?i", $data_reservation, $id);
 
-            }
-            else{
-                $data_reservation['product_id'] = $product_id;
-                db_query("INSERT INTO ?:product_reservations ?e", $data_reservation);
 
-            }
+//                db_query("INSERT INTO ?:product_reservations ?e", $data_reservation);
         }
 
     }
-}
+    if (!empty($reservations_add) && is_array($reservations_add)){
+        foreach ($reservations_add as $data_reservation){
+                $data_reservation['time_start'] = strtotime($data_reservation['time_start']);
+                $data_reservation['time_end'] = strtotime($data_reservation['time_end']);
+                $data_reservation['product_id']=$product_id;
+                db_query("INSERT INTO ?:product_reservations ?e", $data_reservation);
+
+        }
+
+        }
+
+    }
 
 
 
