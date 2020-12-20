@@ -25,6 +25,6 @@ $reservations = db_get_array("select * from ?:product_reservations where product
 if($reservations){
     Tygh::$app['view']->assign('reservations', $reservations);
 }
-    Tygh::$app['view']->assign('lang', $_REQUEST['sl']?$_REQUEST['sl']:'ru');
+    Tygh::$app['view']->assign('lang', isset($_REQUEST['sl'])?$_REQUEST['sl']:'ru');
 
 }
