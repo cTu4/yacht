@@ -9,30 +9,16 @@
 
         $('#content_reservation').append(`
         <li id="item-add">
-                <span class="date">
-                        <input name="reservations_add[${index}][time_start]" class="date_start input w-100 t-18px font-weight-600"  autocomplete="off"></input>
-                         —
-                        <input name="reservations_add[${index}][time_end]" class="date_end input w-100 t-18px font-weight-600" autocomplete="off"></input>
-                </span>
-                <a class="icon-plus cm-tooltip" name="add" onclick="$.ceEvent('trigger', 'ce.add_calendar',  [this,${index+1},${lang}]);"></a>
-         </li>
+                <input type="text" name="reservations_add[${index}][time_start]" class="input-long user-success w-100 t-18px font-weight-600"  autocomplete="off"></input>
+                <a class="icon-plus cm-tooltip" name="add" onclick="$.ceEvent('trigger', 'ce.add_calendar',  [this,{$smarty.foreach.for_reserv.index+1},'${lang}']);"></a>
+                <a class="cm-tooltip" name="remove" onclick="$.ceEvent('trigger', 'ce.delete_reservation',  [this,{$smarty.foreach.for_reserv.index+1},'${lang}']);">
+                    <i class="icon-remove"></i>
+                </a>
+            </li>
         `);
-        $(el).parent().next().find('.date').dateRangePicker({
+        $(el).parent().next().dateRangePicker({
             format: 'MMM DD, YYYY',
             separator: " — ",
-            getValue: function()
-            {
-                console.log(this);
-                if ($(this).find('.date_start').val() && $(this).find('.date_end').val() )
-                    return $(this).find('.date_start').val() + $(this).find('.date_end').val();
-                else
-                    return '';
-            },
-            setValue: function(s,s1,s2)
-            {
-                $(this).find('.date_start').val(s1);
-                $(this).find('.date_end').val(s2);
-            },
             monthSelect: true,
             yearSelect: true,
             language: lang,
@@ -45,5 +31,22 @@
             autoUpdateInput: true
         });
     });
-}(Tygh, Tygh.$));
+
+    $.ceEvent('on', 'ce.delete_reservation', function(el,id_reservation) {
+        $.ceAjax('request', fn_url("reservation.delete"), {
+            method: "POST",
+            data: {id_reservation},
+            callback(resp){
+                if(resp.debug_info){
+                    $(el).parent().remove();
+                }
+                else{
+                    console.log('false');
+
+                }
+
+            }
+        });
+    });
+    }(Tygh, Tygh.$));
 

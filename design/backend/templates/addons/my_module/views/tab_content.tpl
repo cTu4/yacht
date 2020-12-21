@@ -3,21 +3,23 @@
     <h3>Укажите доступные даты бронирования</h3>
         {if $reservations}
             {foreach from=$reservations item="reservation" name="for_reserv"}
-
                 <li id="item-{$smarty.foreach.for_reserv.iteration}">
                     <input type="hidden" name=reservations[{$smarty.foreach.for_reserv.index}_update][id_reservation]" value="{$reservation.reservation_id}">
-                        <input class="date" name="reservations[{$smarty.foreach.for_reserv.index}_update][time_start]" class="date_start input w-100 t-18px font-weight-600"  value="{$reservation.time_start|date_format:"%b %d,%Y"} — {$reservation.time_end|date_format:"%b %d,%Y"}" autocomplete="off"></input>
-                    <a class="icon-plus cm-tooltip" name="add" onclick="$.ceEvent('trigger', 'ce.add_calendar',  [this,{$smarty.foreach.for_reserv.index},{$lang}]);"></a>
+                        <input type="text" class="date input-long user-success" name="reservations[{$smarty.foreach.for_reserv.index}_update][time_start]" class="w-100 t-18px font-weight-600"  value="{$reservation.time_start|date_format:"%b %d,%Y"} — {$reservation.time_end|date_format:"%b %d,%Y"}" autocomplete="off"></input>
+                    <a class="icon-plus cm-tooltip" name="add" onclick="$.ceEvent('trigger', 'ce.add_calendar',  [this,{$smarty.foreach.for_reserv.index},'{$lang}']);"></a>
+                    <a class="cm-tooltip" name="remove" onclick="$.ceEvent('trigger', 'ce.delete_reservation',  [this,{$reservation.reservation_id}]);">
+                        <i class="icon-remove"></i>
+                    </a>
+
                 </li>
             {/foreach}
         {else}
             <li id="item-add">
-                <span class="date">
-                        <input name="reservations_add[0][time_start]" class="date_start input w-100 t-18px font-weight-600"  autocomplete="off"></input>
-                         —
-                        <input name="reservations_add[0][time_end]" class="date_end input w-100 t-18px font-weight-600"  autocomplete="off"></input>
-                    </span>
-                <a class="icon-plus cm-tooltip" name="add" onclick="$.ceEvent('trigger', 'ce.add_calendar',  [this,{$smarty.foreach.for_reserv.index+1},{$lang}]);"></a>
+                <input type="text" name="reservations_add[0][time_start]" class="input-long user-success w-100 t-18px font-weight-600"  autocomplete="off"></input>
+                <a class="icon-plus cm-tooltip" name="add" onclick="$.ceEvent('trigger', 'ce.add_calendar',  [this,{$smarty.foreach.for_reserv.index+1},'{$lang}']);"></a>
+                <a class="cm-tooltip" name="remove" onclick="$.ceEvent('trigger', 'ce.delete_reservation',  [this,{$smarty.foreach.for_reserv.index+1},'{$lang}']);">
+                    <i class="icon-remove"></i>
+                </a>
             </li>
         {/if}
 </div>

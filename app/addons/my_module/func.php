@@ -37,22 +37,24 @@ function fn_update_reservation($reservations,$reservations_add,$product_id){
 
     if (!empty($reservations) && is_array($reservations)){
         foreach ($reservations as $data_reservation){
-
-            $data_reservation['time_start'] = strtotime($data_reservation['time_start']);
-            $data_reservation['time_end'] = strtotime($data_reservation['time_end']);
-
-            $id = $data_reservation['id_reservation'];
-            unset($data_reservation['$data_reservation']);
-            if($data_reservation['time_start'] && $data_reservation['time_end'] && $id){
-                db_query("UPDATE ?:product_reservations SET ?u WHERE reservation_id = ?i", $data_reservation, $id);
+            $data = explode(' — ',$data_reservation['time_start']);
+//            $month = mb_strimwidth($data[0],0,3);
+//            $time_start = str_replace($month,Months[$month],$data[0]);
+//            $month = mb_strimwidth($data[1],0,3);
+//            $time_end = str_replace($month,Months[$month],$data[1]);
+            $data_reservation['time_start'] = strtotime($data[0]);
+            $data_reservation['time_end'] = strtotime($data[1]);
+            if($data_reservation['time_start'] && $data_reservation['time_end'] && $data_reservation['id_reservation']){
+                db_query("UPDATE ?:product_reservations SET ?u WHERE reservation_id = ?i", $data_reservation, $data_reservation['id_reservation']);
             }
         }
 
     }
     if (!empty($reservations_add) && is_array($reservations_add)){
         foreach ($reservations_add as &$data_reservation){
-                $data_reservation['time_start'] = strtotime($data_reservation['time_start']);
-                $data_reservation['time_end'] = strtotime($data_reservation['time_end']);
+            $data = explode(' — ',$data_reservation['time_start']);
+            $data_reservation['time_start'] = strtotime($data[0]);
+            $data_reservation['time_end'] = strtotime($data[1]);
                 $data_reservation['product_id']=$product_id;
                 db_query("INSERT INTO ?:product_reservations ?e", $data_reservation);
 
