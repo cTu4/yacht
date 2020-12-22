@@ -142,6 +142,13 @@
                         <div class="t-18px font-weight-600">Barcelona, Spain</div>
                     </div>
                 </div>
+                <div class="item">
+                    <input name="location_end" type="checkbox">
+                    <div class="title location_end">
+                        <div  class="t-15px t-gray-op5">{__('location')}</div>
+                        <div class="t-18px font-weight-600">Barcelona, Spain</div>
+                    </div>
+                </div>
                 <div class="item d-flex">
                     <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19 7.99609H1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

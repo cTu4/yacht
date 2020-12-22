@@ -9,19 +9,19 @@
 
         $('#content_reservation').append(`
         <li id="item-add">
-                <input type="text" name="reservations_add[${index}][time_start]" class="input-long user-success w-100 t-18px font-weight-600"  autocomplete="off"></input>
-                <a class="icon-plus cm-tooltip" name="add" onclick="$.ceEvent('trigger', 'ce.add_calendar',  [this,{$smarty.foreach.for_reserv.index+1},'${lang}']);"></a>
-                <a class="cm-tooltip" name="remove" onclick="$.ceEvent('trigger', 'ce.delete_reservation',  [this,{$smarty.foreach.for_reserv.index+1},'${lang}']);">
+                <input type="text" name="reservations_add[${index}][time_start]" class="date input-long user-success w-100 t-18px font-weight-600" value=""  autocomplete="off"></input>
+                <a class="icon-plus cm-tooltip" name="add" onclick="$.ceEvent('trigger', 'ce.add_calendar',  [this,${index+1},'${lang}']);"></a>
+                <a class="cm-tooltip" name="remove" onclick="$.ceEvent('trigger', 'ce.delete_reservation',  [this,${index+1},'${lang}']);">
                     <i class="icon-remove"></i>
                 </a>
             </li>
         `);
-        $(el).parent().next().dateRangePicker({
+        $(el).parent().next().find('input').dateRangePicker({
             format: 'MMM DD, YYYY',
             separator: " — ",
             monthSelect: true,
             yearSelect: true,
-            language: lang,
+            language: `${lang}`,
             startDate: new Date(),
             endDate: moment().startOf('year').add(3, 'year'),
             autoClose: true,

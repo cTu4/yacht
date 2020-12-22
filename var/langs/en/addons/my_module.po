@@ -406,6 +406,13 @@ msgctxt "Languages::reservation"
 msgid "reservation"
 msgstr "Reservation"
 
+msgctxt "Languages::remove_dates"
+msgid "remove_dates"
+msgstr "Remove dates"
+
+msgctxt "Languages::add_dates"
+msgid "add_dates"
+msgstr "Add dates"
 
 
 

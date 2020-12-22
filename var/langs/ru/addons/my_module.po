@@ -348,3 +348,11 @@ msgctxt "Languages::reservation"
 msgid "reservation"
 msgstr "Бронирование"
 
+msgctxt "Languages::remove_dates"
+msgid "remove_dates"
+msgstr "Удалить даты"
+
+msgctxt "Languages::add_dates"
+msgid "add_dates"
+msgstr "Добавить даты"
+
