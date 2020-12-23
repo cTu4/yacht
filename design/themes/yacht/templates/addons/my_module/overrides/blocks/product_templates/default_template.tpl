@@ -27,6 +27,7 @@
             {/if}
         {/foreach}
     </div>
+    {$product|fn_print_r}
     <div class="content d-flex">
         <div class="info col-8">
             <div class="title d-flex flex-column">
@@ -139,15 +140,25 @@
                     </svg>
                     <div class="title d-flex flex-column">
                         <div  class="t-15px t-gray-op5">{__('location')}</div>
-                        <div class="t-18px font-weight-600">Barcelona, Spain</div>
+                        <input class="input w-100 t-18px font-weight-600"  value="Barcelona, Spain" autocomplete="off">
                     </div>
                 </div>
                 <div class="item">
-                    <input name="location_end" type="checkbox">
-                    <div class="title location_end">
-                        <div  class="t-15px t-gray-op5">{__('location')}</div>
-                        <div class="t-18px font-weight-600">Barcelona, Spain</div>
+                    <input id="diff_location" name="location_end" type="checkbox">
+                    <label class="t-15px t-gray-op5" for="diff_location">{__('drop_location_text')}</label>
+                    <div class="location_end">
+                        <div class="d-flex">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 13C10.343 13 9 11.657 9 10C9 8.343 10.343 7 12 7C13.657 7 15 8.343 15 10C15 11.657 13.657 13 12 13Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 21C12 21 5 15.25 5 10C5 6.134 8.134 3 12 3C15.866 3 19 6.134 19 10C19 15.25 12 21 12 21Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <div class="title ">
+                                <div  class="t-15px t-gray-op5">{__('drop_location')}</div>
+                                <input class="input w-100 t-18px font-weight-600"  value="Barcelona, Spain" autocomplete="off">
+                            </div>
+                        </div>
                     </div>
+
                 </div>
                 <div class="item d-flex">
                     <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">

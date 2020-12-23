@@ -414,6 +414,13 @@ msgctxt "Languages::add_dates"
 msgid "add_dates"
 msgstr "Add dates"
 
+msgctxt "Languages::drop_location_text"
+msgid "drop_location"
+msgstr "Drop yacht off at different location"
+
+msgctxt "Languages::drop_location"
+msgid "drop_location"
+msgstr "Drop-off location"
 
 
 

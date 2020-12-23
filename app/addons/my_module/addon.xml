@@ -6,14 +6,14 @@
     <default_language>en</default_language>
     <queries>
         <item for="install">
-            CREATE TABLE `?:product_reservations` (
+            CREATE TABLE IF NOT EXISTS `?:product_reservations` (
             `reservation_id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
             `product_id` varchar(6),
             `time_start` int(11),
             `time_end` int(11)
             )
         </item>
-        <item for="uninstall">DROP TABLE IF EXISTS ?:reservations;</item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:product_reservations;</item>
 
         <item for="install">
             alter table `?:products`
@@ -58,4 +58,7 @@
             drop `lux`
         </item>
     </queries>
+    <functions>
+        <item for="install">fn_my_module_install</item>
+    </functions>
 </addon>

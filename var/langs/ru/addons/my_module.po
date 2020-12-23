@@ -356,3 +356,11 @@ msgctxt "Languages::add_dates"
 msgid "add_dates"
 msgstr "Добавить даты"
 
+msgctxt "Languages::drop_location_text"
+msgid "drop_location"
+msgstr "Оставить яхту в другом месторасположении"
+
+msgctxt "Languages::drop_location"
+msgid "drop_location"
+msgstr "Конечное месторасположение"
+

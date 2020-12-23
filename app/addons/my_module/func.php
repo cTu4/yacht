@@ -33,6 +33,31 @@ function html_print($text){
     print_r($text);
     echo "</pre>";
 };
+function fn_my_module_install(){
+    $feature_data = [
+        "description" => "Расположение",
+        "company_id" => 1,
+        "purpose" => "find_products",
+        "feature_style" => "text",
+        "filter_style" => "checkbox",
+        "feature_type" => "S",
+        "parent_id" => 0,
+        "feature_code" => '',
+        "position" =>'' ,
+        "full_description" => '',
+        "status" => "A",
+        "display_on_product" => "Y",
+        "display_on_catalog" => "N",
+        "display_on_header" => "N",
+        "prefix" => '',
+        "suffix" => '',
+        "yml2_variants_unit" => '',
+        "yml2_exclude_prices" => '',
+        "categories_path" => '',
+        "original_var_ids" => ''
+    ];
+    fn_update_product_feature($feature_data,0);
+}
 function fn_update_reservation($reservations,$reservations_add,$product_id){
 
     if (!empty($reservations) && is_array($reservations)){
@@ -52,11 +77,14 @@ function fn_update_reservation($reservations,$reservations_add,$product_id){
     }
     if (!empty($reservations_add) && is_array($reservations_add)){
         foreach ($reservations_add as &$data_reservation){
+            if(!empty($data_reservation['time_start'])){
             $data = explode(' — ',$data_reservation['time_start']);
-            $data_reservation['time_start'] = strtotime($data[0]);
-            $data_reservation['time_end'] = strtotime($data[1]);
+                $data_reservation['time_start'] = strtotime($data[0]);
+                $data_reservation['time_end'] = strtotime($data[1]);
                 $data_reservation['product_id']=$product_id;
                 db_query("INSERT INTO ?:product_reservations ?e", $data_reservation);
+            }
+
 
         }
 
