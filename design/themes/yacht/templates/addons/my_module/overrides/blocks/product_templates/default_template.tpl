@@ -1,4 +1,7 @@
 {*{$product.image_pairs|fn_print_r}*}
+{$feature_location = $product.product_features[$features_ids['location']]}
+{$location = $feature_location['variants'][$feature_location.variant_id].variant}
+
 <div class="detailed bot-br-3">
     <div class="images">
         <div class="item">
@@ -27,7 +30,6 @@
             {/if}
         {/foreach}
     </div>
-    {$product|fn_print_r}
     <div class="content d-flex">
         <div class="info col-8">
             <div class="title d-flex flex-column">
@@ -140,21 +142,23 @@
                     </svg>
                     <div class="title d-flex flex-column">
                         <div  class="t-15px t-gray-op5">{__('location')}</div>
-                        <input class="input w-100 t-18px font-weight-600"  value="Barcelona, Spain" autocomplete="off">
+                        <input class="input w-100 t-18px font-weight-600"  value="{$location}" autocomplete="off">
                     </div>
                 </div>
                 <div class="item">
-                    <input id="diff_location" name="location_end" type="checkbox">
-                    <label class="t-15px t-gray-op5" for="diff_location">{__('drop_location_text')}</label>
-                    <div class="location_end">
-                        <div class="d-flex">
+                    <div class="d-flex align-items-baseline">
+                        <input id="diff_location" name="location_end" type="checkbox">
+                        <label class="t-15px t-gray-op5" for="diff_location">{__('drop_location_text')}</label>
+                    </div>
+                    <div class="location_end" id="location_toggle">
+                        <div class="d-flex ">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 13C10.343 13 9 11.657 9 10C9 8.343 10.343 7 12 7C13.657 7 15 8.343 15 10C15 11.657 13.657 13 12 13Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M12 21C12 21 5 15.25 5 10C5 6.134 8.134 3 12 3C15.866 3 19 6.134 19 10C19 15.25 12 21 12 21Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                             <div class="title ">
                                 <div  class="t-15px t-gray-op5">{__('drop_location')}</div>
-                                <input class="input w-100 t-18px font-weight-600"  value="Barcelona, Spain" autocomplete="off">
+                                <input class="input w-100 t-18px font-weight-600"  value="{$location}" autocomplete="off">
                             </div>
                         </div>
                     </div>

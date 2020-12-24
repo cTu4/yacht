@@ -300,7 +300,7 @@
 
     $('[name="location_end"]').on('click',function (){
         console.log('ssss');
-       $(this).next().next().toggle(600);
+       $('#location_toggle').toggle(600);
     });
 
 //     // Create the script tag, set the appropriate attributes
