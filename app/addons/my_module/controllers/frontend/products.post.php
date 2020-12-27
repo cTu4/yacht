@@ -15,6 +15,11 @@ if ($mode == 'view') {
     $features_ids = [];
     $id_feature_location = db_get_field('select feature_id from ?:product_features_descriptions where description="Расположение"');
     $features_ids["location"]=$id_feature_location;
+    $id_feature_amenities = db_get_field('select feature_id from ?:product_features_descriptions where description="Удобства"');
+    $features_ids["amenities"]=$id_feature_amenities;
     Tygh::$app['view']->assign('features_ids', $features_ids);
+
+
+
 
 }

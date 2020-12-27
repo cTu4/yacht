@@ -299,7 +299,6 @@
     }
 
     $('[name="location_end"]').on('click',function (){
-        console.log('ssss');
        $('#location_toggle').toggle(600);
     });
 
