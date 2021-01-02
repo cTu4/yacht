@@ -1,6 +1,10 @@
 {*{$product.image_pairs|fn_print_r}*}
 {$feature_location = $product.product_features[$features_ids['location']]}
 {$location = $feature_location['variants'][$feature_location.variant_id].variant}
+{$features_ids.features_cards|fn_print_r}
+{foreach from=$features_ids.features_cards item="id"}
+    {$product.product_features[$id]|fn_print_r}
+{/foreach}
 <div class="detailed bot-br-3">
     <div class="images">
         <div class="item">

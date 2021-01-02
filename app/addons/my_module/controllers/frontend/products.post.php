@@ -17,6 +17,13 @@ if ($mode == 'view') {
     $features_ids["location"]=$id_feature_location;
     $id_feature_amenities = db_get_field('select feature_id from ?:product_features_descriptions where description="Удобства"');
     $features_ids["amenities"]=$id_feature_amenities;
+    $sql = "select feature_id,description from ?:product_features_descriptions where (";
+    foreach (features_names as $feature){
+        $sql .= " description='".$feature."' or";
+    }
+    $sql = substr($sql, 0, -3);
+    $sql .= ") and lang_code='ru'";
+    $features_ids["features_cards"] = db_get_hash_array($sql,"description");
     Tygh::$app['view']->assign('features_ids', $features_ids);
 
 
