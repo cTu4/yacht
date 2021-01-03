@@ -1,7 +1,7 @@
 <div class="bot-br-3">
     <div class="title_options t-28px font-weight-bold">{__('boat_options')}</div>
     <div class="boat_options d-flex justify-content-left flex-wrap">
-        {if $wi_fi=="Y"}
+        {if $wi_fi}
             <div class="option">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.99917 12.8334C7.86117 12.8334 7.74917 12.9454 7.7505 13.0834C7.74983 13.2214 7.86183 13.3334 7.99983 13.3334C8.13783 13.3334 8.24983 13.2214 8.24983 13.0834C8.24983 12.9454 8.13783 12.8334 7.99917 12.8334" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -13,7 +13,7 @@
             </div>
         {/if}
 
-        {if $bath_accessories=="Y"}
+        {if $bath_accessories}
             <div class="option">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7.99984 5.972V5.44467C7.99984 4.9 8.3365 4.60467 8.67384 4.378C9.00317 4.156 9.33317 3.86667 9.33317 3.33333C9.33317 2.59667 8.7365 2 7.99984 2C7.26317 2 6.6665 2.59667 6.6665 3.33333" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -24,7 +24,7 @@
             </div>
         {/if}
 
-        {if $dishes=="Y"}
+        {if $dishes}
             <div class="option">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11.2426 1.87868C13.5858 3.05025 13.5858 4.94975 11.2426 6.12132C8.89948 7.29289 5.10049 7.29289 2.75736 6.12132C0.414213 4.94975 0.414213 3.05025 2.75736 1.87868C5.10051 0.707107 8.89949 0.707107 11.2426 1.87868" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -36,7 +36,7 @@
             </div>
         {/if}
 
-        {if $cinema=="Y"}
+        {if $cinema}
             <div class="option">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13.0879 11.222H2.91195C2.17528 11.222 1.57861 10.6254 1.57861 9.88872V3.37472C1.57861 2.63805 2.17528 2.04138 2.91195 2.04138H13.0873C13.8239 2.04138 14.4206 2.63805 14.4206 3.37472V9.88938C14.4213 10.6254 13.8239 11.222 13.0879 11.222Z" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -46,7 +46,7 @@
             </div>
         {/if}
 
-        {if $pool=="Y"}
+        {if $pool}
             <div class="option">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 10.0787C1.764 9.73939 2.636 9.73939 3.4 10.0787C4.164 10.4181 5.036 10.4181 5.8 10.0787C6.564 9.73939 7.436 9.73939 8.2 10.0787C8.964 10.4181 9.836 10.4181 10.6 10.0787C11.364 9.73939 12.236 9.73939 13 10.0787" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -60,7 +60,7 @@
             </div>
         {/if}
 
-        {if $bar=="Y"}
+        {if $bar}
             <div class="option">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.79602 13.3754L9.33336 6.04204C9.30936 5.65804 9.61402 5.33337 9.99869 5.33337H13.6667C14.0514 5.33337 14.356 5.65804 14.332 6.04204L13.8694 13.3754C13.8474 13.7267 13.556 14 13.204 14H10.4614C10.1094 14 9.81802 13.7267 9.79602 13.3754Z" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -73,7 +73,7 @@
             </div>
         {/if}
 
-        {if $pets=="Y"}
+        {if $pets}
             <div class="option">
                 <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.3052 2.69242C7.81376 2.21442 6.18625 2.21442 4.6948 2.69242L2.9812 1.36386C2.47813 0.973294 1.72055 1.02586 1.28911 1.48127C1.10311 1.6776 1.00059 1.92756 1 2.1862V6.46843C0.999999 9.46819 3.6863 11.9 7 11.9C10.3137 11.9 13 9.46819 13 6.46843V2.1862C13 1.58625 12.4627 1.09998 11.8 1.09998C11.5135 1.09998 11.2364 1.19279 11.0189 1.36164L9.3052 2.69242Z" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -82,7 +82,7 @@
             </div>
         {/if}
 
-        {if $washer=="Y"}
+        {if $washer}
             <div class="option">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2.33333 13H11.5193C12.256 13 12.8527 12.4033 12.8527 11.6667V2.33333C12.8527 1.59667 12.256 1 11.5193 1H2.33333C1.59667 1 1 1.59667 1 2.33333V11.6667C1 12.4033 1.59667 13 2.33333 13Z" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>

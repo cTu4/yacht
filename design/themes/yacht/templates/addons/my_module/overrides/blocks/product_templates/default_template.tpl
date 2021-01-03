@@ -1,10 +1,7 @@
 {*{$product.image_pairs|fn_print_r}*}
 {$feature_location = $product.product_features[$features_ids['location']]}
 {$location = $feature_location['variants'][$feature_location.variant_id].variant}
-{$features_ids.features_cards|fn_print_r}
-{foreach from=$features_ids.features_cards item="id"}
-    {$product.product_features[$id]|fn_print_r}
-{/foreach}
+{$feature_amenities = $product.product_features[$features_ids['amenities']]}
 <div class="detailed bot-br-3">
     <div class="images">
         <div class="item">
@@ -55,7 +52,7 @@
                     </span>
                 </div>
                 <div class="full_desc t-16px">
-                    {$product.full_description}
+                    {$product.full_description nofilter}
                 </div>
                 <a class="t-16px t-blue-a font-weight-500">
                     See full model  history
@@ -67,12 +64,12 @@
             </div>
             <div class="cards-info d-flex justify-content-left">
                 {include file="addons/my_module/blocks/cards-info.tpl"
-                    double_cabins=$product.double_cabins
-                    single_cabins=$product.single_cabins
-                    double_sleep_place=$product.double_sleep_place
-                    single_sleep_place=$product.single_sleep_place
-                    shower=$product.shower
-                    kitchen=$product.kitchen
+                    double_cabins=$card_data.double_cabins
+                    single_cabins=$card_data.single_cabins
+                    double_sleep_place=$card_data.double_sleep_place
+                    single_sleep_place=$card_data.single_sleep_place
+                    shower=$card_data.shower
+                    kitchen=$card_data.kitchen
                 }
             </div>
             <div class="host bot-br-3 d-flex align-items-center">
@@ -115,14 +112,14 @@
                 </div>
             </div>
                 {include file="addons/my_module/blocks/boat_options.tpl"
-                    wi_fi=$product.wi_fi
-                    bath_accessories=$product.bath_accessories
-                    dishes=$product.dishes
-                    cinema=$product.cinema
-                    pool=$product.pool
-                    bar=$product.bar
-                    pets=$product.pets
-                    washer=$product.washer
+                    wi_fi=$card_data.wi_fi
+                    bath_accessories=$card_data.bath_accessories
+                    dishes=$card_data.dishes
+                    cinema=$card_data.cinema
+                    pool=$card_data.pool
+                    bar=$card_data.bar
+                    pets=$card_data.pets
+                    washer=$card_data.washer
                 }
             {include file="addons/my_module/blocks/map.tpl"}
             {include file="addons/my_module/blocks/weather.tpl"}
@@ -316,8 +313,8 @@
                         <span class="t-22px font-weight-500">{__('total')}</span>
                         <span class="t-22px font-weight-500">€ 15 508,60</span>
                     </div>
-                    <div class="button pointer t-18px t-white font-weight-600">
-                            {__('select_rent')}
+                    <div class="button pointer t-18px t-white font-weight-600" >
+                        <a href="{$config.http_path}/checkout">{__('select_rent')}</a>
                     </div>
                 </div>
 

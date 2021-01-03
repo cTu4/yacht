@@ -26,7 +26,7 @@
         </div>
 {/if}
 
-{if $shower === "Y" }
+{if $shower }
         <div class="card d-flex flex-column justify-content-end">
                 <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 7.66667C9 3.98533 11.9853 1 15.6667 1C19.348 1 22.3333 3.98533 22.3333 7.66667V25" stroke="#0090F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -43,7 +43,7 @@
         </div>
 {/if}
 
-{if $kitchen === "Y" }
+{if $kitchen }
         <div class="card d-flex flex-column justify-content-end">
                 <svg width="25" height="27" viewBox="0 0 25 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M21 17.0693C18.7907 17.0693 17 15.2787 17 13.0693V5.06934C17 2.86 18.7907 1.06934 21 1.06934" stroke="#0090F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
