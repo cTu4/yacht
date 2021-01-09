@@ -126,7 +126,7 @@
 
             {include file="addons/discussion/blocks/product_tabs/discussion.tpl"}
         </div>
-            <form class="options col-4 form-edit cm-disable-empty-files cm-processed-form cm-check-changes" enctype="multipart/form-data" novalidate="novalidate" action="{$config.http_path}/services" method="post" name="product_data">
+            <form class="options col-4 form-edit cm-disable-empty-files cm-processed-form cm-check-changes" enctype="multipart/form-data" novalidate="novalidate" action="{$config.http_path}/services" method="get" name="product_data">
                 <input type="hidden" name="product_id" value="{$product.product_id}">
                 {include file="addons/my_module/blocks/product/main_options.tpl"
                     location=$location

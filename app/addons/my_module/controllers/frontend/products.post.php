@@ -7,27 +7,7 @@ if (!defined('BOOTSTRAP')) { die('Access denied'); }
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if ($mode == 'services'){
-        $product = fn_get_product_data(
-            $_REQUEST['product_id'],
-            $auth,
-            CART_LANGUAGE,
-            '',
-            true,
-            true,
-            true,
-            true,
-            fn_is_preview_action($auth, $_REQUEST),
-            true,
-            false,
-            true
-        );
-        Tygh::$app['view']->assign('product', $product);
 
-        $features_ids = fn_get_features_ids();
-        Tygh::$app['view']->assign('features_ids', $features_ids);
-
-    }
     return;
 }
 function select_ids($select,$table,$filters, $filter_on){
@@ -40,7 +20,27 @@ function select_ids($select,$table,$filters, $filter_on){
     $ids = db_get_fields($sql);
     return $ids;
 }
+if ($mode == 'services'){
+    $product = fn_get_product_data(
+        $_REQUEST['product_id'],
+        $auth,
+        CART_LANGUAGE,
+        '',
+        true,
+        true,
+        true,
+        true,
+        fn_is_preview_action($auth, $_REQUEST),
+        true,
+        false,
+        true
+    );
+    Tygh::$app['view']->assign('product', $product);
 
+    $features_ids = fn_get_features_ids();
+    Tygh::$app['view']->assign('features_ids', $features_ids);
+
+}
 if ($mode == 'view') {
 
     $features_ids = fn_get_features_ids();
