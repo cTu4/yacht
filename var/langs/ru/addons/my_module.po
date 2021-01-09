@@ -328,6 +328,14 @@ msgctxt "Languages::edit_dates"
 msgid "edit_dates"
 msgstr "Редактировать даты"
 
+msgctxt "Languages::total_price"
+msgid "total_price"
+msgstr "Итого: "
+
+msgctxt "Languages::edit_order"
+msgid "edit_order"
+msgstr "Редактировать заказ"
+
 msgctxt "Languages::weather"
 msgid "weather"
 msgstr "Погода"

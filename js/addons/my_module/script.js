@@ -298,7 +298,7 @@
 
     }
 
-    $('[name="location_end"]').on('click',function (){
+    $('#diff_location').on('click',function (){
        $('#location_toggle').toggle(600);
     });
 

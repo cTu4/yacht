@@ -163,6 +163,9 @@ font-weight: normal;
 letter-spacing: -1px;
 color: #000000;
 }
+.none-under-line{
+  text-decoration: none!important;
+}
 a:hover{
 text-decoration: none;
 color:#1DD1B9!important;
@@ -948,6 +951,7 @@ fill: #1DD1B9;
   grid-column-gap: 15px;
   grid-row-gap: 15px;
   margin-bottom: 40px;
+  padding: 0 15px;
 }
 .images .view_images,.images .item .play_video{
   position: absolute;
@@ -1006,7 +1010,7 @@ fill: #1DD1B9;
   text-decoration: underline;
 }
 
-.detailed .options > div{
+.options > div{
   background: #F2F4FA;
   border-radius: 12px;
 }
@@ -1179,12 +1183,12 @@ fill: #1DD1B9;
   color:#222222;
   margin: 0 20px;
 }
-.content .options .edit{
+.options .edit{
   position: absolute;
   top: 20px;
   right: 20px;
 }
-.content .options .boat_order{
+.boat_order{
   position: relative;
   margin-bottom: 20px;
 }
@@ -1267,7 +1271,6 @@ label::before {
   width: 18px;
   height: 18px;
   background: #fff;
-  transform: rotate(-25deg);
 }
 .input_slide:checked + label {
   background: #2466F6;

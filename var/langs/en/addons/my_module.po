@@ -253,6 +253,9 @@ msgctxt "Languages::add_vacation"
 msgid "add_vacation"
 msgstr "Add Vacations"
 
+msgctxt "Languages::total_price"
+msgid "total_price"
+msgstr "Total Price"
 
 msgctxt "Languages::price_range"
 msgid "price_range"
@@ -353,6 +356,10 @@ msgstr "Selected dates"
 msgctxt "Languages::edit_dates"
 msgid "edit_dates"
 msgstr "Edit dates"
+
+msgctxt "Languages::edit_order"
+msgid "edit_order"
+msgstr "Edit Order"
 
 msgctxt "Languages::cleanliness"
 msgid "Cleanliness"
