@@ -21,24 +21,27 @@ function select_ids($select,$table,$filters, $filter_on){
     return $ids;
 }
 if ($mode == 'services'){
-    $product = fn_get_product_data(
-        $_REQUEST['product_id'],
-        $auth,
-        CART_LANGUAGE,
-        '',
-        true,
-        true,
-        true,
-        true,
-        fn_is_preview_action($auth, $_REQUEST),
-        true,
-        false,
-        true
-    );
-    Tygh::$app['view']->assign('product', $product);
+    if(isset($_REQUEST['product_id'])){
+        $product = fn_get_product_data(
+            $_REQUEST['product_id'],
+            $auth,
+            CART_LANGUAGE,
+            '',
+            true,
+            true,
+            true,
+            true,
+            fn_is_preview_action($auth, $_REQUEST),
+            true,
+            false,
+            true
+        );
+        Tygh::$app['view']->assign('product', $product);
 
-    $features_ids = fn_get_features_ids();
-    Tygh::$app['view']->assign('features_ids', $features_ids);
+        $features_ids = fn_get_features_ids();
+        Tygh::$app['view']->assign('features_ids', $features_ids);
+    }
+
 
 }
 if ($mode == 'view') {

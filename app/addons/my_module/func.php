@@ -294,5 +294,17 @@ function fn_update_reservation($reservations,$reservations_add,$product_id){
 
     }
 
+    function fn_my_module_get_discussion_posts_post($params, $items_per_page, &$posts){
+        foreach ($posts as &$post) {
+            $ratings = db_get_array("select * from ?:discussion_rating where post_id=?i",$post['post_id']);
+            if($ratings){
+                foreach ($ratings[0] as $keyRating => $rating){
+                    $post[$keyRating] = $rating;
+                }
+            }
+
+        }
+    }
+
 
 
