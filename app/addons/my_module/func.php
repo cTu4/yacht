@@ -298,9 +298,14 @@ function fn_update_reservation($reservations,$reservations_add,$product_id){
         foreach ($posts as &$post) {
             $ratings = db_get_array("select * from ?:discussion_rating where post_id=?i",$post['post_id']);
             if($ratings){
+                $arr = [];
                 foreach ($ratings[0] as $keyRating => $rating){
-                    $post[$keyRating] = $rating;
+                    if($keyRating !== "rating_value" && $keyRating !== "post_id" && $keyRating !== "thread_id" ){
+                        $arr[$keyRating] = $rating;
+                    }
                 }
+                $post['ratings'] = $arr;
+
             }
 
         }
