@@ -1,4 +1,7 @@
 <?php
+use Tygh\Registry;
+
+
 function fn_my_module_get_discussion_post($object_id, $object_type, $get_posts, $params, &$discussion) {
     if(isset($discussion['posts'])){
         $posts = $discussion['posts'];
@@ -21,7 +24,30 @@ function fn_my_module_get_discussion_post($object_id, $object_type, $get_posts, 
         }
         $discussion['posts_columns'] = $posts_data;
     }
+    $discussion['average_ratings'] = fn_get_avarage_ratings($discussion['thread_id'], $discussion['posts'][0]['ratings']);
 
+}
+function fn_get_avarage_ratings($thread_id,$fields){
+    if($fields){
+        $sql = "select ";
+        foreach ($fields as $key_filed => $field){
+            $sql .= 'AVG('.$key_filed.') as '.$key_filed.' ,';
+        }
+        $sql = substr($sql,0,-1);
+        $sql .= "from ?:discussion_rating where thread_id=?i";
+        $data_ratings = db_get_array($sql,$thread_id);
+        $result = [];
+        foreach ($data_ratings[0] as $key => &$rating){
+            $result[$key] = [
+                'info' =>   number_format($rating, 2),
+                'value' =>  ($rating / 5) * 100
+                ];
+
+        }
+
+    }
+
+    return $result;
 }
 function fn_my_module_get_product_data_post(&$product_data, $auth, $preview, $lang_code){
     $dates = db_get_array("select time_start,time_end from ?:product_reservations where product_id=?s",$product_data['product_id']);

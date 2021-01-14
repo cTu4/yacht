@@ -18,66 +18,77 @@
             </span>
             </div>
         </div>
-        <div class="points d-flex justify-content-between">
-            <div class="d-flex flex-column">
+        <div class="points d-flex justify-content-between flex-wrap">
+            {foreach from=$product.discussion.average_ratings item="rating" key="keyRating"}
                 <div class="point d-flex justify-content-between">
-                    <div class="t-12px t-gray-op6">{__('cleanliness')}</div>
+                    <div class="t-12px t-gray-op6">{__($keyRating)}</div>
                     <div class="d-flex align-items-center">
                         <div class="progress w-75">
-                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: {$rating.value}%" aria-valuenow="{$rating.value}" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
-                        <div class="t-12px t-gray-op6">1.4</div>
+                        <div class="t-12px t-gray-op6">{$rating.info}</div>
                     </div>
                 </div>
-                <div class="point d-flex justify-content-between">
-                    <div class="t-12px t-gray-op6">{__('communication')}</div>
-                    <div class="d-flex align-items-center">
-                        <div class="progress w-75">
-                            <div class="progress-bar" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="t-12px t-gray-op6">4.4</div>
-                    </div>
-                </div>
-                <div class="point d-flex justify-content-between">
-                    <div class="t-12px t-gray-op6">{__('check-in')}</div>
-                    <div class="d-flex align-items-center">
-                        <div class="progress w-75">
-                            <div class="progress-bar" role="progressbar" style="width: 38%" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="t-12px t-gray-op6">3.1</div>
-                    </div>
-                </div>
+            {/foreach}
+{*            <div class="d-flex flex-column">*}
+{*                <div class="point d-flex justify-content-between">*}
+{*                    <div class="t-12px t-gray-op6">{__('cleanliness')}</div>*}
+{*                    <div class="d-flex align-items-center">*}
+{*                        <div class="progress w-75">*}
+{*                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>*}
+{*                        </div>*}
+{*                        <div class="t-12px t-gray-op6">1.4</div>*}
+{*                    </div>*}
+{*                </div>*}
+{*                <div class="point d-flex justify-content-between">*}
+{*                    <div class="t-12px t-gray-op6">{__('communication')}</div>*}
+{*                    <div class="d-flex align-items-center">*}
+{*                        <div class="progress w-75">*}
+{*                            <div class="progress-bar" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>*}
+{*                        </div>*}
+{*                        <div class="t-12px t-gray-op6">4.4</div>*}
+{*                    </div>*}
+{*                </div>*}
+{*                <div class="point d-flex justify-content-between">*}
+{*                    <div class="t-12px t-gray-op6">{__('check-in')}</div>*}
+{*                    <div class="d-flex align-items-center">*}
+{*                        <div class="progress w-75">*}
+{*                            <div class="progress-bar" role="progressbar" style="width: 38%" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100"></div>*}
+{*                        </div>*}
+{*                        <div class="t-12px t-gray-op6">3.1</div>*}
+{*                    </div>*}
+{*                </div>*}
 
-            </div>
-            <div class="d-flex flex-column"">
-            <div class="point d-flex justify-content-between">
-                <div class="t-12px t-gray-op6">{__('accuracy')}</div>
-                <div class="d-flex align-items-center">
-                    <div class="progress w-75">
-                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="t-12px t-gray-op6">1.4</div>
-                </div>
-            </div>
-            <div class="point d-flex justify-content-between">
-                <div class="t-12px t-gray-op6">{__('location')}</div>
-                <div class="d-flex align-items-center">
-                    <div class="progress w-75">
-                        <div class="progress-bar" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="t-12px t-gray-op6">4.4</div>
-                </div>
-            </div>
-            <div class="point d-flex justify-content-between">
-                <div class="t-12px t-gray-op6">{__('value')}</div>
-                <div class="d-flex align-items-center">
-                    <div class="progress w-75">
-                        <div class="progress-bar" role="progressbar" style="width: 38%" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="t-12px t-gray-op6">3.1</div>
-                </div>
-            </div>
-        </div>
+{*            </div>*}
+{*            <div class="d-flex flex-column">*}
+{*                <div class="point d-flex justify-content-between">*}
+{*                    <div class="t-12px t-gray-op6">{__('accuracy')}</div>*}
+{*                    <div class="d-flex align-items-center">*}
+{*                        <div class="progress w-75">*}
+{*                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>*}
+{*                        </div>*}
+{*                        <div class="t-12px t-gray-op6">1.4</div>*}
+{*                    </div>*}
+{*                </div>*}
+{*                <div class="point d-flex justify-content-between">*}
+{*                    <div class="t-12px t-gray-op6">{__('location')}</div>*}
+{*                    <div class="d-flex align-items-center">*}
+{*                        <div class="progress w-75">*}
+{*                            <div class="progress-bar" role="progressbar" style="width: 78%" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>*}
+{*                        </div>*}
+{*                        <div class="t-12px t-gray-op6">4.4</div>*}
+{*                    </div>*}
+{*                </div>*}
+{*                <div class="point d-flex justify-content-between">*}
+{*                    <div class="t-12px t-gray-op6">{__('value')}</div>*}
+{*                    <div class="d-flex align-items-center">*}
+{*                        <div class="progress w-75">*}
+{*                            <div class="progress-bar" role="progressbar" style="width: 38%" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100"></div>*}
+{*                        </div>*}
+{*                        <div class="t-12px t-gray-op6">3.1</div>*}
+{*                    </div>*}
+{*                </div>*}
+{*        </div>*}
     </div>
     </div>
     <div class="wrap_posts">
