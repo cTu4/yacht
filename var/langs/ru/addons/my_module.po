@@ -372,3 +372,10 @@ msgctxt "Languages::drop_location"
 msgid "drop_location"
 msgstr "Конечное месторасположение"
 
+msgctxt "Languages::identy_verified"
+msgid "identy_verified"
+msgstr "Личность подтверждена"
+
+msgctxt "Languages::full_desc_vendor"
+msgid "full_desc_vendor"
+msgstr "Подробное описание от продавца"

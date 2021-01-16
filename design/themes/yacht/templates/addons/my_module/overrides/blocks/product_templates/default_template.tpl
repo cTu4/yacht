@@ -72,25 +72,25 @@
                     kitchen=$card_data.kitchen
                 }
             </div>
-            <div class="host bot-br-3 d-flex align-items-center">
+            <div class="host bot-br-3 d-flex justify-content-between align-items-center">
                 <div class="text">
                     <div class="t-28px font-weight-bold">
-                        Host by Andrew Miles
+                        Host by {$company_data.company}
                     </div>
-                    <div class="t-16px full_desc ">
-                        Sailing boat Bavaria 30, model 2006 is a famous German brand for comfortable sailing.
-                        It offers total comfort and with the sails of 66 m2 gives pleasure for sailing in the beautiful
-                        Adriatic sea.
-                    </div>
-                    <div >
-                        <a href="" class="t-16px t-blue-a font-weight-500">
-                            See more
-                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.87189 5.06687L3.94454 4.99553L3.87189 4.92418L0.336584 1.45214C0.0211382 1.14234 0.0211382 0.642892 0.336584 0.333092C0.653036 0.0223036 1.16473 0.0223035 1.48118 0.333092L5.66342 4.44047C5.97886 4.75027 5.97886 5.24973 5.66342 5.55953L1.48118 9.66691C1.16489 9.97755 0.653535 9.9777 0.337047 9.66736C0.0287628 9.35613 0.0224648 8.84741 0.336584 8.53891L3.87189 5.06687Z" fill="#2466F6" stroke="#2466F6" stroke-width="0.2"/>
-                            </svg>
-                        </a>
+                    {if $product.vendors_desc}
+                        <div class="t-16px full_desc ">
+                               {$product.vendors_desc.description nofilter}
+                        </div>
+                        <div >
+                            <a href="" class="t-16px t-blue-a font-weight-500">
+                                See more
+                                <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.87189 5.06687L3.94454 4.99553L3.87189 4.92418L0.336584 1.45214C0.0211382 1.14234 0.0211382 0.642892 0.336584 0.333092C0.653036 0.0223036 1.16473 0.0223035 1.48118 0.333092L5.66342 4.44047C5.97886 4.75027 5.97886 5.24973 5.66342 5.55953L1.48118 9.66691C1.16489 9.97755 0.653535 9.9777 0.337047 9.66736C0.0287628 9.35613 0.0224648 8.84741 0.336584 8.53891L3.87189 5.06687Z" fill="#2466F6" stroke="#2466F6" stroke-width="0.2"/>
+                                </svg>
+                            </a>
 
-                    </div>
+                        </div>
+                    {/if}
                     <div class="rating">
                         <span class="t-18px font-weight-500">
                             <svg class="align-baseline" width="16" height="16" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,17 +98,19 @@
                             </svg>
                             4.81
                         </span>
-                        <span class="t-18px font-weight-500">
+                        {if $company_data.status === "A"}
+                            <span class="t-18px font-weight-500">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M10.0042 18C10.162 18 10.3863 17.9364 10.6024 17.8331C15.3881 15.5122 17 14.2404 17 11.3949V5.55291C17 4.52757 16.6178 4.12221 15.6955 3.74863C14.8315 3.40686 11.8404 2.41331 11.0178 2.15897C10.7021 2.06359 10.3199 2 10.0042 2C9.68012 2 9.30623 2.07154 8.9905 2.15897C8.15964 2.40537 5.16855 3.4148 4.31276 3.74863C3.3822 4.11426 3 4.52757 3 5.55291V11.3949C3 14.2404 4.67003 15.4168 9.40593 17.8331C9.62196 17.9444 9.84629 18 10.0042 18ZM9.20653 13.7476C8.8908 13.7476 8.63323 13.6125 8.39228 13.3343L6.14065 10.7273C5.98279 10.5524 5.90801 10.3616 5.90801 10.1629C5.90801 9.73373 6.26528 9.3999 6.69733 9.3999C6.9549 9.3999 7.17092 9.50323 7.37033 9.74168L9.1816 11.9036L12.6712 6.57029C12.8623 6.28415 13.1033 6.14903 13.3774 6.14903C13.7929 6.14903 14.1917 6.43517 14.1917 6.85643C14.1917 7.03925 14.1003 7.23795 13.984 7.41282L9.98754 13.3264C9.79644 13.6046 9.52225 13.7476 9.20653 13.7476Z" fill="#F9002D"/>
                             </svg>
-                            Identy verified
+                           {__('identy_verified')}
                         </span>
+                        {/if}
                     </div>
 
                 </div>
                 <div class="icon">
-                    <img src="images/my_module/host.png">
+                    <img src="{$company_data.logo.image.image_path}">
                 </div>
             </div>
                 {include file="addons/my_module/blocks/boat_options.tpl"

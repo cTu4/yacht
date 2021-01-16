@@ -16,6 +16,16 @@
         <item for="uninstall">DROP TABLE IF EXISTS ?:product_reservations;</item>
 
         <item for="install">
+            CREATE TABLE IF NOT EXISTS `?:product_vendors_desc` (
+            `vendor_desc_id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            `product_id` varchar(6),
+            `company_id` int(11),
+            `description` mediumtext
+            )
+        </item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:product_vendors_desc;</item>
+
+        <item for="install">
             alter table `?:discussion_rating`
             add `cleanliness` int(1),
             add `communication` int(1),
@@ -25,13 +35,13 @@
             add `value` int(1)
         </item>
         <item for="uninstall">
-            alter table `?:products`
-            drop `cleanliness`,
-            drop `communication`,
-            drop `check_in`,
-            drop `accuracy`,
-            drop `location`,
-            drop `value`
+<!--            alter table `?:discussion_rating`-->
+<!--            drop `cleanliness`,-->
+<!--            drop `communication`,-->
+<!--            drop `check_in`,-->
+<!--            drop `accuracy`,-->
+<!--            drop `location`,-->
+<!--            drop `value`-->
         </item>
 
 <!--        <item for="install">-->

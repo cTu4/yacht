@@ -47,7 +47,6 @@ if ($mode == 'services'){
 if ($mode == 'view') {
 
     $features_ids = fn_get_features_ids();
-
     $sql = "select feature_id from ?:product_features_descriptions where (";
     foreach (features_names as $feature){
         $sql .= " description='".$feature."' or";
@@ -65,11 +64,16 @@ if ($mode == 'view') {
         "variants"=>true
     ]);
     $card_data = fn_get_card_data($card_features[0]);
-
-
-
     Tygh::$app['view']->assign('card_data', $card_data);
     Tygh::$app['view']->assign('features_ids', $features_ids);
+    $logos = fn_get_logos($_REQUEST['company_id']);
+    $company_data = fn_get_company_data($_REQUEST['company_id'], DESCR_SL);
+    $company_data['logo'] = $logos['theme'];
+    Tygh::$app['view']->assign('company_data', $company_data);
+
+
+
+
 
 
 

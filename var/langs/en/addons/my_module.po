@@ -429,6 +429,13 @@ msgctxt "Languages::drop_location"
 msgid "drop_location"
 msgstr "Drop-off location"
 
+msgctxt "Languages::identy_verified"
+msgid "identy_verified"
+msgstr "Identy verified"
+
+msgctxt "Languages::full_desc_vendor"
+msgid "full_desc_vendor"
+msgstr "Vendor's full description"
 
 
 
