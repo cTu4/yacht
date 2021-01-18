@@ -24,7 +24,7 @@ function fn_my_module_get_discussion_post($object_id, $object_type, $get_posts, 
         }
         $discussion['posts_columns'] = $posts_data;
     }
-   // $discussion['average_ratings'] = fn_get_avarage_ratings($discussion['thread_id'], $discussion?$discussion['posts'][0]['ratings']:false);
+    $discussion['average_ratings'] = fn_get_avarage_ratings($discussion['thread_id'], $discussion['posts']?$discussion['posts'][0]['ratings']:false);
 
 }
 function fn_get_avarage_ratings($thread_id,$fields){
