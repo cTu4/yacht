@@ -24,14 +24,13 @@ function fn_my_module_get_discussion_post($object_id, $object_type, $get_posts, 
         }
         $discussion['posts_columns'] = $posts_data;
     }
-    $discussion['average_ratings'] = fn_get_avarage_ratings($discussion['thread_id'], $discussion['posts']?$discussion['posts'][0]['ratings']:false);
+    $discussion['average_ratings'] = fn_get_avarage_ratings(isset($discussion['thread_id'])?$discussion['thread_id']:false, isset($discussion['posts'])?$discussion['posts'][0]['ratings']:false);
 
 }
 function fn_get_avarage_ratings($thread_id,$fields){
     $result = [];
 
     if($fields){
-        $sql = "select ";
         foreach ($fields as $key_filed => $field){
             $sql .= 'AVG('.$key_filed.') as '.$key_filed.' ,';
         }
@@ -47,7 +46,7 @@ function fn_get_avarage_ratings($thread_id,$fields){
         }
 
     }
-    return $result;
+    return $result?$result:false;
 }
 function fn_my_module_get_product_data_post(&$product_data, $auth, $preview, $lang_code){
     $dates = db_get_array("select time_start,time_end from ?:product_reservations where product_id=?s",$product_data['product_id']);
