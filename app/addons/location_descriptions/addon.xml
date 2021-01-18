@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>location_descriptions</id>
+    <version>1.0</version>
+    <status>active</status>
+    <default_language>en</default_language>
+    <queries>
+
+    </queries>
+</addon>
