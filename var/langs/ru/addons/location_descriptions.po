@@ -19,6 +19,10 @@ msgctxt "Addons::description::location_descriptions"
 msgid "location_descriptions_desc"
 msgstr "Добавление описаний месторасположений"
 
+msgctxt "Languages::location_descriptions"
+msgid "location_descriptions_menu"
+msgstr "Описание месторасположений"
+
 msgctxt "Languages::location_descriptions_menu_description"
 msgid "location_descriptions_menu_description"
-msgstr "Описание месторасположений"
+msgstr "Добавляйте описания месторасположений"
