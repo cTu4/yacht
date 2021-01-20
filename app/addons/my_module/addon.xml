@@ -35,13 +35,13 @@
             add `value` int(1)
         </item>
         <item for="uninstall">
-<!--            alter table `?:discussion_rating`-->
-<!--            drop `cleanliness`,-->
-<!--            drop `communication`,-->
-<!--            drop `check_in`,-->
-<!--            drop `accuracy`,-->
-<!--            drop `location`,-->
-<!--            drop `value`-->
+            alter table `?:discussion_rating`
+            drop `cleanliness`,
+            drop `communication`,
+            drop `check_in`,
+            drop `accuracy`,
+            drop `location`,
+            drop `value`
         </item>
 
 <!--        <item for="install">-->

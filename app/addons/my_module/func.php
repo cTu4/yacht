@@ -24,12 +24,14 @@ function fn_my_module_get_discussion_post($object_id, $object_type, $get_posts, 
         }
         $discussion['posts_columns'] = $posts_data;
     }
-    $discussion['average_ratings'] = fn_get_avarage_ratings(isset($discussion['thread_id'])?$discussion['thread_id']:false, isset($discussion['posts'])?$discussion['posts'][0]['ratings']:false);
+    if(isset($discussion['thread_id']) && isset($discussion['posts'][0])){
+        $discussion['average_ratings'] = fn_get_avarage_ratings($discussion['thread_id'], $discussion['posts'][0]['ratings']);
+    }
 
 }
 function fn_get_avarage_ratings($thread_id,$fields){
     $result = [];
-
+    $sql = "select ";
     if($fields){
         foreach ($fields as $key_filed => $field){
             $sql .= 'AVG('.$key_filed.') as '.$key_filed.' ,';
