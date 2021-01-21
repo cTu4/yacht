@@ -5,6 +5,17 @@
     <status>active</status>
     <default_language>en</default_language>
     <queries>
-
+        <item for="install">
+            CREATE TABLE IF NOT EXISTS `?:location_descriptions` (
+            `id_location_description` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            `location_description` mediumtext,
+            `variant_id` int(10),
+            `lang_code` varchar(2)
+            )
+        </item>
+        <item for="uninstall">DROP TABLE IF EXISTS ?:location_descriptions;</item>
     </queries>
+    <functions>
+        <item for="install">fn_my_module_location_install</item>
+    </functions>
 </addon>

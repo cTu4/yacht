@@ -17,7 +17,7 @@ if (fn_check_permissions('location_desc', 'manage', 'admin', 'GET')) {
         'attrs' => array(
             'class'=>'is-addon'
         ),
-        'href' => 'location_desc.manage',
+        'href' => 'location_desc.manage?descr_sl=ru',
         'position' => 90
     ];
 

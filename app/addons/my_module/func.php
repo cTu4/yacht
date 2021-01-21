@@ -29,6 +29,7 @@ function fn_my_module_get_discussion_post($object_id, $object_type, $get_posts, 
     }
 
 }
+
 function fn_get_avarage_ratings($thread_id,$fields){
     $result = [];
     $sql = "select ";
@@ -50,6 +51,7 @@ function fn_get_avarage_ratings($thread_id,$fields){
     }
     return $result?$result:false;
 }
+
 function fn_my_module_get_product_data_post(&$product_data, $auth, $preview, $lang_code){
     $dates = db_get_array("select time_start,time_end from ?:product_reservations where product_id=?s",$product_data['product_id']);
     $product_data['available_dates']=$dates;
@@ -249,15 +251,6 @@ function fn_my_module_get_product_data_post(&$product_data, $auth, $preview, $la
                         "variant"=> 1
                     ]
                 ]
-            ],
-            [
-                "description" => "Расположение",
-                "company_id" => 1,
-                "purpose" => "find_products",
-                "feature_style" => "text",
-                "filter_style" => "checkbox",
-                "feature_type" => "S",
-                "position" =>1
             ],
             [
                 "description" => "Тип яхты",

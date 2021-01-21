@@ -20,6 +20,10 @@ msgctxt "Addons::description::my_module"
 msgid "my_module"
 msgstr "Специальный модуль для внесения собственных изменений в платформу"
 
+msgctxt "Languages::description"
+msgid "description"
+msgstr "Описание"
+
 msgctxt "Languages::covid"
 msgid "covid"
 msgstr "Get the latest on our COVID-19 response"

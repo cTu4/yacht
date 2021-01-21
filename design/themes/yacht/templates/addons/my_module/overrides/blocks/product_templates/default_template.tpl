@@ -1,5 +1,6 @@
 {*{$product.image_pairs|fn_print_r}*}
 {$feature_location = $product.product_features[$features_ids['location']]}
+{$variant_location = $feature_location.variant_id}
 {$location = $feature_location['variants'][$feature_location.variant_id].variant}
 {$feature_amenities = $product.product_features[$features_ids['amenities']]}
 <div class="detailed bot-br-3">

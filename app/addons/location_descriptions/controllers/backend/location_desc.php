@@ -27,5 +27,6 @@ if ($_SERVER['REQUEST_METHOD']	== 'POST') {
 }
 
 if($mode == "manage"){
-
+        $lang_code = $_REQUEST['descr_sl'];
+        $location_descriptions = db_get_array("select * from ?:location_descriptions");
 }

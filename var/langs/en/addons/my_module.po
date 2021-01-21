@@ -12,6 +12,10 @@ msgctxt "Addons::description::my_module"
 msgid "my_module"
 msgstr "my module"
 
+msgctxt "Languages::description"
+msgid "description"
+msgstr "Description"
+
 msgctxt "Languages::slider_category"
 msgid "slider_category"
 msgstr "Slider for category"
