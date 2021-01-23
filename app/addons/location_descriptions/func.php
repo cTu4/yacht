@@ -16,3 +16,6 @@ function fn_my_module_location_install(){
         db_query("update ?:product_features_descriptions set description='Location' where lang_code='en' and feature_id=?i",$id_feature );
     }
 }
+function fn_location_descriptions_get_product_feature_variants(&$fields, $join, $condition, $group_by, $sorting, $lang_code, $limit, $params){
+    array_push($fields,'?:product_feature_variant_descriptions.description');
+}

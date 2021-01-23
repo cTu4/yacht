@@ -2,7 +2,7 @@
 use Tygh\Registry;
 
 
-function fn_my_module_get_discussion_post($object_id, $object_type, $get_posts, $params, &$discussion) {
+    function fn_my_module_get_discussion_post($object_id, $object_type, $get_posts, $params, &$discussion) {
     if(isset($discussion['posts'])){
         $posts = $discussion['posts'];
         $posts_data=[
@@ -30,7 +30,7 @@ function fn_my_module_get_discussion_post($object_id, $object_type, $get_posts, 
 
 }
 
-function fn_get_avarage_ratings($thread_id,$fields){
+    function fn_get_avarage_ratings($thread_id,$fields){
     $result = [];
     $sql = "select ";
     if($fields){
@@ -52,7 +52,7 @@ function fn_get_avarage_ratings($thread_id,$fields){
     return $result?$result:false;
 }
 
-function fn_my_module_get_product_data_post(&$product_data, $auth, $preview, $lang_code){
+    function fn_my_module_get_product_data_post(&$product_data, $auth, $preview, $lang_code){
     $dates = db_get_array("select time_start,time_end from ?:product_reservations where product_id=?s",$product_data['product_id']);
     $product_data['available_dates']=$dates;
     $vendors_desc = db_get_array("select vendor_desc_id,description from ?:product_vendors_desc where product_id=?i and company_id=?i",

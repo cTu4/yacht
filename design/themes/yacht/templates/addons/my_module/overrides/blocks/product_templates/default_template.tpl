@@ -1,7 +1,7 @@
 {*{$product.image_pairs|fn_print_r}*}
 {$feature_location = $product.product_features[$features_ids['location']]}
 {$variant_location = $feature_location.variant_id}
-{$location = $feature_location['variants'][$feature_location.variant_id].variant}
+{$location = $feature_location['variants'][$feature_location.variant_id]}
 {$feature_amenities = $product.product_features[$features_ids['amenities']]}
 <div class="detailed bot-br-3">
     <div class="images">
@@ -124,7 +124,7 @@
                     pets=$card_data.pets
                     washer=$card_data.washer
                 }
-            {include file="addons/my_module/blocks/map.tpl"}
+            {include file="addons/my_module/blocks/map.tpl" location=$location}
             {include file="addons/my_module/blocks/weather.tpl"}
 
             {include file="addons/discussion/blocks/product_tabs/discussion.tpl"}
@@ -132,7 +132,7 @@
             <form class="options col-4 form-edit cm-disable-empty-files cm-processed-form cm-check-changes" enctype="multipart/form-data" novalidate="novalidate" action="{$config.http_path}/services" method="get" name="product_data">
                 <input type="hidden" name="product_id" value="{$product.product_id}">
                 {include file="addons/my_module/blocks/product/main_options.tpl"
-                    location=$location
+                    location=$location.variant
                     product=$product
                 }
                     <div class="main_order">
