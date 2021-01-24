@@ -71,9 +71,9 @@
 
 
 
-{*{capture name="sidebar"}*}
-{*    {include file="common/saved_search.tpl" dispatch="seo_rules.manage" view_type="seo_rules"}*}
-{*    {include file="addons/seo/views/seo_rules/components/search_form.tpl" dispatch="seo_rules.manage"}*}
-{*{/capture}*}
+{capture name="sidebar"}
+    {include file="common/saved_search.tpl" dispatch="location_desc.manage" view_type="location_desc"}
+    {include file="addons/location_descriptions/views/location_desc/components/search_form.tpl" dispatch="location_desc.manage"}
+{/capture}
 
 {include file="common/mainbox.tpl" title=__("location_descriptions") content=$smarty.capture.mainbox title_extra=$smarty.capture.title_extra buttons=$smarty.capture.buttons  adv_buttons=$smarty.capture.adv_buttons sidebar=$smarty.capture.sidebar select_languages=true}

@@ -13,16 +13,16 @@ msgstr ""
 
 msgctxt "Addons::name::location_descriptions"
 msgid "location_descriptions"
-msgstr "_Описание месторасположений"
+msgstr "_Описание расположений"
 
 msgctxt "Addons::description::location_descriptions"
 msgid "location_descriptions_desc"
-msgstr "Добавление описаний месторасположений"
+msgstr "Добавление описаний расположений"
 
 msgctxt "Languages::location_descriptions"
 msgid "location_descriptions_menu"
-msgstr "Описание месторасположений"
+msgstr "Описание расположений"
 
 msgctxt "Languages::location_descriptions_menu_description"
 msgid "location_descriptions_menu_description"
-msgstr "Добавляйте описания месторасположений"
+msgstr "Добавляйте описания расположений"

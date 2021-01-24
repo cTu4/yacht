@@ -12,7 +12,10 @@
  * "copyright.txt" FILE PROVIDED WITH THIS DISTRIBUTION PACKAGE.            *
  ****************************************************************************/
 
+use Tygh\Enum\NotificationSeverity;
 use Tygh\Registry;
+use Tygh\Navigation\LastView;
+use Tygh\Languages\Languages;
 
 if (!defined('BOOTSTRAP')) { die('Access denied'); }
 
@@ -59,11 +62,49 @@ if ($_SERVER['REQUEST_METHOD']	== 'POST') {
 
 if($mode == "manage"){
         $lang_code = $_REQUEST['descr_sl'];
-        $id_feature = db_get_field("select feature_id from ?:product_features_descriptions where description='Расположение'");
-        $variants_location = db_get_array("select ?:product_feature_variants.variant_id,description,variant from ?:product_feature_variants 
+//        $id_feature = db_get_field("select feature_id from ?:product_features_descriptions where description='Расположение'");
+//        $variants_location = db_get_array("select ?:product_feature_variants.variant_id,description,variant from ?:product_feature_variants
+//        inner join ?:product_feature_variant_descriptions
+//        on ?:product_feature_variants.variant_id=?:product_feature_variant_descriptions.variant_id
+//        where ?:product_feature_variants.feature_id=?i and ?:product_feature_variant_descriptions.lang_code=?s", $id_feature,$lang_code);
+//        Tygh::$app['view']->assign('location_desc', $variants_location);
+        Tygh::$app['view']->assign('descr_sl', $lang_code);
+        list($variants_location, $search) = fn_get_location_desc($_REQUEST, Registry::get('settings.Appearance.admin_elements_per_page'));
+
+        Tygh::$app['view']->assign('location_desc', $variants_location);
+        Tygh::$app['view']->assign('search', $search);
+
+}
+function fn_get_location_desc($params = array(), $items_per_page = 0, $lang_code = DESCR_SL){
+    $id_feature = db_get_field("select feature_id from ?:product_features_descriptions where description='Расположение'");
+
+    // Init filter
+    $params = LastView::instance()->update('location_desc', $params);
+
+    // Set default values to input params
+    $default_params = array (
+        'page' => 1,
+        'items_per_page' => $items_per_page
+    );
+
+    $params = array_merge($default_params, $params);
+    $condition = "";
+    if (isset($params['variant']) && fn_string_not_empty($params['variant'])) {
+        $condition .= db_quote(" AND variant LIKE ?l", "%".trim($params['variant'])."%");
+    }
+
+    $limit = '';
+    if (!empty($params['items_per_page'])) {
+        $params['total_items'] = db_get_field("SELECT COUNT(*) FROM ?:product_feature_variants 
+            inner join ?:product_feature_variant_descriptions 
+            on  ?:product_feature_variants.variant_id=?:product_feature_variant_descriptions.variant_id
+            WHERE feature_id = ?i and lang_code=?s ?p", $id_feature,$lang_code, $condition);
+        $limit = db_paginate($params['page'], $params['items_per_page'], $params['total_items']);
+    }
+    $variants_location = db_get_array("select ?:product_feature_variants.variant_id,description,variant from ?:product_feature_variants 
         inner join ?:product_feature_variant_descriptions 
         on ?:product_feature_variants.variant_id=?:product_feature_variant_descriptions.variant_id 
-        where ?:product_feature_variants.feature_id=?i and ?:product_feature_variant_descriptions.lang_code=?s", $id_feature,$lang_code);
-        Tygh::$app['view']->assign('location_desc', $variants_location);
-        Tygh::$app['view']->assign('descr_sl', $lang_code);
+        where ?:product_feature_variants.feature_id=?i and ?:product_feature_variant_descriptions.lang_code=?s ?p ORDER BY variant_id $limit", $id_feature,$lang_code, $condition);
+
+    return array($variants_location, $params);
 }

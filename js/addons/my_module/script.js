@@ -273,23 +273,29 @@
     });
     function init(){
         var myMap,
-            myPlacemark;
-        myMap = new ymaps.Map ("map", {
-            center: [55.76, 37.64],
-            zoom: 7
+            coords;
+        ymaps.geocode($('#location').text()).then(function (res) {
+            var firstGeoObject = res.geoObjects.get(0);
+            coords = firstGeoObject.geometry.getCoordinates();
+            myMap = new ymaps.Map ("map", {
+                center: [coords[0], coords[1]],
+                zoom: 7,
+                controls: []
+            });
+            myMap.geoObjects.add(firstGeoObject);
         });
 
-        myPlacemark = new ymaps.Placemark([55.931161, 37.848649], {
-                iconContent: "$ 2450  ",
-                balloonContent: 'Столица России'
+        // myPlacemark = new ymaps.Placemark([55.931161, 37.848649], {
+        //         iconContent: "$ 2450  ",
+        //         balloonContent: $('#product').text()
+        //     },
+        //     {
+        //         preset: 'islands#blueStretchyIcon',
+        //         iconColor: '#1D85D1'
+        //     });
 
-            },
-            {
-                preset: 'islands#blueStretchyIcon',
-                iconColor: '#1D85D1'
-            });
+        // myMap.geoObjects.add(myPlacemark);
 
-        myMap.geoObjects.add(myPlacemark);
         // $.ajax({
         //     url: "https://geocode-maps.yandex.ru/1.x/?apikey=b32251bf-b0a1-4013-a53e-03c1d438785f&format=json&geocode=37.841495 55.937906&results=1"
         // }).done(function(resp) {
