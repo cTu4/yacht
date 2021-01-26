@@ -4,7 +4,6 @@
 {$location = $feature_location['variants'][$feature_location.variant_id]}
 {$feature_amenities = $product.product_features[$features_ids['amenities']]}
 
-
 <div class="detailed bot-br-3">
     <div class="images">
         <div class="item">
@@ -65,7 +64,7 @@
                 </a>
 
             </div>
-            <div class="cards-info d-flex justify-content-left">
+            <div class="cards-info d-flex justify-content-left flex-wrap">
                 {include file="addons/my_module/blocks/cards-info.tpl"
                     double_cabins=$card_data.double_cabins
                     single_cabins=$card_data.single_cabins

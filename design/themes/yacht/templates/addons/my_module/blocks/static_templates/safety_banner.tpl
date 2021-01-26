@@ -9,5 +9,5 @@
             </svg>
         </a>
     </div>
-    <img src="/images/my_module/safety.svg">
+    <img src="{$config.http_path}/images/my_module/safety.svg">
 </div>

@@ -6,9 +6,9 @@ all the lodgers to keep them calm</span>
         {include file="addons/my_module/blocks/common/link_banner.tpl" text="Learn more about ’Yachts Hosts Support’ program"}
     </div>
     <div class="right d-flex justify-content-between">
-        <div><img class="palm_1" src="/images/my_module/palm.png"></div>
-        <div><img class="palm_2" src="/images/my_module/palm.png"></div>
-        <div><img class="palm_3" src="/images/my_module/palm.png"></div>
+        <div><img class="palm_1" src="{$config.http_path}/images/my_module/palm.png"></div>
+        <div><img class="palm_2" src="{$config.http_path}/images/my_module/palm.png"></div>
+        <div><img class="palm_3" src="{$config.http_path}/images/my_module/palm.png"></div>
     </div>
 
 </div>

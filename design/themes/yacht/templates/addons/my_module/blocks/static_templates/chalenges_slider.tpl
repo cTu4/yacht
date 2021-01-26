@@ -29,7 +29,7 @@
         {for $i=0 to 5}
             <div  class="item" style="{if $i>=2} display:none;{/if}">
                 <a class="pointer" href="/boats">
-                    <img src="https://yacht23.ru/upload/resize_cache/iblock/73c/1920_1010_70_2bd8046e86ed6dc81a753aafc271c1aeb/20185211021215632.jpg" >
+                    <img src="https://interparus.com/wp-content/uploads/2020/05/izmatyvayushhaya-zhestkaya-lishennaya-i-nameka-na-komfort-takoj-yavlyaetsya-the-ocean-race-samaya-zhelannaya-gonka-dlya-yahtsmenov.jpg" >
                     <span class="title">
                         <span class="t-white t-25px font-weight-bold">Cannes Yachting Festival 2020</span><br />
                         <span class="t-white t-15px">The Vieux Port will continue to host the latest powerboat and motor yachts, while Port Canto will become the new home for sale. September 10 – 14</span>

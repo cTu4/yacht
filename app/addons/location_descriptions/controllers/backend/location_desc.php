@@ -59,7 +59,28 @@ if ($_SERVER['REQUEST_METHOD']	== 'POST') {
     $disatch = !empty($_REQUEST['descr_sl'])?$_REQUEST['descr_sl']:"ru";
     return array(CONTROLLER_STATUS_OK, "location_desc.manage?descr_sl=" . $disatch );
 }
+function fn_file_get_contents_curl_box() {
+    $url = "https://gridforecast.com/api/v1/statistics/temperature/55.75;37.61?api_token=hwSVgBfbFYryg4hc";
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+//    curl_setopt($ch, CURLOPT_POST, 1);
+//    curl_setopt($ch, CURLOPT_POSTFIELDS,
+//        http_build_query($params));
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    $data = curl_exec($ch);
+    curl_close($ch);
+    $data = json_decode($data, true);
+    return $data;
+}
 
+if($mode == "test"){
+    $test = fn_file_get_contents_curl_box();
+    html_print($test);
+    die;
+}
 if($mode == "manage"){
         $lang_code = $_REQUEST['descr_sl'];
 //        $id_feature = db_get_field("select feature_id from ?:product_features_descriptions where description='Расположение'");
