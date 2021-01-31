@@ -11,10 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     return;
 }
 if ($mode == 'index'){
+    $id_feature_type = db_get_field("select feature_id from ?:product_features_descriptions where description='Тип яхты'");
     $id_variant_lux = db_get_field("select variant_id from ?:product_feature_variant_descriptions where variant='Люкс'");
     $params = [
         "feature_variants" => [
-            "26" => ["26" => $id_variant_lux]
+            $id_feature_type => [$id_feature_type => $id_variant_lux]
         ]
     ];
     list($lux_yachts, $search_lux) = fn_get_products($params, Registry::get('settings.Appearance.products_per_page'));
@@ -24,7 +25,7 @@ if ($mode == 'index'){
 
     $params = [
         "feature_variants" => [
-            "26" => ["26" => $id_variant_checked]
+            $id_feature_type => [$id_feature_type => $id_variant_checked]
         ]
     ];
     list($checked_yachts, $search_checked) = fn_get_products($params, Registry::get('settings.Appearance.products_per_page'));
