@@ -52,6 +52,10 @@ if ($mode == 'index'){
     Tygh::$app['view']->assign("search_checked",$search_checked);
 
     Tygh::$app['view']->assign("features",$feature_ids['features']);
+    Tygh::$app['view']->assign("id_feature_type",$id_feature_type);
+    Tygh::$app['view']->assign("variants_type",["lux"=> $id_variant_lux, "checked"=>$id_variant_checked]);
+
+
 
 
 }

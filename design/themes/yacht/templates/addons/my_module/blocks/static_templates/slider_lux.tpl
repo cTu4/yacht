@@ -4,7 +4,7 @@
         <div class="title_slider d-flex justify-content-between align-items-baseline">
             <form action="{""|fn_url}" name="lux-form" method="get" class="cm-processed-form" style="display: none">
                 <input type="hidden" name="search_performed" value="Y">
-                <input type="hidden" name="feature_variants[26][26]" value="59">
+                <input type="hidden" name="feature_variants[{$id_feature_type}][{$id_feature_type}]" value="{$variants_type.lux}">
             </form>
             <div class="d-flex align-bottom">
              <span class="t-28px font-weight-bold">
