@@ -383,3 +383,19 @@ msgstr "Личность подтверждена"
 msgctxt "Languages::full_desc_vendor"
 msgid "full_desc_vendor"
 msgstr "Подробное описание от продавца"
+
+msgctxt "Languages::cabins_search"
+msgid "cabins_search"
+msgstr "Кают"
+
+msgctxt "Languages::discussion_not"
+msgid "discussion_not"
+msgstr "Отзывы отсутствуют"
+
+msgctxt "Languages::location_no"
+msgid "location_no"
+msgstr "Расположение не указано"
+
+msgctxt "Languages::description_no"
+msgid "location_no"
+msgstr "Описание отсутствует"

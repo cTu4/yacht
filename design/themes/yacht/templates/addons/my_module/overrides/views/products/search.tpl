@@ -55,7 +55,7 @@
                         <img src="{$product.main_pair.detailed.image_path}">
                         {if $product.image_pairs}
                             {foreach from=$product.image_pairs item="image" name="foo"}
-                                <img src="{$image.detailed.image_path}">
+                                <img src="{$image.detailed.image_path}" style="display: none">
                             {/foreach}
 
 

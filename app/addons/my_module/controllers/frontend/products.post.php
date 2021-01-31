@@ -46,23 +46,26 @@ if ($mode == 'services'){
 }
 if ($mode == 'view') {
 
-    $features_ids = fn_get_features_ids();
-    $sql = "select feature_id from ?:product_features_descriptions where (";
-    foreach (features_names as $feature){
-        $sql .= " description='".$feature."' or";
-    }
-    $sql = substr($sql, 0, -3);
-    $sql .= ") and lang_code='ru'";
-    $ids = db_get_fields($sql);
-    array_push($ids,$features_ids['location'],$features_ids['amenities']);
-
-    $option_variant_ids = select_ids('variant_id','product_feature_variant_descriptions',boat_options_name,'variant');
+    $feature_data = fn_get_features_ids(features_names);
+    $ids = $feature_data['ids'];
+    $features_ids = $feature_data['features'];
+//    $sql = "select feature_id from ?:product_features_descriptions where (";
+//    foreach (features_names as $feature){
+//        $sql .= " description='".$feature."' or";
+//    }
+//    $sql = substr($sql, 0, -3);
+//    $sql .= ") and lang_code='ru'";
+//    $ids = db_get_fields($sql);
+//    array_push($ids,$features_ids['location'],$features_ids['amenities']);
+//
+//    $option_variant_ids = select_ids('variant_id','product_feature_variant_descriptions',boat_options_name,'variant');
 
     $card_features = fn_get_product_features([
         "product_id"=>$_REQUEST['product_id'],
         "feature_id"=> $ids,
         "variants"=>true
     ]);
+
     $card_data = fn_get_card_data($card_features[0]);
     Tygh::$app['view']->assign('card_data', $card_data);
     Tygh::$app['view']->assign('features_ids', $features_ids);

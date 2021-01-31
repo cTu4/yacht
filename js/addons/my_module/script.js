@@ -243,8 +243,9 @@
     });
 
 
+    var sliders = $('.slider-lux .item').length ;
     $('.slider-checked').slick({
-        infinite: false,
+        infinite: true,
         slidesToShow: 4,
         slidesToScroll: 4,
         arrows: false,

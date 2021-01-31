@@ -53,37 +53,50 @@ use Tygh\Registry;
 }
 
     function fn_my_module_get_product_data_post(&$product_data, $auth, $preview, $lang_code){
-    $dates = db_get_array("select time_start,time_end from ?:product_reservations where product_id=?s",$product_data['product_id']);
-    $product_data['available_dates']=$dates;
-    $vendors_desc = db_get_array("select vendor_desc_id,description from ?:product_vendors_desc where product_id=?i and company_id=?i",
-        $product_data['product_id'],
-        $product_data['company_id']
-    );
-    $product_data['vendors_desc'] = $vendors_desc?$vendors_desc[0]:null;
-}
+        $dates = db_get_array("select time_start,time_end from ?:product_reservations where product_id=?s",$product_data['product_id']);
+        $product_data['available_dates']=$dates;
+        $vendors_desc = db_get_array("select vendor_desc_id,description from ?:product_vendors_desc where product_id=?i and company_id=?i",
+            $product_data['product_id'],
+            $product_data['company_id']
+        );
+        $product_data['vendors_desc'] = $vendors_desc?$vendors_desc[0]:null;
+        $card_data = fn_get_card_data($product_data['product_features']);
+        $product_data['card_data'] = $card_data;
+
+        $product_data['discussion'] = fn_get_discussion($product_data['product_id'], "P", true, $_REQUEST);
+
+        $product_data['discussion_type'] = empty($product_data['discussion']) ? DiscussionTypes::TYPE_DISABLED : $product_data['discussion']['type'];
+
+    }
     function html_print($text){
         echo "<pre>";
         print_r($text);
         echo "</pre>";
     };
-    function fn_get_features_ids(){
+    function fn_get_features_ids($selects_features = null){
         $features_ids = [];
+
         $id_feature_location = db_get_field('select feature_id from ?:product_features_descriptions where description="Расположение"');
         $features_ids["location"]=$id_feature_location;
         $id_feature_amenities = db_get_field('select feature_id from ?:product_features_descriptions where description="Удобства"');
         $features_ids["amenities"]=$id_feature_amenities;
-        $sql = "select feature_id from ?:product_features_descriptions where (";
-        foreach (features_names as $feature){
-            $sql .= " description='".$feature."' or";
+        $ids=[];
+        if($selects_features){
+            $sql = "select feature_id from ?:product_features_descriptions where (";
+            foreach ($selects_features as $feature){
+                $sql .= " description='".$feature."' or";
+            }
+            $sql = substr($sql, 0, -3);
+            $sql .= ") and lang_code='ru'";
+            $ids = db_get_fields($sql);
         }
-        $sql = substr($sql, 0, -3);
-        $sql .= ") and lang_code='ru'";
-        $ids = db_get_fields($sql);
+
         array_push($ids,$id_feature_location,$id_feature_amenities);
 
-        $option_variant_ids = select_ids('variant_id','product_feature_variant_descriptions',boat_options_name,'variant');
+//        $option_variant_ids = select_ids('variant_id','product_feature_variant_descriptions',boat_options_name,'variant');
 
-        return $features_ids;
+        return ["ids"=>$ids,
+            "features"=>$features_ids];
     }
     function fn_get_card_data($card_features){
         $card_data = [];
@@ -100,6 +113,9 @@ use Tygh\Registry;
                     break;
                 case features_names[3]:
                     $card_data['single_sleep_place']=$card_feature['variant_id']?$card_feature['variants'][$card_feature['variant_id']]['variant']:'';
+                    break;
+                case features_names[4]:
+                    $card_data['bath']=$card_feature['variant_id']?$card_feature['variants'][$card_feature['variant_id']]['variant']:'';
                     break;
                 case "Удобства":
                     foreach ($card_feature['variants'] as $variant){
