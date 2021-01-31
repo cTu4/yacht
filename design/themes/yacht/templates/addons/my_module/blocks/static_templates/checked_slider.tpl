@@ -5,7 +5,7 @@
             <div class="d-flex align-bottom">
                 <form action="{""|fn_url}" name="checked-form" method="get" class="cm-processed-form" style="display: none">
                     <input type="hidden" name="search_performed" value="Y">
-                    <input type="hidden" name="feature_variants{$id_feature_type}][{$id_feature_type}" value="{$variants_type.checked}">
+                    <input type="hidden" name="feature_variants[{$id_feature_type}][{$id_feature_type}]" value="{$variants_type.checked}">
                 </form>
                 <span class="t-28px font-weight-bold">
                 Checked Boats & More
