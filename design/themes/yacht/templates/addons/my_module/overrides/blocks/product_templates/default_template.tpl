@@ -29,7 +29,7 @@
                         </div>
 
                     {else}
-                        <div style="display: none" class="item-{$smarty.foreach.foo.iteration}"><img src="{$image.detailed.image_path}" alt=""></div>
+                        <div style="display: none" href="{$image.detailed.image_path}" data-fancybox="gallery" class="item-{$smarty.foreach.foo.iteration}"><img src="{$image.detailed.image_path}" alt=""></div>
                     {/if}
                 {/foreach}
 {*        {else}*}
