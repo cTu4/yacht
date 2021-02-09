@@ -7,20 +7,20 @@
 <div class="detailed bot-br-3">
     <div class="images">
         {if $product.main_pair}
-                <div class="item">
-                    <img src="{$product.main_pair.detailed.image_path}" alt="">
-                    <div class="play_video pointer">
-                        <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.92332 0.344071L15.7252 6.89978C17.4249 7.84488 17.4249 10.1551 15.7252 11.1002L3.92013 17.6559C2.1885 18.619 0 17.4459 0 15.5557V2.4443C0 0.554093 2.1917 -0.619033 3.92332 0.344071Z" fill="white"/>
-                        </svg>
-                        <span class="t-white font-weight-600 t-14px">Live video</span>
-                    </div>
+                <div class="item" href="{$product.main_pair.detailed.image_path}" data-fancybox="gallery">
+                    <img  src="{$product.main_pair.detailed.image_path}" alt="">
+{*                    <div class="play_video pointer">*}
+{*                        <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">*}
+{*                            <path d="M3.92332 0.344071L15.7252 6.89978C17.4249 7.84488 17.4249 10.1551 15.7252 11.1002L3.92013 17.6559C2.1885 18.619 0 17.4459 0 15.5557V2.4443C0 0.554093 2.1917 -0.619033 3.92332 0.344071Z" fill="white"/>*}
+{*                        </svg>*}
+{*                        <span class="t-white font-weight-600 t-14px">Live video</span>*}
+{*                    </div>*}
                 </div>
 
                 {foreach from=$product.image_pairs item=image name=foo}
                     {if $smarty.foreach.foo.iteration<=2}
-                        <div class="item-{$smarty.foreach.foo.iteration}">
-                            <img src="{$image.detailed.image_path}" alt="">
+                        <div class="item-{$smarty.foreach.foo.iteration}" href="{$image.detailed.image_path}" data-fancybox="gallery">
+                            <img  src="{$image.detailed.image_path}" alt="">
                             {if $smarty.foreach.foo.iteration==2}
                                 <div class="view_images pointer">
                                     <span class="font-weight-600 t-14px">View all photos ({$product.image_pairs|count +1 })</span>
