@@ -77,18 +77,33 @@ function fn_file_get_contents_curl_box() {
 }
 
 if($mode == "test"){
-    $test = fn_file_get_contents_curl_box();
-    html_print($test);
+    $cities = db_get_array("select city_id from ?:_cities where region_id=4185354");
+    db_query('INSERT INTO ?:_description ?m', $cities);
     die;
 }
 if($mode == "manage"){
         $lang_code = $_REQUEST['descr_sl'];
+        $title = "title_".$lang_code;
+        $location_data = db_get_array("select 
+        ?:_description.city_id, 
+        ?:_countries.".$title.", 
+        ?:_regions.".$title.",
+        ?:_description.description_".$lang_code." 
+        from  ?:_description inner join 
+        ?:_cities on ?:_cities.city_id=?:_description.city_id 
+        inner join ?:_regions on 
+        ?:_cities.region_id = ?:_regions.region_id
+        inner join ?:_countries on 
+        ?:_cities.country_id = ?:_countries.country_id");
+        html_print($location_data);
+        die;
 //        $id_feature = db_get_field("select feature_id from ?:product_features_descriptions where description='Расположение'");
 //        $variants_location = db_get_array("select ?:product_feature_variants.variant_id,description,variant from ?:product_feature_variants
 //        inner join ?:product_feature_variant_descriptions
 //        on ?:product_feature_variants.variant_id=?:product_feature_variant_descriptions.variant_id
 //        where ?:product_feature_variants.feature_id=?i and ?:product_feature_variant_descriptions.lang_code=?s", $id_feature,$lang_code);
 //        Tygh::$app['view']->assign('location_desc', $variants_location);
+
         Tygh::$app['view']->assign('descr_sl', $lang_code);
         list($variants_location, $search) = fn_get_location_desc($_REQUEST, Registry::get('settings.Appearance.admin_elements_per_page'));
 
