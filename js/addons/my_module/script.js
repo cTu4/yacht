@@ -330,6 +330,14 @@
 
 
 (function(_, $) {
+    $(".search .arrow-bottom").on("click",function (e){
+        $(".search .arrow-bottom").toggleClass("active");
+        $(".search > span, .search form, .search_toggle").toggle(300);
+        $(".search .search_buttons").toggleClass("active");
+
+    });
+
+
     $.ceEvent('on', 'ce.commoninit', function (context) {
 
         $('.slider-search').each(function (slider){

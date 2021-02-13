@@ -23,15 +23,13 @@
     {if $product.main_pair.detailed}
 
         <div class="slider-search">
-        <img src="{$product.main_pair.detailed.image_path}">
-        {if $product.image_pairs}
-            {foreach from=$product.image_pairs item="image" name="foo"}
-                <img src="{$image.detailed.image_path}" style="display: none">
-            {/foreach}
-
-
-            </div>
-        {/if}
+            <img src="{$product.main_pair.detailed.image_path}">
+            {if $product.image_pairs}
+                {foreach from=$product.image_pairs item="image" name="foo"}
+                    <img src="{$image.detailed.image_path}" style="display: none">
+                {/foreach}
+            {/if}
+        </div>
     {else}
         <span class="ty-no-image"><i class="ty-no-image__icon ty-icon-image" title="{__("no_image")}"></i></span>
     {/if}
