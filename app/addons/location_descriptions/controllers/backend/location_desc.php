@@ -84,6 +84,18 @@ if($mode == "test"){
 if($mode == "manage"){
         $lang_code = $_REQUEST['descr_sl'];
         $title = "title_".$lang_code;
+        html_print("select 
+        ?:_description.city_id, 
+        ?:_countries.".$title.", 
+        ?:_regions.".$title.",
+        ?:_description.description_".$lang_code." 
+        from  ?:_description inner join 
+        ?:_cities on ?:_cities.city_id=?:_description.city_id 
+        inner join ?:_regions on 
+        ?:_cities.region_id = ?:_regions.region_id
+        inner join ?:_countries on 
+        ?:_cities.country_id = ?:_countries.country_id");
+        die;
         $location_data = db_get_array("select 
         ?:_description.city_id, 
         ?:_countries.".$title.", 
