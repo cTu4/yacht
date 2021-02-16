@@ -17,7 +17,6 @@
                     <input type="hidden" name="search_performed" value="Y" />
                     <input type="hidden" name="items_per_page" value="{$settings.Appearance.products_per_page}" />
                     <input type="hidden" name="cid" value="2">
-                    {debug}
                 </form>
             </a>
             <a href="#">{__('experiences')}</a>
