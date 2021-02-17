@@ -332,8 +332,7 @@
 (function(_, $) {
     $(".search .arrow-bottom").on("click",function (e){
         $(".search .arrow-bottom").toggleClass("active");
-        $(".search > span, .search form, .search_toggle").toggle(300);
-        $(".search .search_buttons").toggleClass("active");
+        $(".main_search, .search_toggle").slideToggle(300);
 
     });
 
