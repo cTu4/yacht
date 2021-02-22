@@ -13,7 +13,27 @@
             `lang_code` varchar(2)
             )
         </item>
-        <item for="uninstall">DROP TABLE IF EXISTS ?:location_descriptions;</item>
+        <item for="install">
+            CREATE TABLE IF NOT EXISTS `?:_description` (
+            `description_id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            `city_id` int(10),
+            `description_ru` mediumtext,
+            `description_ua` mediumtext,
+            `description_be` mediumtext,
+            `description_en` mediumtext,
+            `description_es` mediumtext,
+            `description_pt` mediumtext,
+            `description_de` mediumtext,
+            `description_fr` mediumtext,
+            `description_it` mediumtext,
+            `description_pl` mediumtext,
+            `description_ja` mediumtext,
+            `description_lt` mediumtext,
+            `description_lv` mediumtext,
+            `description_cz` mediumtext
+            )
+        </item>
+<!--        <item for="uninstall">DROP TABLE IF EXISTS ?:location_descriptions;</item>-->
     </queries>
     <functions>
         <item for="install">fn_my_module_location_install</item>

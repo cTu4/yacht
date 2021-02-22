@@ -5,7 +5,20 @@
         <div class="logo col-2"><a href="{$config.http_path}">Yachts & More</a></div>
         <div class="col-1"></div>
         <nav class="header-nav d-flex justify-content-center col-6">
-            <a href="{$config.http_path}/boats">{__('boats')}</a>
+            <a class="cm-submit" data-ca-target-form="boats" data-ca-dispatch="dispatch[products.search]">{__('boats')}
+                <form name="boats" method="get" class="hidden">
+                    <input type="hidden" name="match" value="all" />
+                    <input type="hidden" name="subcats" value="Y" />
+                    <input type="hidden" name="pcode_from_q" value="Y" />
+                    <input type="hidden" name="pshort" value="Y" />
+                    <input type="hidden" name="pfull" value="Y" />
+                    <input type="hidden" name="pname" value="Y" />
+                    <input type="hidden" name="pkeywords" value="Y" />
+                    <input type="hidden" name="search_performed" value="Y" />
+                    <input type="hidden" name="items_per_page" value="{$settings.Appearance.products_per_page}" />
+                    <input type="hidden" name="cid" value="2">
+                </form>
+            </a>
             <a href="#">{__('experiences')}</a>
             <a href="#">{__('destinations')}</a>
             <a href="#">{__('events')}</a>

@@ -1,4 +1,10 @@
 {hook name="categories:view"}
+
+    {include file="blocks/static_templates/search.tpl" toggle=true}
+
+
+    {include file="addons/my_module/blocks/filter.tpl"}
+
     {include file="common/pagination.tpl"}
     {*{script src="js/addons/my_module/script.js"}*}
             <div class="products_category d-flex" id="category_products">

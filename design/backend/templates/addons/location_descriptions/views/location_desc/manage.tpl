@@ -1,6 +1,7 @@
 {script src="js/tygh/node_cloning.js"}
-
 {capture name="mainbox"}
+    {$location_desc|fn_print_r}
+
     <form action="{""|fn_url}" method="post" name="location_desc" class="form-horizontal form-edit">
         {include file="common/pagination.tpl" save_current_page=true save_current_url=true}
         <input type="hidden" name="descr_sl" value="{$descr_sl}" class="cm-item" /></td>
