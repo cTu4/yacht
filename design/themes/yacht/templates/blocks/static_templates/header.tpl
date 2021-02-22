@@ -2,7 +2,7 @@
 <div class="header">
     <div class="covid "><a href="{$config.http_path}">{__('covid')} &#8594;</a></div>
     <div class="main-header d-flex justify-content-between align-items-center ">
-        <div class="logo col-2"><a href="{$config.http_path}">Yachts & More</a></div>
+        <div class="logo col-2"><a href="{$config.http_location}">Yachts & More</a></div>
         <div class="col-1"></div>
         <nav class="header-nav d-flex justify-content-center col-6">
             <a class="cm-submit" data-ca-target-form="boats" data-ca-dispatch="dispatch[products.search]">{__('boats')}
