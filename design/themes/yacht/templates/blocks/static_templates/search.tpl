@@ -18,7 +18,7 @@
         <div class="title t-32px font-weight-600" >The ideal boat will be found anywhere in the world.<br/>
     Choose the country where you want to go on a maritime journey.</div>
 
-        <form action="{""|fn_url}" name="search_form" method="get" >
+        <form action="{"products.search"|fn_url}" name="search_form" method="get" >
             <input type="hidden" name="match" value="all" />
             <input type="hidden" name="subcats" value="Y" />
             <input type="hidden" name="pcode_from_q" value="Y" />
@@ -54,13 +54,35 @@
                     <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.31073 0H0.689272C0.382143 0 0.189596 0.331793 0.341974 0.598455L3.6527 6.39223C3.80626 6.66096 4.19374 6.66096 4.3473 6.39223L7.65803 0.598456C7.8104 0.331793 7.61786 0 7.31073 0Z" fill="#2466F6"/>
                     </svg><br>
-                    <span class="t-15px">Add travel dates</span></div>
-                <div class="item_search">
+                    <input id="date" class="t-15px" placeholder="Add travel dates" autocomplete="off">
+                </div>
+                <div class="item_search item-3">
                     <span class="t-16px font-weight-bold">Price from — to</span>
                     <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.31073 0H0.689272C0.382143 0 0.189596 0.331793 0.341974 0.598455L3.6527 6.39223C3.80626 6.66096 4.19374 6.66096 4.3473 6.39223L7.65803 0.598456C7.8104 0.331793 7.61786 0 7.31073 0Z" fill="#2466F6"/>
                     </svg><br>
-                    <span class="t-15px">Type in rent amount</span></div>
+                    <input id="search_price" class="t-15px" placeholder="Type in rent amount" autocomplete="off">
+                    <div class="select_price" >
+                        <div class="from d-flex flex-column">
+                            <span class="t-15px t-gray-op6">From</span>
+                            <div class="d-flex justify-content-between">
+                                <input class="t-22px font-weight-500 t-gray-op5 input-long" name="price_from" value="0">
+                                <div class="symbol t-22px font-weight-500 ">
+                                    {$currencies.$secondary_currency.symbol}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="to d-flex flex-column">
+                            <span class="t-15px t-gray-op6">To</span>
+                            <div class="d-flex justify-content-between">
+                                <input class="t-22px font-weight-500 t-gray-op5 input-long" name="price_to" value="0">
+                                <div class="t-22px font-weight-500">
+                                    {$currencies.$secondary_currency.symbol}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="item_search">
                     <span class="t-16px font-weight-bold">Team</span>
                     <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,9 +100,61 @@
             </div>
             <div class="right d-flex justify-content-end">
                 <a class="btn-search btn-white t-18px font-weight-500">Show boats on map</a>
-                <a class="btn-search btn-blue t-18px font-weight-500">Show all boats</a>
+                <a class="btn-search btn-blue t-18px font-weight-500 cm-submit"
+                   data-ca-target-form="search_form"
+                   data-ca-dispatch="dispatch[products.search]">
+                    Show all boats
+                </a>
             </div>
         </div>
     </div>
 
 </div>
+<script type="text/javascript">
+    (function(_, $) {$ldelim}
+    $('#date').dateRangePicker({
+        format: 'DD.MM.YY',
+        separator: " — ",
+        monthSelect: true,
+        yearSelect: true,
+        language: "{$block.lang_code}",
+        startDate: new Date(),
+        endDate: moment().startOf('year').add(3, 'year'),
+        autoClose: true,
+        changeMonth: true,
+        changeYear: true,
+        selectForward: true,
+        autoUpdateInput: true,
+        "showTopbar": false,
+        "opens": "right"
+    });
+
+    $(".search .arrow-bottom").on("click",function (e){
+        $(".search .arrow-bottom").toggleClass("active");
+        $(".main_search, .search_toggle").slideToggle(300);
+
+    });
+    $("#search_price").on("click", function (e){
+        $(".select_price").toggleClass('active');
+    });
+    $("input[name='price_from']").on('input',function (e){
+        $("#search_price").val($(e.target).val() + "{$currencies.$secondary_currency.symbol}");
+    });
+    $("input[name='price_to']").on('input',function (e){
+        var price = $("#search_price");
+        var str = price.val().split(" - ");
+        if(str.length === 1){
+            price.val(price.val() + " - " + $(e.target).val() + "{$currencies.$secondary_currency.symbol}");
+        }
+        else{
+            str[1] = $(e.target).val();
+            price.val(str[0] + " - " + str[1] + "{$currencies.$secondary_currency.symbol}");
+
+        }
+    });
+    $("input[name='price_to'], .select_price").on('blur',function (e){
+        $(".select_price").toggleClass('active');
+    });
+
+    {$rdelim}(Tygh, Tygh.$));
+</script>

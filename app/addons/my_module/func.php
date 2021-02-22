@@ -1,6 +1,10 @@
 <?php
+use Tygh\Enum\NotificationSeverity;
 use Tygh\Registry;
-
+use Tygh\Navigation\LastView;
+use Tygh\Languages\Languages;
+use Tygh\Enum\Addons\Discussion\DiscussionObjectTypes;
+use Tygh\Enum\Addons\Discussion\DiscussionTypes;
 
     function fn_my_module_get_discussion_post($object_id, $object_type, $get_posts, $params, &$discussion) {
     if(isset($discussion['posts'])){
@@ -299,6 +303,19 @@ use Tygh\Registry;
             }
         }
 
+        $name = "services";
+        $rule_params = "products.services";
+        if (Registry::get('addons.seo.single_url') == 'Y') {
+            $lang_codes = [Registry::get('settings.Appearance.frontend_default_language')];
+        } else {
+            $lang_codes = array_keys(Languages::getAll());
+        }
+        foreach ($lang_codes as $lang_code) {
+            $created_seo_name = fn_create_seo_name(0, 's', $name, 0, $rule_params, '', $lang_code);
+            if ($_REQUEST['rule_data']['name'] !== $created_seo_name) {
+                $errors = $created_seo_name;
+            }
+        }
     }
     function fn_update_vendors_desc($vendors_desc_id,$product_id,$company_id,$value){
         $data = [
@@ -366,5 +383,8 @@ use Tygh\Registry;
         }
     }
 
+    function fn_my_module_get_products($params, $fields, $sortings, $condition, $join, $sorting, $group_by, $lang_code, $having){
+
+    }
 
 

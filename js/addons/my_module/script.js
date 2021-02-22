@@ -330,11 +330,7 @@
 
 
 (function(_, $) {
-    $(".search .arrow-bottom").on("click",function (e){
-        $(".search .arrow-bottom").toggleClass("active");
-        $(".main_search, .search_toggle").slideToggle(300);
 
-    });
 
 
     $.ceEvent('on', 'ce.commoninit', function (context) {

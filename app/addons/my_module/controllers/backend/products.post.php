@@ -11,6 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (isset($_REQUEST['reservations']) || isset($_REQUEST['reservations_add'])) {
             fn_update_reservation(isset($_REQUEST['reservations'])?$_REQUEST['reservations']:null,isset($_REQUEST['reservations_add'])?$_REQUEST['reservations_add']:null,$_REQUEST['product_id']);
         }
+
         if($_REQUEST['product_data'] &&
             isset($_REQUEST['product_data']['vendor_desc']) &&
             $_REQUEST['product_id'] &&

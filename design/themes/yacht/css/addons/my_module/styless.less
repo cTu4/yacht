@@ -20,6 +20,10 @@ font-size: unset!important;
 .t-gray{
   color: #8F9CB8;
 }
+.t-gray-op3{
+  color: #000000;
+  opacity: 0.3;
+}
 .t-gray-op5{
   color: #000000;
   opacity: 0.5;
@@ -91,7 +95,7 @@ letter-spacing: -1.5px;
   letter-spacing: -0.3px;
 }
 .t-22px{
-  font-size: 21px;
+  font-size: 22px!important;
   line-height: 24px;
   letter-spacing: -0.5px;
 }
@@ -507,6 +511,9 @@ fill: #1DD1B9;
   padding: 20px;
   margin: 0 5px;
 }
+.item_search input{
+  width: 100%;
+}
 .item_search:not(:first-child){
   width: 20%;
   border-left: 1px solid rgba(0, 0, 0, 0.2);
@@ -518,6 +525,36 @@ fill: #1DD1B9;
 .item_search.item_2{
   width: 25%;
 }
+.item_search.item-3{
+  position: relative;
+}
+.select_price{
+  position: absolute;
+  background: #FFFFFF;
+  padding: 12px;
+  display: flex;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.16);
+  border-radius: 12px;
+  bottom: -120px;
+  min-width: 200%;
+  opacity: 0;
+  z-index: -100;
+  transition: opacity 0.7s;
+
+}
+.select_price.active{
+  opacity: 1;
+  z-index: 100;
+}
+
+.select_price > div{
+  background: #F7F7F7;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 0 6px;
+  flex: 1
+}
+
 .search_toggle{
   margin: 20px;
 }
@@ -572,7 +609,7 @@ fill: #1DD1B9;
 .item_preset{
   height: 80px;
   margin: 0 10px;
-  padding: 10px 15px;
+  padding: 10px 30px 10px 15px;
   background: linear-gradient(227.53deg, #38CDFC -20.97%, #1D85D1 87.01%);
   border-radius: 12px;
   color: #fff;
@@ -1555,19 +1592,23 @@ label::before {
   border-radius: 12px;
 }
 // inputs
-.input {
+input, input[type="number"] {
   font-family: inherit;
   background-color: inherit;
   width: 50%;
   padding: 0;
   cursor: pointer;
 }
-input {
+input, input[type="number"] {
   border:0;
   outline:0;
 }
-input:focus {outline:none!important;}
-
+input:focus, input[type="number"]:focus {
+  outline:none!important;
+}
+input[type="number"]{
+  height: unset;
+}
 #location_toggle{
   display: none;
 }
@@ -1575,6 +1616,18 @@ input:focus {outline:none!important;}
   margin-left: 6px;
   margin-right: 15px;
 }
+.date-picker-wrapper.no-shortcuts{
+  border-radius: 12px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.16);
+  background: #FFFFFF;
+}
+.date-picker-wrapper, .date-picker-wrapper .month-wrapper{
+  border: unset;
+}
+.date-picker-wrapper .gap{
+  //border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 @media (max-width: 1240px) {
 //.header-nav a{
 //font-size: 15px!important;
@@ -1592,6 +1645,11 @@ input:focus {outline:none!important;}
 //font-weight: 600;
 //line-height: 14px;
 //}
+}
+@media (max-width: 1024px) {
+  .options .edit span{
+    display: none;
+  }
 }
 
 /* /my_module */

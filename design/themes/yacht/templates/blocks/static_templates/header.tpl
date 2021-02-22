@@ -6,7 +6,7 @@
         <div class="col-1"></div>
         <nav class="header-nav d-flex justify-content-center col-6">
             <a class="cm-submit" data-ca-target-form="boats" data-ca-dispatch="dispatch[products.search]">{__('boats')}
-                <form name="boats" method="get" class="hidden">
+                <form name="boats" method="get" class="hidden" action="{$config.http_location}">
                     <input type="hidden" name="match" value="all" />
                     <input type="hidden" name="subcats" value="Y" />
                     <input type="hidden" name="pcode_from_q" value="Y" />
