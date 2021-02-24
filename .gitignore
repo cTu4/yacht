@@ -2,7 +2,8 @@
 !/app/addons
 /app/addons/*
 !/app/addons/my_module
-
+/cgi-bin
+/.bashrc
 
 /images/*
 !/images/my_module
