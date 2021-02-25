@@ -303,9 +303,9 @@ use Tygh\Enum\Addons\Discussion\DiscussionTypes;
                 "description" => "Производитель",
                 "company_id" => 0,
                 "purpose" => "organize_catalog",
-                "feature_style" => "text",
+                "feature_style" => "brand",
                 "filter_style" => "checkbox",
-                "feature_type" => "S"
+                "feature_type" => "E"
             ],
             [
                 "description" => "Модель",
