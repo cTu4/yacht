@@ -3,7 +3,8 @@
 /app/addons/*
 !/app/addons/my_module
 !/app/addons/location_descriptions
-
+/cgi-bin
+/.bashrc
 
 /images/*
 !/images/my_module
