@@ -331,8 +331,6 @@
 
 (function(_, $) {
 
-
-
     $.ceEvent('on', 'ce.commoninit', function (context) {
 
         $('.slider-search').each(function (slider){

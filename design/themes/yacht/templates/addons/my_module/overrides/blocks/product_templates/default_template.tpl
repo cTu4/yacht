@@ -2,6 +2,15 @@
 {$feature_location = $product.product_features[$features_ids['location']]}
 {$variant_location = $feature_location.variant_id}
 {$location = $feature_location['variants'][$feature_location.variant_id]}
+
+{$feature_vendor = $product.product_features[$features_ids['vendor']]}
+{$variant_vendor = $feature_vendor.variant_id}
+{$vendor = $feature_vendor['variants'][$feature_vendor.variant_id].variant}
+
+{$feature_model = $product.product_features[$features_ids['model']]}
+{$variant_model = $feature_model.variant_id}
+{$model = $feature_model['variants'][$feature_model.variant_id].variant}
+
 {$feature_amenities = $product.product_features[$features_ids['amenities']]}
 
 <div class="detailed bot-br-3">
@@ -40,7 +49,8 @@
     <div class="content d-flex">
         <div class="info col-8">
             <div class="title d-flex flex-column">
-                <div id="product" class="t-28px font-weight-bold">{$product.product}</div>
+                <div id="product" class="t-28px font-weight-bold">{$product.product}{if $model}, {$model}{/if}{if $vendor}, {$vendor}{/if}
+                </div>
                 <div class="t-16px font-weight-300">
                     <svg width="12" height="17" viewBox="0 0 12 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 0C2.68629 0 0 2.74043 0 6.12093C0 9.58887 3.77486 14.7077 5.33657 16.676C5.67943 17.108 6.32057 17.108 6.66343 16.676C8.22514 14.7077 12 9.58887 12 6.12093C12 2.74043 9.31371 0 6 0ZM6 8.30697C4.81629 8.30697 3.85714 7.3285 3.85714 6.12093C3.85714 4.91336 4.81629 3.93488 6 3.93488C7.18371 3.93488 8.14286 4.91336 8.14286 6.12093C8.14286 7.3285 7.18371 8.30697 6 8.30697Z" fill="#8F9CB8"/>
@@ -244,13 +254,34 @@
                                 <span class="t-22px font-weight-500">{__('total')}</span>
                                 <span class="t-22px font-weight-500">€ 15 508,60</span>
                             </div>
-                            <a class="button d-flex justify-content-center none-under-line pointer t-18px t-white font-weight-600 cm-submit" data-ca-dispatch="dispatch[products.services]" data-ca-target-form="product_data">{__('select_rent')}</a>
+                            <a class="button d-flex justify-content-center none-under-line pointer t-18px t-white font-weight-600 {*cm-submit*}"
+                               data-toggle="modal" data-target="#modal"
+                                    {*data-ca-dispatch="dispatch[products.services]" data-ca-target-form="product_data"*}>
+                                {__('select_rent')}
+                            </a>
                         </div>
 
                     </div>
             </form>
     </div>
-
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">{__("order_success")}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    {__('order_description')}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {if $block.lang_code=="ru"}
     <script src="https://api-maps.yandex.ru/2.1/?apikey=b32251bf-b0a1-4013-a53e-03c1d438785f&lang=ru_RU" type="text/javascript" data-no-defer></script>

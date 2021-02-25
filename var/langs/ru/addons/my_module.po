@@ -399,3 +399,23 @@ msgstr "Расположение не указано"
 msgctxt "Languages::description_no"
 msgid "location_no"
 msgstr "Описание отсутствует"
+
+msgctxt "Languages::order_success"
+msgid "order_success"
+msgstr "Заказ принят"
+
+msgctxt "Languages::order_description"
+msgid "order_description"
+msgstr "Ваш заказ принят! В ближайшее время с вами свяжутся менеджеры."
+
+msgctxt "Languages::vendor_model"
+msgid "vendor_model"
+msgstr "Производители и модели"
+
+msgctxt "Languages::manufacturer"
+msgid "manufacturers"
+msgstr "Производители"
+
+msgctxt "Languages::models"
+msgid "models"
+msgstr "Модели"

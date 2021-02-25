@@ -457,7 +457,25 @@ msgctxt "Languages::description_no"
 msgid "location_no"
 msgstr "No description available"
 
+msgctxt "Languages::order_success"
+msgid "order_success"
+msgstr "Order is accepted"
 
+msgctxt "Languages::order_description"
+msgid "order_description"
+msgstr "Your order is accepted! Our managers will contact you in the near future."
+
+msgctxt "Languages::vendor_model"
+msgid "vendor_model"
+msgstr "Vendor and models"
+
+msgctxt "Languages::manufacturer"
+msgid "manufacturers"
+msgstr "Manufacturers"
+
+msgctxt "Languages::models"
+msgid "models"
+msgstr "Models"
 
 
 

@@ -13,7 +13,16 @@
             `time_end` int(11)
             )
         </item>
-        <item for="uninstall">DROP TABLE IF EXISTS ?:product_reservations;</item>
+<!--        <item for="uninstall">DROP TABLE IF EXISTS ?:product_reservations;</item>-->
+
+        <item for="install">
+            CREATE TABLE IF NOT EXISTS `?:variant_links` (
+            `link_id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            `parent_variant_id` int(10),
+            `variant_id` int(10)
+            )
+        </item>
+<!--        <item for="uninstall">DROP TABLE IF EXISTS ?:variant_links;</item>-->
 
         <item for="install">
             CREATE TABLE IF NOT EXISTS `?:product_vendors_desc` (
@@ -23,26 +32,26 @@
             `description` mediumtext
             )
         </item>
-        <item for="uninstall">DROP TABLE IF EXISTS ?:product_vendors_desc;</item>
+<!--        <item for="uninstall">DROP TABLE IF EXISTS ?:product_vendors_desc;</item>-->
 
-        <item for="install">
-            alter table `?:discussion_rating`
-            add `cleanliness` int(1),
-            add `communication` int(1),
-            add `check_in` int(1),
-            add `accuracy` int(1),
-            add `location` int(1),
-            add `value` int(1)
-        </item>
-        <item for="uninstall">
-            alter table `?:discussion_rating`
-            drop `cleanliness`,
-            drop `communication`,
-            drop `check_in`,
-            drop `accuracy`,
-            drop `location`,
-            drop `value`
-        </item>
+<!--        <item for="install">-->
+<!--            alter table `?:discussion_rating`-->
+<!--            add `cleanliness` int(1),-->
+<!--            add `communication` int(1),-->
+<!--            add `check_in` int(1),-->
+<!--            add `accuracy` int(1),-->
+<!--            add `location` int(1),-->
+<!--            add `value` int(1)-->
+<!--        </item>-->
+<!--        <item for="uninstall">-->
+<!--            alter table `?:discussion_rating`-->
+<!--            drop `cleanliness`,-->
+<!--            drop `communication`,-->
+<!--            drop `check_in`,-->
+<!--            drop `accuracy`,-->
+<!--            drop `location`,-->
+<!--            drop `value`-->
+<!--        </item>-->
 
 <!--        <item for="install">-->
 <!--            alter table `?:products`-->

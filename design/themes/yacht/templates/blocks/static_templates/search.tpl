@@ -129,10 +129,17 @@
         "opens": "right"
     });
 
+
     $(".search .arrow-bottom").on("click",function (e){
         $(".search .arrow-bottom").toggleClass("active");
         $(".main_search, .search_toggle").slideToggle(300);
 
+    });
+    $(document).click(function (e) {
+        var container = $(".select_price.active");
+        if ($(e.target).attr("class") !== "select_price active" && container.has(e.target).length === 0 && $(e.target).attr('id') !== "search_price"){
+            $(".select_price").removeClass('active');
+        }
     });
     $("#search_price").on("click", function (e){
         $(".select_price").toggleClass('active');

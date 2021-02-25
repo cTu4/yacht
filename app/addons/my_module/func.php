@@ -84,6 +84,10 @@ use Tygh\Enum\Addons\Discussion\DiscussionTypes;
         $features_ids["location"]=$id_feature_location;
         $id_feature_amenities = db_get_field('select feature_id from ?:product_features_descriptions where description="Удобства"');
         $features_ids["amenities"]=$id_feature_amenities;
+        $id_feature_amenities = db_get_field('select feature_id from ?:product_features_descriptions where description="Производитель"');
+        $features_ids["vendor"]=$id_feature_amenities;
+        $id_feature_amenities = db_get_field('select feature_id from ?:product_features_descriptions where description="Модель"');
+        $features_ids["model"]=$id_feature_amenities;
         $ids=[];
         if($selects_features){
             $sql = "select feature_id from ?:product_features_descriptions where (";
@@ -294,6 +298,22 @@ use Tygh\Enum\Addons\Discussion\DiscussionTypes;
                         "variant" => "Люкс"
                     ]
                 ]
+            ],
+            [
+                "description" => "Производитель",
+                "company_id" => 0,
+                "purpose" => "organize_catalog",
+                "feature_style" => "text",
+                "filter_style" => "checkbox",
+                "feature_type" => "S"
+            ],
+            [
+                "description" => "Модель",
+                "company_id" => 0,
+                "purpose" => "find_products",
+                "feature_style" => "text",
+                "filter_style" => "checkbox",
+                "feature_type" => "S"
             ]
         ];
         foreach ($features as $keyFeature => $feature){

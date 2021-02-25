@@ -9,4 +9,6 @@
 
 <script src="https://unpkg.com/lightpick@latest/lightpick.js" data-no-defer></script>
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" data-no-defer></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" data-no-defer></script>
+
 {*<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-date-range-picker/0.21.1/jquery.daterangepicker.min.js" data-no-defer></script>*}
