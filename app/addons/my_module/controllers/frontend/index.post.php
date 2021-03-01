@@ -48,6 +48,11 @@ if ($mode == 'index'){
     foreach ($checked_yachts as $yacht){
         $result[] = fn_get_product_data($yacht['product_id'],$auth);
     }
+    $categories_search = db_get_hash_array("select category_id, category from ?:category_descriptions where category IN (?a) and lang_code='en'", "category", categories_search);
+    Tygh::$app['view']->assign("categories_search",$categories_search);
+
+
+
     Tygh::$app['view']->assign("checked_yachts",$result);
     Tygh::$app['view']->assign("search_checked",$search_checked);
 

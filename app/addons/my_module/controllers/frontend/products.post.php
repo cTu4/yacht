@@ -62,11 +62,11 @@ if ($mode == 'view') {
 
     $card_features = fn_get_product_features([
         "product_id"=>$_REQUEST['product_id'],
-        "feature_id"=> $ids,
+        "feature_id"=> array_merge($ids,$features_ids),
         "variants"=>true
     ]);
-
     $card_data = fn_get_card_data($card_features[0]);
+
     Tygh::$app['view']->assign('card_data', $card_data);
     Tygh::$app['view']->assign('features_ids', $features_ids);
     $logos = fn_get_logos($_REQUEST['company_id']);

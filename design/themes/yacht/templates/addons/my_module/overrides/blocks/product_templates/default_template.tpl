@@ -81,10 +81,8 @@
             </div>
             <div class="cards-info d-flex justify-content-left flex-wrap">
                 {include file="addons/my_module/blocks/cards-info.tpl"
-                    double_cabins=$card_data.double_cabins
-                    single_cabins=$card_data.single_cabins
-                    double_sleep_place=$card_data.double_sleep_place
-                    single_sleep_place=$card_data.single_sleep_place
+                    cabins=$card_data.cabins
+                    sleep_place=$card_data.sleep_place
                     shower=$card_data.shower
                     kitchen=$card_data.kitchen
                 }

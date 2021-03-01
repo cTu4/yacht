@@ -1,7 +1,4 @@
 <div class="info-search-result margin_center bot-br-3">
-    <div class="title t-28px font-weight-bold">
-        {__('result_for')} "{$search.q}": {$search.total_items}
-    </div>
     <div class="buttons d-flex justify-content-between">
         <div class="d-flex left">
             <div class="search-result-btn">

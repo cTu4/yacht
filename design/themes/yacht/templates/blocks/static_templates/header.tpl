@@ -1,4 +1,5 @@
 {** block-description:tmpl_header **}
+{*{$categories_search|fn_print_r}*}
 <div class="header">
     <div class="covid "><a href="{$config.http_path}">{__('covid')} &#8594;</a></div>
     <div class="main-header d-flex justify-content-between align-items-center ">
@@ -16,12 +17,51 @@
                     <input type="hidden" name="pkeywords" value="Y" />
                     <input type="hidden" name="search_performed" value="Y" />
                     <input type="hidden" name="items_per_page" value="{$settings.Appearance.products_per_page}" />
-                    <input type="hidden" name="cid" value="2">
+                    <input type="hidden" name="cid" value="{$categories_search.Boats.category_id}">
                 </form>
             </a>
-            <a href="#">{__('experiences')}</a>
-            <a href="#">{__('destinations')}</a>
-            <a href="#">{__('events')}</a>
+            <a class="cm-submit" data-ca-target-form="experiences" data-ca-dispatch="dispatch[products.search]">{__('experiences')}
+                <form name="experiences" method="get" class="hidden" action="{$config.http_location}">
+                    <input type="hidden" name="match" value="all" />
+                    <input type="hidden" name="subcats" value="Y" />
+                    <input type="hidden" name="pcode_from_q" value="Y" />
+                    <input type="hidden" name="pshort" value="Y" />
+                    <input type="hidden" name="pfull" value="Y" />
+                    <input type="hidden" name="pname" value="Y" />
+                    <input type="hidden" name="pkeywords" value="Y" />
+                    <input type="hidden" name="search_performed" value="Y" />
+                    <input type="hidden" name="items_per_page" value="{$settings.Appearance.products_per_page}" />
+                    <input type="hidden" name="cid" value="{$categories_search.Experiences.category_id}">
+                </form>
+            </a>
+            <a class="cm-submit" data-ca-target-form="destinations" data-ca-dispatch="dispatch[products.search]">{__('destinations')}
+                <form name="destinations" method="get" class="hidden" action="{$config.http_location}">
+                    <input type="hidden" name="match" value="all" />
+                    <input type="hidden" name="subcats" value="Y" />
+                    <input type="hidden" name="pcode_from_q" value="Y" />
+                    <input type="hidden" name="pshort" value="Y" />
+                    <input type="hidden" name="pfull" value="Y" />
+                    <input type="hidden" name="pname" value="Y" />
+                    <input type="hidden" name="pkeywords" value="Y" />
+                    <input type="hidden" name="search_performed" value="Y" />
+                    <input type="hidden" name="items_per_page" value="{$settings.Appearance.products_per_page}" />
+                    <input type="hidden" name="cid" value="{$categories_search.Destinations.category_id}">
+                </form>
+            </a>
+            <a class="cm-submit" data-ca-target-form="events" data-ca-dispatch="dispatch[products.search]">{__('events')}
+                <form name="events" method="get" class="hidden" action="{$config.http_location}">
+                    <input type="hidden" name="match" value="all" />
+                    <input type="hidden" name="subcats" value="Y" />
+                    <input type="hidden" name="pcode_from_q" value="Y" />
+                    <input type="hidden" name="pshort" value="Y" />
+                    <input type="hidden" name="pfull" value="Y" />
+                    <input type="hidden" name="pname" value="Y" />
+                    <input type="hidden" name="pkeywords" value="Y" />
+                    <input type="hidden" name="search_performed" value="Y" />
+                    <input type="hidden" name="items_per_page" value="{$settings.Appearance.products_per_page}" />
+                    <input type="hidden" name="cid" value="{$categories_search.Events.category_id}">
+                </form>
+            </a>
         </nav>
         <div class="right d-flex col-3 justify-content-end align-items-center">
             <div>

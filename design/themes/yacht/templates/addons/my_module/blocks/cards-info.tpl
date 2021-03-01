@@ -1,4 +1,4 @@
-{if $double_cabins!=0 && $single_cabins!=0}
+{if $cabins!=0}
         <div class="card d-flex flex-column justify-content-end">
         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14.9083 24.936L22.9083 23.1693C24.131 22.9 25.0003 21.8173 25.0003 20.5653V5.43462C25.0003 4.18395 24.131 3.09995 22.9083 2.83062L14.9083 1.06395C13.2443 0.695954 11.667 1.96262 11.667 3.66795V22.332C11.667 24.0373 13.2443 25.304 14.9083 24.936V24.936Z" stroke="#0090F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -7,11 +7,11 @@
                 <path d="M11.6667 3.66797H3.66667C2.19333 3.66797 1 4.8613 1 6.33464V13" stroke="#0090F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <span class="t-18px font-weight-600">{__('cabins')}</span>
-        <span class="ty-lowercase t-11px t-blue">{if $double_cabins!=0}{$double_cabins} {__('double')}{/if} {if $double_cabins!=0 && $single_cabins!=0}{__('and')}{/if} {if $single_cabins!=0}{$single_cabins} {__('single')} {/if}{__('cabins')}</span>
+        <span class="ty-lowercase t-11px t-blue">{$cabins} {__('cabins')}</span>
         </div>
 {/if}
 
-{if $double_sleep_place!=0 && $single_sleep_place!=0}
+{if $sleep_place!=0}
         <div class="card d-flex flex-column justify-content-end">
                 <svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M25.6665 12.0894H4.33317C2.85984 12.0894 1.6665 13.2827 1.6665 14.756V18.6667C1.6665 19.4027 2.26384 20 2.99984 20H26.9998C27.7358 20 28.3332 19.4027 28.3332 18.6667V14.756C28.3332 13.2827 27.1398 12.0894 25.6665 12.0894Z" stroke="#0090F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -22,7 +22,7 @@
                         <path d="M3 20V22.6667" stroke="#0090F9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <span class="t-18px font-weight-600">{__('sleeping_places')}</span>
-                <span class=" t-11px t-blue">{if $double_sleep_place!=0}{$single_sleep_place} {__('double')}{/if} {if $double_sleep_place!=0 && $single_sleep_place!=0}{__('and')}{/if} {if $single_sleep_place!=0}{$single_sleep_place} {__('single')} {/if}{__('beds')}</span>
+                <span class=" t-11px t-blue">{$sleep_place} {__('beds')}</span>
         </div>
 {/if}
 

@@ -65,8 +65,8 @@
                     </span>
                     <span class=" t-17px font-weight-500">{$yacht.product}</span>
                     <span class=" t-13px">
-                        {$yacht.card_data.double_cabins + $yacht.card_data.single_cabins} cabins,
-                        {$yacht.card_data.double_sleep_place + $yacht.card_data.single_sleep_place} berths,
+                        {$yacht.card_data.double_cabins + $yacht.card_data.cabins} cabins,
+                        {$yacht.card_data.double_sleep_place + $yacht.card_data.sleep_place} berths,
                         {$yacht.card_data.bath} baths</span>
                     <span>
                         <span class="t-18px font-weight-bold">{include file="common/price.tpl"

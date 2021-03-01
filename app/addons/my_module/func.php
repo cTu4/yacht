@@ -111,18 +111,12 @@ use Tygh\Enum\Addons\Discussion\DiscussionTypes;
         foreach ($card_features as $card_feature){
             switch ($card_feature['description']){
                 case features_names[0]:
-                    $card_data['double_cabins']=$card_feature['variant_id']?$card_feature['variants'][$card_feature['variant_id']]['variant']:'';
+                    $card_data['cabins']=$card_feature['variant_id']?$card_feature['variants'][$card_feature['variant_id']]['variant']:'';
                     break;
                 case features_names[1]:
-                    $card_data['single_cabins']=$card_feature['variant_id']?$card_feature['variants'][$card_feature['variant_id']]['variant']:'';
+                    $card_data['sleep_place']=$card_feature['variant_id']?$card_feature['variants'][$card_feature['variant_id']]['variant']:'';
                     break;
                 case features_names[2]:
-                    $card_data['double_sleep_place']=$card_feature['variant_id']?$card_feature['variants'][$card_feature['variant_id']]['variant']:'';
-                    break;
-                case features_names[3]:
-                    $card_data['single_sleep_place']=$card_feature['variant_id']?$card_feature['variants'][$card_feature['variant_id']]['variant']:'';
-                    break;
-                case features_names[4]:
                     $card_data['bath']=$card_feature['variant_id']?$card_feature['variants'][$card_feature['variant_id']]['variant']:'';
                     break;
                 case "Удобства":
@@ -212,7 +206,7 @@ use Tygh\Enum\Addons\Discussion\DiscussionTypes;
                 ]
             ],
             [
-                "description" => "Количество кают для двоих",
+                "description" => "Количество кают",
                 "company_id" => 1,
                 "purpose" => "find_products",
                 "feature_style" => "text",
@@ -225,33 +219,7 @@ use Tygh\Enum\Addons\Discussion\DiscussionTypes;
                 ]
             ],
             [
-                "description" => "Количество кают для одного",
-                "company_id" => 1,
-                "purpose" => "find_products",
-                "feature_style" => "text",
-                "filter_style" => "slider",
-                "feature_type" => "N",
-                "variants"=>[
-                    [
-                        "variant"=> 1
-                    ]
-                ]
-            ],
-            [
-                "description" => "Количество спальных мест для одного",
-                "company_id" => 1,
-                "purpose" => "find_products",
-                "feature_style" => "text",
-                "filter_style" => "slider",
-                "feature_type" => "N",
-                "variants"=>[
-                    [
-                        "variant"=> 1
-                    ]
-                ]
-            ],
-            [
-                "description" => "Количество спальных мест для двоих",
+                "description" => "Количество спальных мест",
                 "company_id" => 1,
                 "purpose" => "find_products",
                 "feature_style" => "text",
@@ -273,6 +241,19 @@ use Tygh\Enum\Addons\Discussion\DiscussionTypes;
                 "variants"=>[
                     [
                         "variant"=> 1
+                    ]
+                ]
+            ],
+            [
+                "description" => "Год выпуска",
+                "company_id" => 1,
+                "purpose" => "find_products",
+                "feature_style" => "text",
+                "filter_style" => "slider",
+                "feature_type" => "N",
+                "variants"=>[
+                    [
+                        "variant"=> 2020
                     ]
                 ]
             ],
