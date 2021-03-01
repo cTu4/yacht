@@ -1,4 +1,7 @@
 {** block-description:tmpl_presets**}
+{*{$categories_search = ""|get_categores_search}*}
+{*{$categories_search|fn_print_r}*}
+{assign var="categories_search" value=""|get_categores_search}
 <div class="presets  d-flex justify-content-between">
     <a class="item_preset t-18px font-weight-600 cm-submit" data-ca-target-form="Sailboats" data-ca-dispatch="dispatch[products.search]">
         {__('Sailboats')}

@@ -388,4 +388,9 @@ use Tygh\Enum\Addons\Discussion\DiscussionTypes;
 
     }
 
+    function get_categores_search(){
+        $categories_search = db_get_hash_array("select category_id, category from ?:category_descriptions where category IN (?a) and lang_code='en'", "category", categories_search);
+        return $categories_search;
+    }
+
 

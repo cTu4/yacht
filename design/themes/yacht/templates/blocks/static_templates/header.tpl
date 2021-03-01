@@ -1,5 +1,6 @@
 {** block-description:tmpl_header **}
 {*{$categories_search|fn_print_r}*}
+{assign var="categories_search" value=""|get_categores_search}
 <div class="header">
     <div class="covid "><a href="{$config.http_path}">{__('covid')} &#8594;</a></div>
     <div class="main-header d-flex justify-content-between align-items-center ">
