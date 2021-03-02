@@ -29,6 +29,7 @@ if ($mode == 'index'){
         ]
     ];
     list($checked_yachts, $search_checked) = fn_get_products($params, Registry::get('settings.Appearance.products_per_page'));
+
 //    fn_filters_handle_search_result($params, $lux_yachts, $search_checked);
 
 //    fn_gather_additional_products_data($lux_yachts, array(

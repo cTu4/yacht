@@ -392,5 +392,12 @@ use Tygh\Enum\Addons\Discussion\DiscussionTypes;
         $categories_search = db_get_hash_array("select category_id, category from ?:category_descriptions where category IN (?a) and lang_code='en'", "category", categories_search);
         return $categories_search;
     }
-
+    function get_release_filter(){
+        $feature_realise = db_get_field("select feature_id from ?:product_features_descriptions where description='Год выпуска'");
+        return $feature_realise;
+    }
+    function get_berths_filter(){
+        $feature_berths = db_get_field("select feature_id from ?:product_features_descriptions where description='Количество спальных мест'");
+        return $feature_berths;
+    }
 

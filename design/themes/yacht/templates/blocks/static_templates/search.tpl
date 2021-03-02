@@ -19,13 +19,13 @@
     Choose the country where you want to go on a maritime journey.</div>
 
         <form action="{"products.search"|fn_url}" name="search_form" method="get" >
-            <input type="hidden" name="match" value="all" />
-            <input type="hidden" name="subcats" value="Y" />
-            <input type="hidden" name="pcode_from_q" value="Y" />
-            <input type="hidden" name="pshort" value="Y" />
-            <input type="hidden" name="pfull" value="Y" />
-            <input type="hidden" name="pname" value="Y" />
-            <input type="hidden" name="pkeywords" value="Y" />
+{*            <input type="hidden" name="match" value="all" />*}
+{*            <input type="hidden" name="subcats" value="Y" />*}
+{*            <input type="hidden" name="pcode_from_q" value="Y" />*}
+{*            <input type="hidden" name="pshort" value="Y" />*}
+{*            <input type="hidden" name="pfull" value="Y" />*}
+{*            <input type="hidden" name="pname" value="Y" />*}
+{*            <input type="hidden" name="pkeywords" value="Y" />*}
             <input type="hidden" name="search_performed" value="Y" />
             <input type="hidden" name="items_per_page" value="{$settings.Appearance.products_per_page}" />
             {strip}
@@ -66,7 +66,7 @@
                         <div class="from d-flex flex-column">
                             <span class="t-15px t-gray-op6">From</span>
                             <div class="d-flex justify-content-between">
-                                <input class="t-22px font-weight-500 t-gray-op5 input-long" name="price_from" value="0">
+                                <input class="t-22px font-weight-500 t-gray-op5 input-long" name="price_from" value="">
                                 <div class="symbol t-22px font-weight-500 ">
                                     {$currencies.$secondary_currency.symbol}
                                 </div>
@@ -75,7 +75,7 @@
                         <div class="to d-flex flex-column">
                             <span class="t-15px t-gray-op6">To</span>
                             <div class="d-flex justify-content-between">
-                                <input class="t-22px font-weight-500 t-gray-op5 input-long" name="price_to" value="0">
+                                <input class="t-22px font-weight-500 t-gray-op5 input-long" name="price_to" value="">
                                 <div class="t-22px font-weight-500">
                                     {$currencies.$secondary_currency.symbol}
                                 </div>
