@@ -340,6 +340,7 @@
                 arrows: false,
                 adaptiveHeight: true,
                 dots: true,
+                draggable: false,
                 customPaging : function(slider, i) {
                     return '<div></div>';
                 },

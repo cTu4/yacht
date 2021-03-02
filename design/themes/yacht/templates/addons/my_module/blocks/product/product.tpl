@@ -21,17 +21,25 @@
         {/if}
     </div>
     {if $product.main_pair.detailed}
+            <div class="slider-search">
+                <a href="{"products.view?product_id=`$product.product_id`"|fn_url}">
 
-        <div class="slider-search">
-            <img src="{$product.main_pair.detailed.image_path}">
-            {if $product.image_pairs}
-                {foreach from=$product.image_pairs item="image" name="foo"}
-                    <img src="{$image.detailed.image_path}" style="display: none">
-                {/foreach}
-            {/if}
-        </div>
+                    <img src="{$product.main_pair.detailed.image_path}">
+                </a>
+                    {if $product.image_pairs}
+                        {foreach from=$product.image_pairs item="image" name="foo"}
+                            <a href="{"products.view?product_id=`$product.product_id`"|fn_url} " style="display: none">
+                                <img src="{$image.detailed.image_path}" >
+                            </a>
+                        {/foreach}
+                    {/if}
+
+            </div>
+
     {else}
-        <span class="ty-no-image"><i class="ty-no-image__icon ty-icon-image" title="{__("no_image")}"></i></span>
+    <a href="{"products.view?product_id=`$product.product_id`"|fn_url}" >
+        <span class="ty-no-image pointer" ><i class="ty-no-image__icon ty-icon-image" title="{__("no_image")}"></i></span>
+    </a>
     {/if}
 
     <a href="{"products.view?product_id=`$product.product_id`"|fn_url}" class="title d-flex flex-column pointer">
