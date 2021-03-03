@@ -477,6 +477,30 @@ msgctxt "Languages::models"
 msgid "models"
 msgstr "Models"
 
+msgctxt "Languages::adults"
+msgid "adults"
+msgstr "Adults"
+
+msgctxt "Languages::adults_info"
+msgid "adults_info"
+msgstr "Ages 13 or above"
+
+msgctxt "Languages::children"
+msgid "children"
+msgstr "Children"
+
+msgctxt "Languages::children_info"
+msgid "children_info"
+msgstr "Ages 2-12"
+
+msgctxt "Languages::infants"
+msgid "infants"
+msgstr "Infants"
+
+msgctxt "Languages::infants_info"
+msgid "infants_info"
+msgstr "Under 2"
+
 
 
 

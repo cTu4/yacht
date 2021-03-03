@@ -1,4 +1,41 @@
 (function(_, $) {
+    $(document).click(function (e) {
+        var container = $(".select_team.active");
+        if ($(e.target).attr("class") !== "select_team active" && container.has(e.target).length === 0 && $(e.target).attr('id') !== "search_team"){
+            $(".select_team").removeClass('active');
+        }
+    });
+    $("#search_team").on("click", function (e){
+        $(".select_team").toggleClass('active');
+    });
+    $("input[name='price_from']").on('input',function (e){
+        $("#search_price").val($(e.target).val() + "{$currencies.$secondary_currency.symbol}");
+    });
+    $("input[name='price_to']").on('input',function (e){
+        var price = $("#search_price");
+        var str = price.val().split(" - ");
+        if(str.length === 1){
+            price.val(price.val() + " - " + $(e.target).val() + "{$currencies.$secondary_currency.symbol}");
+        }
+        else{
+            str[1] = $(e.target).val();
+            price.val(str[0] + " - " + str[1] + "{$currencies.$secondary_currency.symbol}");
+
+        }
+    });
+
+    $(".fa-plus").on("click", function (e){
+        var input = $(e.target).parent().prev();
+        input.val(parseInt(input.val()) + 1);
+    });
+    $(".fa-minus").on("click", function (e){
+        var input = $(e.target).parent().next();
+        var val = parseInt(input.val()) - 1;
+        input.val(val < 0 ? 0 : val );
+    })
+
+
+
     $.fn.hScroll = function( options )
     {
         function scroll( obj, e )

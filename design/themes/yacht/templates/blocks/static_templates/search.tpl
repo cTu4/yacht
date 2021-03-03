@@ -83,12 +83,74 @@
                         </div>
                     </div>
                 </div>
-                <div class="item_search">
+                <div class="item_search item-4">
                     <span class="t-16px font-weight-bold">Team</span>
                     <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.31073 0H0.689272C0.382143 0 0.189596 0.331793 0.341974 0.598455L3.6527 6.39223C3.80626 6.66096 4.19374 6.66096 4.3473 6.39223L7.65803 0.598456C7.8104 0.331793 7.61786 0 7.31073 0Z" fill="#2466F6"/>
                     </svg><br>
-                    <span class="t-15px">Add team members</span></div>
+                    <input id="search_team" class="t-15px" placeholder="Add team members" autocomplete="off">
+
+                    <div class="select_team d-flex flex-column">
+                        <div class="item d-flex">
+                            <div class="d-flex flex-column w-50">
+                                <div class="t-16px font-weight-bold">
+                                    {__('adults')}
+                                </div>
+                                <div class="t-15px ">
+                                    {__('adults_info')}
+                                </div>
+                            </div>
+                            <div class="select_number d-flex w-50">
+                                <span class="minus pointer">
+                                    <i class="fas fa-minus"></i>
+                                </span>
+                                <input class="t-22px font-weight-500" type="number" value="0" min="0">
+                                <span class="plus pointer">
+                                    <i class="fas fa-plus"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="item d-flex">
+                            <div class="d-flex flex-column w-50">
+                                <div class="t-16px font-weight-bold">
+                                    {__('children')}
+                                </div>
+                                <div class="t-15px ">
+                                    {__('children_info')}
+                                </div>
+                            </div>
+                            <div class="select_number d-flex w-50">
+                                <span class="minus pointer">
+                                    <i class="fas fa-minus"></i>
+                                </span>
+                                <input class="t-22px font-weight-500" type="number" value="0" min="0">
+                                <span class="plus pointer">
+                                    <i class="fas fa-plus"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="item d-flex">
+                            <div class="d-flex flex-column w-50">
+                                <div class="t-16px font-weight-bold">
+                                    {__('infants')}
+                                </div>
+                                <div class="t-15px ">
+                                    {__('infants_info')}
+                                </div>
+                            </div>
+                            <div class="select_number d-flex w-50">
+                                <span class="minus pointer">
+                                    <i class="fas fa-minus"></i>
+                                </span>
+                                <input class="t-22px font-weight-500" type="number" value="0" min="0">
+                                <span class="plus pointer">
+                                    <i class="fas fa-plus"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </form>
 
@@ -159,9 +221,7 @@
 
         }
     });
-    $("input[name='price_to'], .select_price").on('blur',function (e){
-        $(".select_price").toggleClass('active');
-    });
+
 
     {$rdelim}(Tygh, Tygh.$));
 </script>
