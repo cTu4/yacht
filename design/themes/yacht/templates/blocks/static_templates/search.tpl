@@ -248,11 +248,26 @@
 
         }
     });
-    $(".numbers_team").on("change", function (e){
-        $(".search_team, #search_team").each(function (index){
-            $(this).val($(e.target).val());
-        });
+    var input_team  = $(".numbers_team");
+    input_team.on("change", function (e){
+            $(".search_team").val($(e.target).val());
+    });
+    input_team.on("keydown", function (e){
+        var input = $(e.target);
+        if(parseInt(input.val()) < 0){
 
+        }
+        $(".search_team").val($(e.target).val());
+    });
+    input_team.on("keydown",function () {
+        if (!$(this).val() || (parseInt($(this).val()) >= 0))
+            $(this).data("old", $(this).val());
+    });
+    input_team.on("keyup",function () {
+        if (!$(this).val() || (parseInt($(this).val()) >= 0 ))
+            ;
+        else
+            $(this).val($(this).data("old"));
     });
     $(".fa-plus").on("click", function (e){
         var input = $(e.target).parent().prev();
