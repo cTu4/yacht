@@ -400,4 +400,8 @@ use Tygh\Enum\Addons\Discussion\DiscussionTypes;
         $feature_berths = db_get_field("select feature_id from ?:product_features_descriptions where description='Количество спальных мест'");
         return $feature_berths;
     }
+    function get_id_feature($name){
+        $feature_id = db_get_field("select feature_id from ?:product_features_descriptions where description=?s",$name);
 
+        return $feature_id;
+    }

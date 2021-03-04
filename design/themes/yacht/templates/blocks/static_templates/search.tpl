@@ -1,5 +1,7 @@
 {** block-description:tmpl_search **}
 {script src="js/addons/my_module/script.js"}
+{$berths_feature_id = "Количество спальных мест"|get_id_feature}
+
 <div class="search margin_center d-flex justify-content-center flex-column">
     {if $toggle}
         <div class="arrow-bottom pointer">
@@ -34,7 +36,7 @@
                 {else}
                     {assign var="search_title" value=__("search_products")}
                 {/if}
-                <input type="text" name="q" value="{$search.q}" id="search_input{$smarty.capture.search_input_id}" title="{$search_title}" class="ty-search-block__input cm-hint" />
+{*                <input type="text" name="q" value="{$search.q}" id="search_input{$smarty.capture.search_input_id}" title="{$search_title}" class="ty-search-block__input cm-hint" />*}
                 {if $settings.General.search_objects}
                     <input type="hidden" name="dispatch" value="search.results" />
                 {else}
@@ -88,8 +90,9 @@
                     <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.31073 0H0.689272C0.382143 0 0.189596 0.331793 0.341974 0.598455L3.6527 6.39223C3.80626 6.66096 4.19374 6.66096 4.3473 6.39223L7.65803 0.598456C7.8104 0.331793 7.61786 0 7.31073 0Z" fill="#2466F6"/>
                     </svg><br>
-                    <input id="search_team" class="t-15px" placeholder="Add team members" autocomplete="off">
-
+{*                    <input id="search_team" class="t-15px" placeholder="Add team members" autocomplete="off">*}
+                    <input type="number" id="search_team" class="search_team t-15px" placeholder="Add team members" name="feature_variants[{$berths_feature_id}][]" value="" />
+                    <input type="hidden" class="search_team" name="feature_variants[{$berths_feature_id}][]" value="" />
                     <div class="select_team d-flex flex-column">
                         <div class="item d-flex">
                             <div class="d-flex flex-column w-50">
@@ -104,50 +107,50 @@
                                 <span class="minus pointer">
                                     <i class="fas fa-minus"></i>
                                 </span>
-                                <input class="t-22px font-weight-500" type="number" value="0" min="0">
+                                <input name="" class="t-22px font-weight-500 numbers_team" type="number" value="0" min="0">
                                 <span class="plus pointer">
                                     <i class="fas fa-plus"></i>
                                 </span>
                             </div>
                         </div>
-                        <div class="item d-flex">
-                            <div class="d-flex flex-column w-50">
-                                <div class="t-16px font-weight-bold">
-                                    {__('children')}
-                                </div>
-                                <div class="t-15px ">
-                                    {__('children_info')}
-                                </div>
-                            </div>
-                            <div class="select_number d-flex w-50">
-                                <span class="minus pointer">
-                                    <i class="fas fa-minus"></i>
-                                </span>
-                                <input class="t-22px font-weight-500" type="number" value="0" min="0">
-                                <span class="plus pointer">
-                                    <i class="fas fa-plus"></i>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="item d-flex">
-                            <div class="d-flex flex-column w-50">
-                                <div class="t-16px font-weight-bold">
-                                    {__('infants')}
-                                </div>
-                                <div class="t-15px ">
-                                    {__('infants_info')}
-                                </div>
-                            </div>
-                            <div class="select_number d-flex w-50">
-                                <span class="minus pointer">
-                                    <i class="fas fa-minus"></i>
-                                </span>
-                                <input class="t-22px font-weight-500" type="number" value="0" min="0">
-                                <span class="plus pointer">
-                                    <i class="fas fa-plus"></i>
-                                </span>
-                            </div>
-                        </div>
+{*                        <div class="item d-flex">*}
+{*                            <div class="d-flex flex-column w-50">*}
+{*                                <div class="t-16px font-weight-bold">*}
+{*                                    {__('children')}*}
+{*                                </div>*}
+{*                                <div class="t-15px ">*}
+{*                                    {__('children_info')}*}
+{*                                </div>*}
+{*                            </div>*}
+{*                            <div class="select_number d-flex w-50">*}
+{*                                <span class="minus pointer">*}
+{*                                    <i class="fas fa-minus"></i>*}
+{*                                </span>*}
+{*                                <input class="t-22px font-weight-500" type="number" value="0" min="0">*}
+{*                                <span class="plus pointer">*}
+{*                                    <i class="fas fa-plus"></i>*}
+{*                                </span>*}
+{*                            </div>*}
+{*                        </div>*}
+{*                        <div class="item d-flex">*}
+{*                            <div class="d-flex flex-column w-50">*}
+{*                                <div class="t-16px font-weight-bold">*}
+{*                                    {__('infants')}*}
+{*                                </div>*}
+{*                                <div class="t-15px ">*}
+{*                                    {__('infants_info')}*}
+{*                                </div>*}
+{*                            </div>*}
+{*                            <div class="select_number d-flex w-50">*}
+{*                                <span class="minus pointer">*}
+{*                                    <i class="fas fa-minus"></i>*}
+{*                                </span>*}
+{*                                <input class="t-22px font-weight-500" type="number" value="0" min="0">*}
+{*                                <span class="plus pointer">*}
+{*                                    <i class="fas fa-plus"></i>*}
+{*                                </span>*}
+{*                            </div>*}
+{*                        </div>*}
                     </div>
                 </div>
 
@@ -221,7 +224,48 @@
 
         }
     });
+    $(document).click(function (e) {
+        var container = $(".select_team.active");
+        if (!$(e.target).hasClass("select_team","active") && container.has(e.target).length === 0 && $(e.target).attr('id') !== "search_team"){
+            $(".select_team").removeClass('active');
+        }
+    });
+    $(".search_team").on("click", function (e){
+        $(".select_team").toggleClass('active');
+    });
+    $("input[name='price_from']").on('input',function (e){
+        $("#search_price").val($(e.target).val() + "{$currencies.$secondary_currency.symbol}");
+    });
+    $("input[name='price_to']").on('input',function (e){
+        var price = $("#search_price");
+        var str = price.val().split(" - ");
+        if(str.length === 1){
+            price.val(price.val() + " - " + $(e.target).val() + "{$currencies.$secondary_currency.symbol}");
+        }
+        else{
+            str[1] = $(e.target).val();
+            price.val(str[0] + " - " + str[1] + "{$currencies.$secondary_currency.symbol}");
 
+        }
+    });
+    $(".numbers_team").on("change", function (e){
+        $(".search_team, #search_team").each(function (index){
+            $(this).val($(e.target).val());
+        });
+
+    });
+    $(".fa-plus").on("click", function (e){
+        var input = $(e.target).parent().prev();
+        var val =  parseInt(input.val()) + 1;
+        input.val(val);
+        input.change();
+    });
+    $(".fa-minus").on("click", function (e){
+        var input = $(e.target).parent().next();
+        var val = parseInt(input.val()) - 1;
+        input.val(val < 0 ? 0 : val );
+        input.change();
+    });
 
     {$rdelim}(Tygh, Tygh.$));
 </script>
