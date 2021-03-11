@@ -2,7 +2,9 @@
 !/app/addons
 /app/addons/*
 !/app/addons/my_module
-
+!/app/addons/location_descriptions
+/cgi-bin
+/.bashrc
 
 /images/*
 !/images/my_module
@@ -19,18 +21,28 @@
 /install.html
 /robots.txt
 /store_closed.html
-!/.htaccess
-
+/.htaccess
+/.gitignore
 /upgrades
 
 /design/*
 !/design/backend
 /design/backend/*
+
+!/design/backend/css
+/design/backend/css/*
+!/design/backend/css/addons
+/design/backend/css/addons/*
+!/design/backend/css/addons/my_module
+!/design/backend/css/addons/location_descriptions
+
+
 !/design/backend/templates
 /design/backend/templates/*
 !/design/backend/templates/addons
 /design/backend/templates/addons/*
 !/design/backend/templates/addons/my_module
+!/design/backend/templates/addons/location_descriptions
 
 
 
@@ -43,6 +55,7 @@
 !/js/addons
 /js/addons/*
 !/js/addons/my_module
+!/js/addons/location_descriptions
 
 /var/*
 !/var/langs/*

@@ -6,46 +6,97 @@
     <default_language>en</default_language>
     <queries>
         <item for="install">
-            alter table `?:products`
-            add `double_cabins` int(2),
-            add `single_cabins` int(2),
-            add `double_sleep_place` int(2),
-            add `single_sleep_place` int(2),
-            add `baths` int(2),
-            add `shower` varchar(1),
-            add `kitchen` varchar(1),
-            add `wi_fi` varchar(1),
-            add `bath_accessories` varchar(1),
-            add `dishes` varchar(1),
-            add `cinema` varchar(1),
-            add `pool` varchar(1),
-            add `bar` varchar(1),
-            add `pets` varchar(1),
-            add `washer` varchar(1),
-            add `checked` varchar(1),
-            add `plus` varchar(1),
-            add `lux` varchar(1)
+            CREATE TABLE IF NOT EXISTS `?:product_reservations` (
+            `reservation_id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            `product_id` varchar(6),
+            `time_start` int(11),
+            `time_end` int(11)
+            )
         </item>
-        <item for="uninstall">
-            alter table `?:products`
-            drop `double_cabins`,
-            drop `single_cabins`,
-            drop `double_sleep_place`,
-            drop `single_sleep_place`,
-            drop `baths`,
-            drop `shower`,
-            drop `kitchen`,
-            drop `wi_fi`,
-            drop `bath_accessories`,
-            drop `dishes`,
-            drop `cinema`,
-            drop `pool`,
-            drop `bar`,
-            drop `pets`,
-            drop `washer`,
-            drop `checked`,
-            drop `plus`,
-            drop `lux`
+<!--        <item for="uninstall">DROP TABLE IF EXISTS ?:product_reservations;</item>-->
+
+        <item for="install">
+            CREATE TABLE IF NOT EXISTS `?:variant_links` (
+            `link_id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            `parent_variant_id` int(10),
+            `variant_id` int(10)
+            )
         </item>
+<!--        <item for="uninstall">DROP TABLE IF EXISTS ?:variant_links;</item>-->
+
+        <item for="install">
+            CREATE TABLE IF NOT EXISTS `?:product_vendors_desc` (
+            `vendor_desc_id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            `product_id` varchar(6),
+            `company_id` int(11),
+            `description` mediumtext
+            )
+        </item>
+<!--        <item for="uninstall">DROP TABLE IF EXISTS ?:product_vendors_desc;</item>-->
+
+<!--        <item for="install">-->
+<!--            alter table `?:discussion_rating`-->
+<!--            add `cleanliness` int(1),-->
+<!--            add `communication` int(1),-->
+<!--            add `check_in` int(1),-->
+<!--            add `accuracy` int(1),-->
+<!--            add `location` int(1),-->
+<!--            add `value` int(1)-->
+<!--        </item>-->
+<!--        <item for="uninstall">-->
+<!--            alter table `?:discussion_rating`-->
+<!--            drop `cleanliness`,-->
+<!--            drop `communication`,-->
+<!--            drop `check_in`,-->
+<!--            drop `accuracy`,-->
+<!--            drop `location`,-->
+<!--            drop `value`-->
+<!--        </item>-->
+
+<!--        <item for="install">-->
+<!--            alter table `?:products`-->
+<!--            add `double_cabins` int(2),-->
+<!--            add `single_cabins` int(2),-->
+<!--            add `double_sleep_place` int(2),-->
+<!--            add `single_sleep_place` int(2),-->
+<!--            add `baths` int(2),-->
+<!--            add `shower` varchar(1),-->
+<!--            add `kitchen` varchar(1),-->
+<!--            add `wi_fi` varchar(1),-->
+<!--            add `bath_accessories` varchar(1),-->
+<!--            add `dishes` varchar(1),-->
+<!--            add `cinema` varchar(1),-->
+<!--            add `pool` varchar(1),-->
+<!--            add `bar` varchar(1),-->
+<!--            add `pets` varchar(1),-->
+<!--            add `washer` varchar(1),-->
+<!--            add `checked` varchar(1),-->
+<!--            add `plus` varchar(1),-->
+<!--            add `lux` varchar(1)-->
+<!--        </item>-->
+<!--        <item for="uninstall">-->
+<!--            alter table `?:products`-->
+<!--            drop `double_cabins`,-->
+<!--            drop `single_cabins`,-->
+<!--            drop `double_sleep_place`,-->
+<!--            drop `single_sleep_place`,-->
+<!--            drop `baths`,-->
+<!--            drop `shower`,-->
+<!--            drop `kitchen`,-->
+<!--            drop `wi_fi`,-->
+<!--            drop `bath_accessories`,-->
+<!--            drop `dishes`,-->
+<!--            drop `cinema`,-->
+<!--            drop `pool`,-->
+<!--            drop `bar`,-->
+<!--            drop `pets`,-->
+<!--            drop `washer`,-->
+<!--            drop `checked`,-->
+<!--            drop `plus`,-->
+<!--            drop `lux`-->
+<!--        </item>-->
     </queries>
+    <functions>
+        <item for="install">fn_my_module_install</item>
+    </functions>
 </addon>

@@ -1,0 +1,42 @@
+msgid ""
+msgstr "Project-Id-Version: tygh\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: English\n"
+"Language: en_US"
+
+msgctxt "Addons::name::location_descriptions"
+msgid "location_descriptions"
+msgstr "_Location descriptions"
+
+msgctxt "Addons::description::location_descriptions"
+msgid "location_descriptions_desc"
+msgstr "Add description for location"
+
+msgctxt "Languages::location_descriptions"
+msgid "location_descriptions_menu"
+msgstr "Description locations"
+
+msgctxt "Languages::location_descriptions_menu_description"
+msgid "location_descriptions_menu_description"
+msgstr "Add description for location"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

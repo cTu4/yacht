@@ -20,6 +20,10 @@ msgctxt "Addons::description::my_module"
 msgid "my_module"
 msgstr "Специальный модуль для внесения собственных изменений в платформу"
 
+msgctxt "Languages::description"
+msgid "description"
+msgstr "Описание"
+
 msgctxt "Languages::covid"
 msgid "covid"
 msgstr "Get the latest on our COVID-19 response"
@@ -328,6 +332,14 @@ msgctxt "Languages::edit_dates"
 msgid "edit_dates"
 msgstr "Редактировать даты"
 
+msgctxt "Languages::total_price"
+msgid "total_price"
+msgstr "Итого: "
+
+msgctxt "Languages::edit_order"
+msgid "edit_order"
+msgstr "Редактировать заказ"
+
 msgctxt "Languages::weather"
 msgid "weather"
 msgstr "Погода"
@@ -344,3 +356,66 @@ msgctxt "Languages::in_collections"
 msgid "in_collections"
 msgstr "В коллекции"
 
+msgctxt "Languages::reservation"
+msgid "reservation"
+msgstr "Бронирование"
+
+msgctxt "Languages::remove_dates"
+msgid "remove_dates"
+msgstr "Удалить даты"
+
+msgctxt "Languages::add_dates"
+msgid "add_dates"
+msgstr "Добавить даты"
+
+msgctxt "Languages::drop_location_text"
+msgid "drop_location"
+msgstr "Оставить яхту в другом месторасположении"
+
+msgctxt "Languages::drop_location"
+msgid "drop_location"
+msgstr "Конечное месторасположение"
+
+msgctxt "Languages::identy_verified"
+msgid "identy_verified"
+msgstr "Личность подтверждена"
+
+msgctxt "Languages::full_desc_vendor"
+msgid "full_desc_vendor"
+msgstr "Подробное описание от продавца"
+
+msgctxt "Languages::cabins_search"
+msgid "cabins_search"
+msgstr "Кают"
+
+msgctxt "Languages::discussion_not"
+msgid "discussion_not"
+msgstr "Отзывы отсутствуют"
+
+msgctxt "Languages::location_no"
+msgid "location_no"
+msgstr "Расположение не указано"
+
+msgctxt "Languages::description_no"
+msgid "location_no"
+msgstr "Описание отсутствует"
+
+msgctxt "Languages::order_success"
+msgid "order_success"
+msgstr "Заказ принят"
+
+msgctxt "Languages::order_description"
+msgid "order_description"
+msgstr "Ваш заказ принят! В ближайшее время с вами свяжутся менеджеры."
+
+msgctxt "Languages::vendor_model"
+msgid "vendor_model"
+msgstr "Производители и модели"
+
+msgctxt "Languages::manufacturer"
+msgid "manufacturers"
+msgstr "Производители"
+
+msgctxt "Languages::models"
+msgid "models"
+msgstr "Модели"

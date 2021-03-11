@@ -1,7 +1,7 @@
 {** block-description:tmpl_notes**}
 <div class="notes">
     <div class="title d-flex justify-content-between">
-        <img src="/images/my_module/Marine notes.png" alt="">
+        <img src="{$config.http_path}/images/my_module/Marine notes.png" alt="">
         <span class="t-white t-13px">We want more people to know about rest on boats. So, our first project was devoted to the development of interest in marine adventures and yachting sport. Today we have turned our content experiment into a full-fledged magazine devoted to boats, yachts, ships and everything that can be connected with it. Enjoy!</span>
     </div>
     <div class="main_content">

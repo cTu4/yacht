@@ -6,11 +6,15 @@ msgstr "Project-Id-Version: tygh\n"
 
 msgctxt "Addons::name::my_module"
 msgid "my_module"
-msgstr "My changes"
+msgstr "My module"
 
 msgctxt "Addons::description::my_module"
 msgid "my_module"
-msgstr "A dummy add-on for easier hook design editing"
+msgstr "my module"
+
+msgctxt "Languages::description"
+msgid "description"
+msgstr "Description"
 
 msgctxt "Languages::slider_category"
 msgid "slider_category"
@@ -253,6 +257,9 @@ msgctxt "Languages::add_vacation"
 msgid "add_vacation"
 msgstr "Add Vacations"
 
+msgctxt "Languages::total_price"
+msgid "total_price"
+msgstr "Total Price"
 
 msgctxt "Languages::price_range"
 msgid "price_range"
@@ -354,6 +361,10 @@ msgctxt "Languages::edit_dates"
 msgid "edit_dates"
 msgstr "Edit dates"
 
+msgctxt "Languages::edit_order"
+msgid "edit_order"
+msgstr "Edit Order"
+
 msgctxt "Languages::cleanliness"
 msgid "Cleanliness"
 msgstr "Cleanliness"
@@ -402,10 +413,93 @@ msgctxt "Languages::in_collections"
 msgid "in_collections"
 msgstr "In collections"
 
+msgctxt "Languages::reservation"
+msgid "reservation"
+msgstr "Reservation"
 
+msgctxt "Languages::remove_dates"
+msgid "remove_dates"
+msgstr "Remove dates"
 
+msgctxt "Languages::add_dates"
+msgid "add_dates"
+msgstr "Add dates"
 
+msgctxt "Languages::drop_location_text"
+msgid "drop_location"
+msgstr "Drop yacht off at different location"
 
+msgctxt "Languages::drop_location"
+msgid "drop_location"
+msgstr "Drop-off location"
+
+msgctxt "Languages::identy_verified"
+msgid "identy_verified"
+msgstr "Identy verified"
+
+msgctxt "Languages::full_desc_vendor"
+msgid "full_desc_vendor"
+msgstr "Vendor's full description"
+
+msgctxt "Languages::cabins_search"
+msgid "cabins_search"
+msgstr "Cabins"
+
+msgctxt "Languages::discussion_not"
+msgid "discussion_not"
+msgstr "No reviews available"
+
+msgctxt "Languages::location_no"
+msgid "location_no"
+msgstr "Location not specified"
+
+msgctxt "Languages::description_no"
+msgid "location_no"
+msgstr "No description available"
+
+msgctxt "Languages::order_success"
+msgid "order_success"
+msgstr "Order is accepted"
+
+msgctxt "Languages::order_description"
+msgid "order_description"
+msgstr "Your order is accepted! Our managers will contact you in the near future."
+
+msgctxt "Languages::vendor_model"
+msgid "vendor_model"
+msgstr "Vendor and models"
+
+msgctxt "Languages::manufacturer"
+msgid "manufacturers"
+msgstr "Manufacturers"
+
+msgctxt "Languages::models"
+msgid "models"
+msgstr "Models"
+
+msgctxt "Languages::adults"
+msgid "adults"
+msgstr "Adults"
+
+msgctxt "Languages::adults_info"
+msgid "adults_info"
+msgstr "Ages 13 or above"
+
+msgctxt "Languages::children"
+msgid "children"
+msgstr "Children"
+
+msgctxt "Languages::children_info"
+msgid "children_info"
+msgstr "Ages 2-12"
+
+msgctxt "Languages::infants"
+msgid "infants"
+msgstr "Infants"
+
+msgctxt "Languages::infants_info"
+msgid "infants_info"
+msgstr "Under 2"
 
 
 

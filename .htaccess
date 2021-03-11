@@ -8,10 +8,14 @@ RewriteEngine on
 # Your store url is http://www.yourcompany.com/store/cart
 # So "RewriteBase" should be:
 # RewriteBase /store/cart
-RewriteBase /yacht
+# RewriteBase /yacht
 RewriteCond %{REQUEST_FILENAME} !.(png|gif|ico|swf|jpe?g|js|css)$
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . index.php?sef_rewrite=1 [L,QSA]
+<Files ~ "\\.xml">
 
+allow from all
+
+</Files>
 </IfModule>
