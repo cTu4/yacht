@@ -17,5 +17,7 @@ if (!defined('BOOTSTRAP')) { die('Access denied'); }
 fn_register_hooks(
 //    'get_product_features_pre',
 //    'get_product_feature_variants_post',
-    "get_product_feature_variants"
+    "get_product_feature_variants",
+    "get_companies_post",
+    "update_product_features_value_pre"
 );
